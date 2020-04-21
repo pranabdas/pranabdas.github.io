@@ -114,6 +114,7 @@ td, th {
 }
 
 /* PKD */ 
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 body, input, h1,h2,h3,h4,h5,h6,legend {
@@ -179,17 +180,10 @@ code, kbd, pre {
 
 .rst-versions {
     background: #fcfcfc; 
-    /* background-color: fcfcfc; */
 }
 
 .rst-versions .rst-current-version {
     background: #fcfcfc; 
-    /* background-color: #fcfcfc;  */
-}
-
-.wy-grid-for-nav  .wy-body-for-nav{
-    background: red;
-    background-color: red;
 }
 
 html {
@@ -212,25 +206,25 @@ footer p {
 } 
 
 a {
-    color: #0066ff;
+    color: #0099ff;
 }
 a:hover {
     text-decoration: underline; 
-    color: #0066ff; 
+    color: #0099ff; 
 }
 a:visited {
-    color: #0066ff;
+    color: #0099ff;
 }
 
 a code {
-    color: #0066ff;
+    color: #0099ff;
 }
 a:hover code {
     text-decoration: underline; 
-    color: #0066ff; 
+    color: #0099ff; 
 }
 a:visited code {
-    color: #0066ff;
+    color: #0099ff;
 }
 
 .wy-side-nav-search a:hover { 
