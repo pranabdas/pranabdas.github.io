@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="Pranab Das">
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>numpy - Learning Python</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "numpy";
+    var mkdocs_page_input_path = "numerical-python/numpy.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/p.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/y.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/t.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/h.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/o.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/n.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Learning Python</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">The Basics</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../introduction/introduction/">Introduction</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../introduction/setup/">Setting up</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../introduction/basics/">Get started</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../introduction/string-formatting/">More on string formatting</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../introduction/list-and-tuple/">Python Lists and Tuple</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../introduction/dictionary/">Dictionary</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../introduction/if-else/">if-else condition</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../introduction/while-loop/">while loop, break, continue</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../introduction/function/">Simple function</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../introduction/file-read-write/">File read-write</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../introduction/class/">Python class</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../introduction/python-packages/">Python packages</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Numerical Python</span>
+    <ul class="subnav">
+                <li class=" current">
+                    
+    <a class="current" href="./">numpy</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#numerical-operations-using-numpy">Numerical operations using numpy</a></li>
+    
+
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Matplotlib</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../matplotlib/matplotlib/">Basic Matplotlib</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../matplotlib/image-plot/">Image plot</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../matplotlib/custom-color-map/">Create custom color map</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Pandas</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../pandas/pandas/">Pandas Series and Dataframe</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Misc</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../misc/misc/">Miscellaneous</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../misc/read-data-url/">Read data from url</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Projects</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../projects/singapore-traffic-camera/">Singapore traffic camera</a>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Learning Python</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Numerical Python &raquo;</li>
+        
+      
+    
+    <li>numpy</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://pranabdas.github.io/"> Homepage</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h3 id="numerical-operations-using-numpy">Numerical operations using numpy</h3>
+<p>First import numpy and create a simple array:</p>
+<pre><code class="python">&gt;&gt;&gt; import numpy as np
+... my_array = np.array([1, 3, 4])
+... print(my_array)
+
+[1 3 4]
+
+&gt;&gt;&gt; type(my_array) 
+
+numpy.ndarray
+</code></pre>
+
+<p>Create a two-dimensional array/matrix: </p>
+<pre><code class="python">&gt;&gt;&gt; my_array2 = np.array([[1, 2, 4], [3, 1, 5]])
+... print(my_array2) 
+
+[[1 2 4]
+ [3 1 5]]
+</code></pre>
+
+<p>Check dimension of an array: </p>
+<pre><code class="python">&gt;&gt;&gt; my_array2.ndim 
+
+2
+
+&gt;&gt;&gt; my_array2.shape 
+
+(2, 3)
+
+&gt;&gt;&gt; my_array2.size
+
+6
+
+&gt;&gt;&gt; my_array2.dtype
+
+dtype('int64')
+</code></pre>
+
+<p>You can specify the dtype explicitly if you need to. </p>
+<pre><code class="py">&gt;&gt;&gt; my_array3 = np.array([[1, 4, 7], [1, 9, 32]], dtype=np.float)
+... my_array3.dtype 
+
+dtype('float64')
+</code></pre>
+
+<p>Or we can switch type after we create the array: </p>
+<pre><code class="py">&gt;&gt;&gt; my_array3.astype(np.int)
+
+array([[ 1,  4,  7],
+       [ 1,  9, 32]])
+
+&gt;&gt;&gt; my_array3.astype(np.float)
+
+array([[ 1.,  4.,  7.],
+       [ 1.,  9., 32.]])
+
+</code></pre>
+
+<p>There is another way: </p>
+<pre><code class="py">&gt;&gt;&gt; my_array3 = np.array(my_array3, dtype=np.int)
+... print(my_array3)
+
+[[ 1  4  7]
+ [ 1  9 32]]
+
+
+&gt;&gt;&gt; my_array3 = np.array(my_array3, dtype=np.float)
+... print(my_array3) 
+
+[[ 1.  4.  7.]
+ [ 1.  9. 32.]]
+</code></pre>
+
+<ul>
+<li>Creating zero matrices: </li>
+</ul>
+<pre><code class="py">&gt;&gt;&gt; my_zero_array = np.zeros((2, 3))
+... print(my_zero_array)
+
+[[0. 0. 0.]
+ [0. 0. 0.]]
+</code></pre>
+
+<ul>
+<li>Matrix of ones: </li>
+</ul>
+<pre><code class="py">&gt;&gt;&gt; my_ones_array = np.ones((2, 3))
+... print(my_ones_array)
+
+[[1. 1. 1.]
+ [1. 1. 1.]]
+</code></pre>
+
+<ul>
+<li>If we need to fill the matrix with some other constant, we can first create ones_matrix and multiply. However there is another function to do the same. </li>
+</ul>
+<pre><code class="py">&gt;&gt;&gt; my_const_array = np.full([2, 3], 3.4)
+... print(my_const_array)
+
+[[3.4 3.4 3.4]
+ [3.4 3.4 3.4]]
+</code></pre>
+
+<ul>
+<li>Create arrays with incremental sequences.</li>
+</ul>
+<pre><code class="py">&gt;&gt;&gt; my_array4 = np.arange(1, 10, 1)
+... print(my_array4)
+
+[1 2 3 4 5 6 7 8 9]
+
+&gt;&gt;&gt; my_array5 = np.linspace(1, 10, 10)
+... print(my_array5)
+
+[ 1.  2.  3.  4.  5.  6.  7.  8.  9. 10.]
+</code></pre>
+
+<ul>
+<li>Create meshgrid: </li>
+</ul>
+<pre><code class="py">&gt;&gt;&gt; x = np.array([-1, 0, 1])
+... y = np.array([-2, 0, 2])
+... X, Y = np.meshgrid(x, y)
+... print(X, '\n\n', Y)
+
+[[-1  0  1]
+ [-1  0  1]
+ [-1  0  1]] 
+
+ [[-2 -2 -2]
+ [ 0  0  0]
+ [ 2  2  2]]
+</code></pre>
+
+<ul>
+<li>Other useful matrix creation: </li>
+</ul>
+<pre><code class="py">&gt;&gt;&gt; np.identity(4)
+
+array([[1., 0., 0., 0.],
+       [0., 1., 0., 0.],
+       [0., 0., 1., 0.],
+       [0., 0., 0., 1.]])
+
+&gt;&gt;&gt; np.eye(4)
+
+array([[1., 0., 0., 0.],
+       [0., 1., 0., 0.],
+       [0., 0., 1., 0.],
+       [0., 0., 0., 1.]]) 
+
+&gt;&gt;&gt; np.eye(4, k=1)
+
+array([[0., 1., 0., 0.],
+       [0., 0., 1., 0.],
+       [0., 0., 0., 1.],
+       [0., 0., 0., 0.]])
+
+&gt;&gt;&gt; np.eye(4, k=-1)
+
+array([[0., 0., 0., 0.],
+       [1., 0., 0., 0.],
+       [0., 1., 0., 0.],
+       [0., 0., 1., 0.]])
+
+&gt;&gt;&gt; np.diag(np.arange(0, 20, 5))
+
+array([[ 0,  0,  0,  0],
+       [ 0,  5,  0,  0],
+       [ 0,  0, 10,  0],
+       [ 0,  0,  0, 15]])
+</code></pre>
+
+<ul>
+<li>Create random matrix: </li>
+</ul>
+<pre><code class="py">&gt;&gt;&gt; np.random.rand(3)
+
+array([0.94387943, 0.29393203, 0.8492759 ])
+
+&gt;&gt;&gt; np.random.rand(2, 3)
+
+array([[0.18586417, 0.42499373, 0.59146342],
+       [0.43061312, 0.04468298, 0.21267794]])
+</code></pre>
+
+<ul>
+<li>Normally distributed random numbers: </li>
+</ul>
+<pre><code class="py">&gt;&gt;&gt; my_array_10 = np.random.randn(5); my_array_10
+
+array([ 0.55956033, -0.37623696,  1.78995147,  0.05591339, -0.43796257])
+</code></pre>
+
+<ul>
+<li>Expand matrix with <code>numpy.tile()</code></li>
+</ul>
+<pre><code class="py">&gt;&gt;&gt; my_array_11 = np.array([[1, 3], [2, 5]]); my_array_11
+
+array([[1, 3],
+       [2, 5]])
+
+&gt;&gt;&gt; my_array_12 = np.tile(my_array_11, 2); my_array_12
+
+array([[1, 3, 1, 3],
+       [2, 5, 2, 5]])
+
+&gt;&gt;&gt; my_array_12 = np.tile(my_array_11, (3, 2)); my_array_12
+
+array([[1, 3, 1, 3],
+       [2, 5, 2, 5],
+       [1, 3, 1, 3],
+       [2, 5, 2, 5],
+       [1, 3, 1, 3],
+       [2, 5, 2, 5]])
+</code></pre>
+
+<ul>
+<li>Indexing and slicing matrix: </li>
+</ul>
+<pre><code class="py">&gt;&gt;&gt; my_array = np.arange(5); my_array
+
+array([0, 1, 2, 3, 4])
+
+&gt;&gt;&gt; print(my_array[0], my_array[-1])
+
+0 4
+</code></pre>
+
+<ul>
+<li>Reversing an array: </li>
+</ul>
+<pre><code class="py">&gt;&gt;&gt; my_array[::-1]
+
+array([4, 3, 2, 1, 0])
+</code></pre>
+
+<ul>
+<li>Indexing in higher dimensional array:</li>
+</ul>
+<pre><code class="py">&gt;&gt;&gt; my_array = np.array([[1, 3, 2], [1, 4, 2], [5, 3, 1]]); print(my_array)
+
+[[1 3 2]
+ [1 4 2]
+ [5 3 1]]
+
+&gt;&gt;&gt; my_array[2, 1]
+
+3
+
+&gt;&gt;&gt; my_array[0, 0]
+
+1
+
+&gt;&gt;&gt; my_array[2]
+
+array([5, 3, 1])
+
+&gt;&gt;&gt; my_array[2, :]
+
+array([5, 3, 1])
+
+&gt;&gt;&gt; my_array[:, 2]
+
+array([2, 2, 1])
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../matplotlib/matplotlib/" class="btn btn-neutral float-right" title="Basic Matplotlib">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../../introduction/python-packages/" class="btn btn-neutral" title="Python packages"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>© Copyright 2020 Pranab Das. All rights reserved.</p>
+    
+  </div>
+
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../../introduction/python-packages/" style="color: #2980B9;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../../matplotlib/matplotlib/" style="color: #2980B9">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+      <script src="../../search/main.js" defer></script>
+
+</body>
+</html>

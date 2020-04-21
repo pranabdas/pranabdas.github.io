@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>Pranab Das | Basic git commands</title>
+  <meta name="description" content="Home page of Pranab Das.
+">
+  <meta name="format-detection" content="telephone=no">
+  
+    <meta property="og:site_name" content="Home page of Pranab Das.
+" />
+    <meta property="og:type" content="object" />
+    <meta property="og:title" content="Pranab Das" />
+    <meta property="og:url" content="https://pranabdas.github.io/coding/git-commands/" />
+    <meta property="og:description" content="Basic git commands" />
+    <meta property="og:image"
+          content="" />
+  
+
+  <link rel="shortcut icon" type= "image/ico" href="https://pranabdas.github.io/assets/img/favicon.ico">
+  <link rel="apple-touch-icon" href="https://pranabdas.github.io/assets/img/favicon.ico">
+  <link rel="stylesheet" href="https://pranabdas.github.io/assets/css/main.css">
+  <link rel="canonical" href="https://pranabdas.github.io/coding/git-commands/">
+
+  
+  
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    
+    <span class="site-title">
+        <a href="https://pranabdas.github.io">
+        Pranab <strong>Das</strong></a>
+    </span>
+    
+
+    <nav class="site-nav">
+      <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+      <div class="trigger">
+        <!-- About -->
+        <a class="page-link" href="https://pranabdas.github.io/">About</a>
+
+        <!-- Blog -->
+        <a class="page-link" href="https://pranabdas.github.io/blog/">Blog</a>
+
+        <!-- Pages -->
+        
+          
+        
+          
+        
+          
+             <!-- PKD : to avoid inclusion of pages in nav bar-->
+              <a class="page-link" href="https://pranabdas.github.io/coding/">Coding</a>
+            
+          
+        
+          
+            
+          
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+             <!-- PKD : to avoid inclusion of pages in nav bar-->
+              <a class="page-link" href="https://pranabdas.github.io/publications/">Publications</a>
+            
+          
+        
+          
+             <!-- PKD : to avoid inclusion of pages in nav bar-->
+              <a class="page-link" href="https://pranabdas.github.io/research/">Research</a>
+            
+          
+        
+          
+        
+          
+        
+          
+        
+
+        <!-- CV link -->
+        <!-- <a class="page-link" href="https://pranabdas.github.io/assets/pdf/CV.pdf">vitae</a> -->
+
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Basic git commands</h1>
+    <h5 class="post-description"></h5>
+  </header>
+
+  <article class="post-content Basic git commands clearfix">
+    <p>Git is a content aware filesystem. It is used for version control. It is used by millions of developers. It is used by big projects for distributed software development. But you can use it to keep track of almost anything from your manuscripts, drawings to complicated code structure. It can provide you with many advantages. It’s worth putting some effort to learn git. Happy learning!</p>
+
+<ul>
+  <li>Check if you have git already installed by issuing following command in Terminal
+    <pre><code>git --version
+</code></pre>
+  </li>
+  <li>
+    <p>If you see error. Go to <a href="https://git-scm.com" target="_blank">https://git-scm.com</a> download and install.</p>
+  </li>
+  <li>
+    <p>If you are on Windows, use of Git bash is recommenced. In MacOS or Linux, use the Terminal.</p>
+  </li>
+  <li>Configure git
+    <pre><code>git config --global user.name "User Name"
+git config --global user.email "user@example.com"
+</code></pre>
+  </li>
+  <li>Check a particular entry
+    <pre><code>git config --global user.name
+</code></pre>
+  </li>
+  <li>If you want to add a text editor which will let you type long commit messages. For Visual Studio Code/Atom, use following (choose one):
+    <pre><code>git config --global core.editor "code --wait"
+git config --global core.editor "atom --wait" 
+</code></pre>
+  </li>
+  <li>You can check your setting by:
+    <pre><code>git config --list
+</code></pre>
+  </li>
+  <li>Initialize current project directory:
+    <pre><code>git init
+</code></pre>
+  </li>
+  <li>Now start working/modifying your files. Then you need to add files individually or whole directory for staging.
+    <pre><code>git add filename
+</code></pre>
+  </li>
+  <li>Add current directory to staging. You can use either one of the following:
+    <pre><code>git add . 
+git add --all 
+</code></pre>
+  </li>
+  <li>This will add the files to the staging area. Note that if you make further changes on the files before commit, those new changes will not be included in the commit. Commit will record precisely when you ran the git add. You can check the status of your project by:
+    <pre><code>git status
+</code></pre>
+  </li>
+  <li>There is a short status version, which will output a concise status message:
+    <pre><code>git status -s
+</code></pre>
+  </li>
+  <li>Often you want to ignore some files or directories in your project. You can do that by creating a <em>.gitignore</em> in your project root, and including the files and folders that you want to exclude. You can use patterns/wildcards to indicate those files.
+    <pre><code>vi .gitignore
+</code></pre>
+  </li>
+  <li>Then this is how the contents of <em>.gitignore</em> should look like:
+    <pre><code>  # Ignore all bin files 
+  *.bin 
+
+  # Track lib.bin even though we ignore all other .bin
+  !lib.bin 
+
+  # Ignore everything on the output directory 
+  output/
+    
+  result.txt
+
+  # ignore all .pdf files in the doc/ directory and any of its subdirectories
+  doc/**/*.pdf
+</code></pre>
+  </li>
+  <li>Note that .gitignore applies to un-tracked files. Once, you include them in git add, they won’t be removed automatically by .gitignore inclusion. You can remove them manually by:
+    <pre><code>git rm --cached filename
+git rm --cached folder/
+</code></pre>
+  </li>
+  <li>
+    <p>Blank lines or the lines that start with “#” are ignored. You can visit this page <a href="https://github.com/github/gitignore">https://github.com/github/gitignore</a>, where GitHub maintains a list of <em>.gitignore</em> for various popular projects.</p>
+  </li>
+  <li>Remove a file from staging environment:
+    <pre><code>git checkout filename
+</code></pre>
+  </li>
+  <li>You can also do for all files, certain directory, or wildcards:
+    <pre><code>git checkout --.
+git checkout --*.html
+</code></pre>
+  </li>
+  <li>To see what changes you have made but not staged:
+    <pre><code>git diff 
+</code></pre>
+  </li>
+  <li>To see what changes you have staged:
+    <pre><code>git diff --staged 
+</code></pre>
+  </li>
+  <li>Check the difference with another branch or commit
+    <pre><code>git diff &lt;commit-hash or branch-name&gt;
+</code></pre>
+  </li>
+  <li>Check the difference for a particular file:
+    <pre><code>git diff -- path/file.md 
+</code></pre>
+  </li>
+  <li>You can also remove something, or everything from staging using:
+    <pre><code>git reset HEAD filename
+git reset HEAD
+</code></pre>
+  </li>
+  <li>Commit git (save staging state):
+    <pre><code>git commit -m "commit comment"
+</code></pre>
+  </li>
+  <li>You can add all changes and commit by combing:
+    <pre><code>git commit -a -m "commit all changes"
+</code></pre>
+  </li>
+  <li>Often you forget some files to add or commit to early. You can add those files and amend the commit:
+    <pre><code>git commit --amend 
+</code></pre>
+  </li>
+  <li>Check the records/commits of your project:
+    <pre><code>git log
+</code></pre>
+  </li>
+  <li>Go back to (undo) previous commits
+    <pre><code>git checkout &lt;commit-hash&gt;
+</code></pre>
+  </li>
+  <li>It will create a separate branch (main branch is called master). You can check branches by:
+    <pre><code>git branch
+</code></pre>
+  </li>
+  <li>You can list remotes brach as well with:
+    <pre><code>git branch -a
+</code></pre>
+  </li>
+  <li>Go back to master:
+    <pre><code>git checkout master
+</code></pre>
+  </li>
+  <li>You can keep the other by creating a new branch:
+    <pre><code>git branch &lt;new-branch&gt; &lt;commit-hash&gt;
+</code></pre>
+  </li>
+  <li>Switch to new branch by using
+    <pre><code>git checkout &lt;new-branch&gt;
+</code></pre>
+  </li>
+  <li>You can create a new branch from current master as well
+    <pre><code>git branch &lt;branch-name&gt;
+</code></pre>
+  </li>
+  <li>Bring over changes from a branch to the master. Once you merge, you bring over all the changes from another branch to the working directory (you do not bring the commit history from other branch). If there are files modified on both branch, there will be conflict merge, you may need to manually resolve those files. Later everything is alright, you can make commit to keep a permanent record.
+    <pre><code>git checkout master
+git merge &lt;branch-name&gt;
+</code></pre>
+  </li>
+  <li>Rename a branch:
+    <pre><code>git branch -m &lt;old-name&gt; &lt;new-name&gt;
+</code></pre>
+  </li>
+  <li>Delete a brach:
+    <pre><code>git branch -d &lt;branch-name&gt;
+</code></pre>
+  </li>
+  <li>The above command will fail with warning if there are changes that are not merged. If you want to delete a branch irrespective of whether the changes were merged:
+    <pre><code>git branch -D &lt;branch-name&gt;
+</code></pre>
+  </li>
+  <li>Following will reset all changes after the specified commit. This preserves the history locally.
+    <pre><code>git reset &lt;commit hash&gt;
+</code></pre>
+  </li>
+  <li>Discard all changes without history:
+    <pre><code>git reset --hard &lt;commit hash&gt; 
+</code></pre>
+  </li>
+  <li>Reset changes after last commit (HEAD represents the current working directory). This will keep the changes un-staged. If you want to reset fully use the flag <code>--hard</code>.
+    <pre><code>git reset HEAD 
+git reset --hard HEAD
+</code></pre>
+  </li>
+  <li>
+    <p>Resetting history which is already pushed to remote can have unintended side effects. Do it with caution.</p>
+  </li>
+  <li>You can undo a merge by using either of following two:
+    <pre><code>git merge --abort  
+git reset --hard HEAD 
+</code></pre>
+  </li>
+</ul>
+
+<p><br /> 
+<strong>Working with remotes:</strong></p>
+
+<p>Here I use the example of GitHub. You can choose another provider, like Gitlab, Bitbucket.</p>
+
+<ul>
+  <li>Clone a github repository locally:
+    <pre><code>git clone https://github.com/user/repository.git 
+</code></pre>
+  </li>
+  <li>If you want to have your repository with a different name, just pass the new name as second argument:
+    <pre><code>git clone https://github.com/user/repository.git my-repo-name
+</code></pre>
+  </li>
+  <li>Add GitHub remote directory:
+    <pre><code>git remote add &lt;short-name&gt; &lt;url&gt;
+git remote add origin https://github.com/user/repository.git
+</code></pre>
+  </li>
+  <li>You can have multiple remotes. You can check the remotes:
+    <pre><code>git remote -v
+</code></pre>
+  </li>
+  <li>Push changes to the GitHub:
+    <pre><code>git push &lt;remote&gt; &lt;branch&gt;
+git push origin master
+</code></pre>
+  </li>
+  <li>Force Push:
+    <pre><code>git push origin --force --all
+</code></pre>
+  </li>
+  <li>Fetch from remote. It fetches the meta-data from the remote:
+    <pre><code>git fetch &lt;short-name or url&gt;
+</code></pre>
+  </li>
+  <li>Then you can run a diff:
+    <pre><code>git diff master origin/master
+git diff &lt;local&gt; &lt;remote/branch&gt; 
+</code></pre>
+  </li>
+  <li>If everything is alright, you can pull the data from remote:
+    <pre><code>git pull &lt;remote&gt; &lt;remote-master&gt; 
+git pull origin master 
+git pull --all
+</code></pre>
+  </li>
+  <li>Rename remote:
+    <pre><code>git remote rename &lt;old-name&gt; &lt;new-name&gt;
+</code></pre>
+  </li>
+  <li>Remove remote:
+    <pre><code>git remote remove &lt;short-name&gt;
+</code></pre>
+    <p><br /></p>
+  </li>
+</ul>
+
+<p><strong>Learn more about git:</strong></p>
+<ul>
+  <li><a href="https://git-scm.com/book/en/v2" target="_blank">https://git-scm.com/book/en/v2</a></li>
+  <li><a href="https://github.com/pluralsight/git-internals-pdf" target="_blank">https://github.com/pluralsight/git-internals-pdf</a></li>
+</ul>
+
+  </article>
+
+  
+
+  
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="footer-alt">
+
+  <div class="wrapper">
+    &copy; Copyright 2020 Pranab Das. All rights reserved.
+  </div>
+
+</footer>
+
+
+    <!-- Load jQuery -->
+<script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
+
+<!-- Load Common JS -->
+<script src="https://pranabdas.github.io/assets/js/common.js"></script>
+
+
+<!-- Load KaTeX -->
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.js"></script>
+<script src="https://pranabdas.github.io/assets/js/katex.js"></script>
+
+
+
+
+<!-- Include custom icon fonts -->
+<link rel="stylesheet" href="https://pranabdas.github.io/assets/css/fontawesome-all.min.css">
+<link rel="stylesheet" href="https://pranabdas.github.io/assets/css/academicons.min.css">
+
+
+
+
+  </body>
+
+</html>

@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/pranab
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://pranabdas.github.io
+  * I am pranab (https://keybase.io/pranab) on keybase.
+  * I have a public key ASA5revzjQyUWbljQ2KuP1nrjKAdGKC5r7XyrjM0ZY1lKwo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0101d973ffffe4bf11372f30a6bd4ecb5e118e69eb5fc9b9b732202224bca9415c9b0a",
+      "host": "keybase.io",
+      "kid": "012039adebf38d0c9459b9634362ae3f59eb8ca01d18a0b9afb5f2ae3334658d652b0a",
+      "uid": "e9ef1a4be271982364d17efc5391a519",
+      "username": "pranab"
+    },
+    "merkle_root": {
+      "ctime": 1586312538,
+      "hash": "ec3defc5298717f16523b276809c05ca687baac7da1f2317aeb004afceb0dbffc824fc888fb3a06c6e9f8440f73e03d8245e22f6c6c8b94bfac41871b573db97",
+      "hash_meta": "8864fb310d4a00332144bf47aa232fb95a4e48a01af473f9cb14896fb2dbbc97",
+      "seqno": 15826643
+    },
+    "service": {
+      "entropy": "cO8c6hONHREmeBRnGuJvVDtW",
+      "hostname": "pranabdas.github.io",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "5.3.0"
+  },
+  "ctime": 1586312576,
+  "expire_in": 504576000,
+  "prev": "cb35230a5a22671a096ef5c53f001b1326c30b33d232191027b1535971e378d6",
+  "seqno": 12,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgOa3r840MlFm5Y0Nirj9Z64ygHRigua+18q4zNGWNZSsKp3BheWxvYWTESpcCDMQgyzUjCloiZxoJbvXFPwAbEybDCzPSMhkQJ7FTWXHjeNbEIJCrF8fwYuT53RcpFr0hWlu/u6ojhNJS4XActGW+jUv1AgHCo3NpZ8RAG1ghbFTAf3yJWdFbTwnOyS8KqbAOFLnqzETlOW92CNsfMFFpC1lhJGOYvvauSrATlltNnbz02ltaiXj7e8ejAqhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIFc0cxatDf64Ira/g2xyYma7R/1Fgw+9+XO9a0a/noT3o3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/pranab
+
+==================================================================

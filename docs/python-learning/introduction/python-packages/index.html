@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="Pranab Das">
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Python packages - Learning Python</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Python packages";
+    var mkdocs_page_input_path = "introduction/python-packages.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/p.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/y.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/t.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/h.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/o.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/n.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Learning Python</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">The Basics</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../introduction/">Introduction</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../setup/">Setting up</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../basics/">Get started</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../string-formatting/">More on string formatting</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../list-and-tuple/">Python Lists and Tuple</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../dictionary/">Dictionary</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../if-else/">if-else condition</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../while-loop/">while loop, break, continue</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../function/">Simple function</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../file-read-write/">File read-write</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../class/">Python class</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">Python packages</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#installing-and-using-various-python-packages">Installing and using various Python packages</a></li>
+    
+
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Numerical Python</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../numerical-python/numpy/">numpy</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Matplotlib</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../matplotlib/matplotlib/">Basic Matplotlib</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../matplotlib/image-plot/">Image plot</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../matplotlib/custom-color-map/">Create custom color map</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Pandas</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../pandas/pandas/">Pandas Series and Dataframe</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Misc</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../misc/misc/">Miscellaneous</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../misc/read-data-url/">Read data from url</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Projects</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../projects/singapore-traffic-camera/">Singapore traffic camera</a>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Learning Python</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>The Basics &raquo;</li>
+        
+      
+    
+    <li>Python packages</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://pranabdas.github.io/"> Homepage</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h3 id="installing-and-using-various-python-packages">Installing and using various Python packages</h3>
+<p>One of most important aspect of python is that there are tons of open source packages freely available to achieve what you want to implement. Using python packages involve two steps: (1) install the package using a package manager, (2) import them in the beginning of your code. </p>
+<p>We can use python <em>pip</em> to install packages. Say we want to install a python package called <em>numpy</em>. This package has tons of functionality while doing numerical operations. So we run following command in the terminal: </p>
+<pre><code>pip install numpy
+</code></pre>
+
+<p>However, depending on your system, you might need to issue <code>pip3</code> instead of <code>pip</code>. If you are using anaconda python distribution, chances are most common packages are already installed. </p>
+<p>Next, in order to use the packages in our code, we need to import them</p>
+<pre><code>import numpy as np
+</code></pre>
+
+<p>As <code>np</code> helps to use a shortened name later in the code to refer to <code>numpy</code>. </p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../numerical-python/numpy/" class="btn btn-neutral float-right" title="numpy">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../class/" class="btn btn-neutral" title="Python class"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>© Copyright 2020 Pranab Das. All rights reserved.</p>
+    
+  </div>
+
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../class/" style="color: #2980B9;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../../numerical-python/numpy/" style="color: #2980B9">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+      <script src="../../search/main.js" defer></script>
+
+</body>
+</html>
