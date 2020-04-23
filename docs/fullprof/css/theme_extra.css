@@ -234,3 +234,7 @@ a:visited code {
 .wy-nav-top a:hover {
     text-decoration: none;
 }
+
+.rst-footer-buttons a:hover {
+    text-decoration: none;
+}
