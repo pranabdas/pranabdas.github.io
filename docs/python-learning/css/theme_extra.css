@@ -135,11 +135,19 @@ code, kbd, pre {
     color: black;
 }
 
+.wy-side-nav-search a:visited {
+    color: black;
+}
+
 .wy-side-nav-search {
     background: #fcfcfc
 }
 
 .wy-menu-vertical li ul li a { 
+    color:#666; 
+}
+
+.wy-menu-vertical li ul li a:visited { 
     color:#666; 
 }
 
@@ -164,6 +172,10 @@ code, kbd, pre {
 }
 
 .toctree-l1 a { 
+    color:#666; 
+}
+
+.toctree-l1 a:visited { 
     color:#666; 
 }
 
@@ -207,11 +219,13 @@ footer p {
 
 a {
     color: #0099ff;
-}
+} 
+
 a:hover {
     text-decoration: underline; 
     color: #0099ff; 
 }
+
 a:visited {
     color: #0099ff;
 }
@@ -229,6 +243,10 @@ a:visited code {
 
 .wy-side-nav-search a:hover { 
     text-decoration: none; 
+}
+
+.wy-nav-top a {
+    color: white;
 }
 
 .wy-nav-top a:hover {
