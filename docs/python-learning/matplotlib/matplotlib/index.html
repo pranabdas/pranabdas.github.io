@@ -147,6 +147,25 @@
                     
     <a class="" href="../custom-color-map/">Create custom color map</a>
                 </li>
+                <li class="">
+                    
+    <a class="" href="../function-plot/">Function plot</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">scipy</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../scipy/integration/">Integration using scipy</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../scipy/convolution/">Convolution</a>
+                </li>
     </ul>
 	    </li>
           
@@ -292,14 +311,15 @@ plt.show()
 <p><img alt="x vs. y plot" src="../../img/mpl-x-vs-y-5.png" /> </p>
 <p>How can I append another plot on the same figure? </p>
 <pre><code class="python">y2 = x**3; 
-plt.plot(x, y, 'ro-')
-plt.plot(x, y2, 'g*-')
-plt.title('My simple plot')  
-plt.xlabel('X')
-plt.ylabel('Y')
-plt.xlim(1, 10.5)
-plt.ylim(1, 1200)
-plt.show()
+plt.plot(x, y, 'ro-', label='y'); 
+plt.plot(x, y2, 'g*-', label='y2'); 
+plt.title('My simple plot'); 
+plt.xlabel('X'); 
+plt.ylabel('Y'); 
+plt.legend(); 
+plt.xlim(1, 10.5); 
+plt.ylim(1, 1200); 
+plt.show(); 
 </code></pre>
 
 <p><img alt="x vs. y plot" src="../../img/mpl-x-vs-y-6.png" /> </p>
