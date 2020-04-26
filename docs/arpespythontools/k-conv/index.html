@@ -81,8 +81,11 @@
             
     <li class="toctree-l2"><a href="#k-space-conversion-for-single-spectra">k-space conversion for single spectra</a></li>
     
-
-    <li class="toctree-l2"><a href="#k-space-conversion-for-3d-fermi-map-data">k-space conversion for 3D Fermi map data</a></li>
+        <ul>
+        
+            <li><a class="toctree-l3" href="#k-space-conversion-for-3d-fermi-map-data">k-space conversion for 3D Fermi map data</a></li>
+        
+        </ul>
     
 
     </ul>
@@ -111,11 +114,6 @@
             <li class="toctree-l1">
 		
     <a class="" href="../igor-text/">Import/Export Igor text</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../about/">About</a>
 	    </li>
           
         </ul>
@@ -150,7 +148,7 @@
           <div role="main">
             <div class="section">
               
-                <h2 id="k-space-conversion-for-single-spectra">k-space conversion for single spectra</h2>
+                <h3 id="k-space-conversion-for-single-spectra">k-space conversion for single spectra</h3>
 <p>The <strong>k_conv</strong> function can convert two-dimensional Energy vs Theta data to Binding energy vs <strong>k</strong> (momentum). Here Binding energy below the Fermi energy is positive convention used.</p>
 <pre><code>import arpespythontools as arp  
 [data, energy, angle] = arp.load_ses_spectra('sample_spectra.txt')
@@ -170,7 +168,7 @@ plt.show()
 </code></pre>
 <p>Which would produce a plot like this:<br />
 <img alt="k-space-image-plot" src="../img/k-space-image-plot.png" /></p>
-<h2 id="k-space-conversion-for-3d-fermi-map-data">k-space conversion for 3D Fermi map data</h2>
+<h5 id="k-space-conversion-for-3d-fermi-map-data">k-space conversion for 3D Fermi map data</h5>
 <p>Similarly, we can convert three dimensional (Energy, theta, phi)  Fermi map data to <strong>k</strong>-space by using <strong>k_conv3D</strong> function.</p>
 <pre><code>[data, energy, theta, phi] = arp.load_ses_map('sample_map_data.zip')
 [data_k, e_bin, kx, ky] = arp.k_conv3D(data, energy, theta, phi, 16.67)

@@ -256,3 +256,11 @@ a:visited code {
 .rst-footer-buttons a:hover {
     text-decoration: none;
 }
+
+.fig-caption {
+    padding: 2em; 
+    font-size: 0.95em; 
+    line-height: 1.5em;
+    font-style: italic; 
+    color: #666;
+} 

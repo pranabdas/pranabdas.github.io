@@ -118,11 +118,6 @@
     <a class="" href="../igor-text/">Import/Export Igor text</a>
 	    </li>
           
-            <li class="toctree-l1">
-		
-    <a class="" href="../about/">About</a>
-	    </li>
-          
         </ul>
       </div>
       &nbsp;
@@ -155,16 +150,16 @@
           <div role="main">
             <div class="section">
               
-                <h2 id="importing-arpes-data">Importing ARPES data</h2>
+                <h3 id="importing-arpes-data">Importing ARPES data</h3>
 <p>At the moment, this module can only import data produced by Scienta-Omicron SES program. For the Spectral scans, we will use the plaintext (.txt) files as input, and in case of Fermi map data, we will need the ZIP files as input.</p>
 <p>First thing first, import arpespythontools in your program  </p>
 <pre><code>import arpespythontools as arp
 </code></pre>
-<h3 id="load-arpes-spectra-from-ses-plaintext-file">Load ARPES Spectra from SES plaintext file</h3>
+<h5 id="load-arpes-spectra-from-ses-plaintext-file">Load ARPES Spectra from SES plaintext file</h5>
 <pre><code>[data, energy, angle] = arp.load_ses_spectra('sample_spectra.txt')
 </code></pre>
 <p>Here, <code>data</code> is a two dimensional numpy array; x-dimension is along energy and y-dimension is along angle/theta. <code>energy</code> and <code>angle</code> are one dimensional vectors of kinetic energy in eV and angle values in degree, respectively.</p>
-<h3 id="load-fermi-map-data-from-ses-zip-file">Load Fermi Map data from SES ZIP file</h3>
+<h5 id="load-fermi-map-data-from-ses-zip-file">Load Fermi Map data from SES ZIP file</h5>
 <pre><code>[map_data, energy, theta, phi] = arp.load_ses_map('sample_map_data.zip')
 </code></pre>
 <p><code>map_data</code> will contain three dimensional array of Fermi map data; x-dimension is along energy, y-dimension is along theta and z-dimension is along phi. <code>energy</code>, <code>theta</code>, and <code>phi</code> are one dimensional vectors of kinetic energy (eV), theta (deg), and phi (deg), respectively.</p>
