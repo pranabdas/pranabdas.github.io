@@ -8,7 +8,7 @@
   
   <meta name="author" content="Pranab Das">
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>Refinement - FullProf</title>
+  <title>About System - ARPES manual (SUV, SSLS)</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../css/theme.css" type="text/css" />
@@ -17,8 +17,8 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Refinement";
-    var mkdocs_page_input_path = "refinement.md";
+    var mkdocs_page_name = "About System";
+    var mkdocs_page_input_path = "system-details.md";
     var mkdocs_page_url = null;
   </script>
   
@@ -42,7 +42,7 @@
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
       <div class="wy-side-nav-search">
-        <a href=".." class="icon icon-home"> FullProf</a>
+        <a href=".." class="icon icon-home"> ARPES manual (SUV, SSLS)</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
@@ -59,30 +59,55 @@
     <a class="" href="..">Home</a>
 	    </li>
           
-            <li class="toctree-l1">
-		
-    <a class="" href="../install/">Installation</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../create-pcr/">Create PCR</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../edit-pcr/">Edit PCR</a>
-	    </li>
-          
             <li class="toctree-l1 current">
 		
-    <a class="current" href="./">Refinement</a>
+    <a class="current" href="./">About System</a>
     <ul class="subnav">
             
-    <li class="toctree-l2"><a href="#refinement">Refinement</a></li>
+    <li class="toctree-l2"><a href="#about-arpes-system">About ARPES system</a></li>
     
 
     </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../sample-mounting/">Sample mounting</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../helium-lamp-operation/">Operation of helium lamp</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../purge-helium-line/">Procedure to purge helium gas line</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../slit-dim/">Analyzer slit dimension</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../power-supply-connections/">SCIENTA Power Supply Connections</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../spin-supply/">Supply information for Spin measurements</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../data-analysis/">Data analysis</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../resolution/">ARPES Resolution</a>
 	    </li>
           
         </ul>
@@ -95,7 +120,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="..">FullProf</a>
+        <a href="..">ARPES manual (SUV, SSLS)</a>
       </nav>
 
       
@@ -107,7 +132,7 @@
     
       
     
-    <li>Refinement</li>
+    <li>About System</li>
     <li class="wy-breadcrumbs-aside">
         <a href="https://pranabdas.github.io">Homepage</a>
     </li>
@@ -117,40 +142,19 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="refinement">Refinement</h1>
-<p>Here we will learn how to do the basic refinements</p>
-<ol>
-<li>
-<p>Run the <strong>Winplotr</strong> by clicking the <strong>WinPlotr</strong> button in the FullProf Suite toolbar.<br />
-<img alt="" src="../img/img-19.png" /> </p>
-</li>
-<li>
-<p>Click the Pcr button to browse and open the pcr in a notepad.<br />
-<img alt="" src="../img/img-20.png" /> </p>
-</li>
-<li>
-<p>Now, the pcr file will open in NotePad, put Aut =1 (Doing so, you don't need to put the index of refine parameter manually).<br />
-<img alt="" src="../img/img-21.png" /> </p>
-</li>
-<li>
-<p>Save and Close the NotePad. </p>
-</li>
-<li>
-<p>Click the <strong>FP</strong> button in the <strong>WinPlotr</strong> toolbar, it will ask for the pcr file and the data file, browse those files. </p>
-</li>
-<li>
-<p>Then it will show the fitted pattern as well as the experimental pattern. It will also show the value of Chi2, recall that for the first time we are only varying the zero error of the instrument.<br />
-<img alt="" src="../img/img-22.png" /> </p>
-</li>
-<li>
-<p>Go back to the Pcr button and open the pcr file in NotePad to edit it. This time we will refine the background parameters one by one. For this change the value of 1st background parameter to 1 instead of 0.<br />
-<img alt="" src="../img/img-23.png" /> </p>
-</li>
-<li>
-<p>Save and Close the NotePad and run the FP again, like this we can refine all the background parameters, generally one can maintain this order for best results:
-<strong>Zero Point of the Detector &gt;&gt; Background Parameters &gt;&gt; Lattice Constants &gt;&gt; Atomic Positions &gt;&gt; Debye-Waller factor &gt;&gt; Peak Shape &gt;&gt; Asymmetry Parameters</strong>. </p>
-</li>
-</ol>
+                <h3 id="about-arpes-system">About ARPES system</h3>
+<ul>
+<li>The ARPES system comprised of Scienta-Omicron DA30L hemispherical electron analyzer. </li>
+<li>Base pressure of the system is <span><span class="MathJax_Preview">\sim 1 \times 10^{-10}</span><script type="math/tex">\sim 1 \times 10^{-10}</script></span> mbar. </li>
+<li>A Scienta VUV-5k helium discharge lamp with monochromator is used as photon source. </li>
+<li>Mott spin detectors are also available for spin-resolved band measurement. </li>
+<li>The manipulator can cooled down using either liquid nitrogen (sample temperature ~90 K) or liquid helium cryogen. </li>
+<li>Single crystalline sample can be exfoliated or cleaved in the load-lock chamber (pressure ~ <span><span class="MathJax_Preview">5 \times 10^{-8}</span><script type="math/tex">5 \times 10^{-8}</script></span> mbar). </li>
+<li>Thin film samples can be grown in-situ using PLD. </li>
+<li>Sample samples can be prepared with argon sputtering and annealing. </li>
+</ul>
+<p><br/></p>
+<p><img alt="SUV ARPES system" src="../img/ARPES-station.jpg" /></p>
               
             </div>
           </div>
@@ -158,8 +162,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
+        <a href="../sample-mounting/" class="btn btn-neutral float-right" title="Sample mounting">Next <span class="icon icon-circle-arrow-right"></span></a>
       
-        <a href="../edit-pcr/" class="btn btn-neutral" title="Edit PCR"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+        <a href=".." class="btn btn-neutral" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -186,13 +192,16 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../edit-pcr/" style="color: #2980B9;">&laquo; Previous</a></span>
+        <span><a href=".." style="color: #2980B9;">&laquo; Previous</a></span>
       
+      
+        <span style="margin-left: 15px"><a href="../sample-mounting/" style="color: #2980B9">Next &raquo;</a></span>
       
     </span>
 </div>
     <script>var base_url = '..';</script>
     <script src="../js/theme.js" defer></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
       <script src="../search/main.js" defer></script>
 
 </body>

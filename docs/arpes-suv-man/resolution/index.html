@@ -8,7 +8,7 @@
   
   <meta name="author" content="Pranab Das">
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>Resolution - ARPES manual (SUV, SSLS)</title>
+  <title>ARPES Resolution - ARPES manual (SUV, SSLS)</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../css/theme.css" type="text/css" />
@@ -17,7 +17,7 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Resolution";
+    var mkdocs_page_name = "ARPES Resolution";
     var mkdocs_page_input_path = "resolution.md";
     var mkdocs_page_url = null;
   </script>
@@ -61,6 +61,16 @@
           
             <li class="toctree-l1">
 		
+    <a class="" href="../system-details/">About System</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../sample-mounting/">Sample mounting</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
     <a class="" href="../helium-lamp-operation/">Operation of helium lamp</a>
 	    </li>
           
@@ -91,7 +101,7 @@
           
             <li class="toctree-l1 current">
 		
-    <a class="current" href="./">Resolution</a>
+    <a class="current" href="./">ARPES Resolution</a>
     <ul class="subnav">
             
     <li class="toctree-l2"><a href="#experimental-arpes-resolution">Experimental ARPES resolution</a></li>
@@ -122,7 +132,7 @@
     
       
     
-    <li>Resolution</li>
+    <li>ARPES Resolution</li>
     <li class="wy-breadcrumbs-aside">
         <a href="https://pranabdas.github.io">Homepage</a>
     </li>
@@ -133,7 +143,7 @@
             <div class="section">
               
                 <h3 id="experimental-arpes-resolution">Experimental ARPES resolution</h3>
-<p>The ARPES experimental resolution depends on several factors including measurement temperature, sample quality, light source used, and the analyzer resolution. Here we will describe a practical scenario. The sample for this measurement was grown using molecular beam epitaxy (MBE) method. The sample was of very good quality. We obtained the following ARPES spectrum using <span><span class="MathJax_Preview">10~eV</span><script type="math/tex">10~eV</script></span> pass energy and <span><span class="MathJax_Preview">5~meV</span><script type="math/tex">5~meV</script></span> energy step. </p>
+<p>The ARPES experimental resolution depends on several factors including measurement temperature, sample quality, quality of electrical contact between sample and analyzer, light source used, and the analyzer resolution. Here we will describe a practical scenario. The sample for this measurement was grown using molecular beam epitaxy (MBE) method. The sample was of very good quality. We obtained the following ARPES spectrum using <span><span class="MathJax_Preview">10~eV</span><script type="math/tex">10~eV</script></span> pass energy and <span><span class="MathJax_Preview">5~meV</span><script type="math/tex">5~meV</script></span> energy step. </p>
 <p><img alt="ARPES spectra" src="../img/res-band.png" /> </p>
 <p>We extract the Energy Distribution Curve (EDC) by integrating <span><span class="MathJax_Preview">\pm0.25~Å^{-1}</span><script type="math/tex">\pm0.25~Å^{-1}</script></span> range. </p>
 <p><img alt="ARPES spectra" src="../img/res-edc.png" /> </p>
@@ -141,7 +151,7 @@
 <p><img alt="Fermi Dirac distribution" src="../img/res-fermi-func.png" /> </p>
 <p>Now, we can convolute a Gaussian broadening of <span><span class="MathJax_Preview">10~meV</span><script type="math/tex">10~meV</script></span>, which fits our experimental data well. </p>
 <p><img alt="Fermi Dirac distribution" src="../img/res-fit.png" /> </p>
-<p>There is some room for adjusting the fitting parameters, but the slope is certainly better than <span><span class="MathJax_Preview">15~meV</span><script type="math/tex">15~meV</script></span> for our current data. Therefore, we have about <span><span class="MathJax_Preview">8~meV</span><script type="math/tex">8~meV</script></span> thermal broadening and <span><span class="MathJax_Preview">10~meV</span><script type="math/tex">10~meV</script></span> instrumental (combines sample quality, analyzer resolution, and light source broadening), i.e., we can expect better than <span><span class="MathJax_Preview">15~meV</span><script type="math/tex">15~meV</script></span> <span><span class="MathJax_Preview">(\sigma_{total} = \sqrt{\sigma_x^2 + \sigma_y^2})</span><script type="math/tex">(\sigma_{total} = \sqrt{\sigma_x^2 + \sigma_y^2})</script></span> resolution. </p>
+<p>There is some room for adjusting the fitting parameters, but the slope is certainly better than <span><span class="MathJax_Preview">15~meV</span><script type="math/tex">15~meV</script></span> for our current data. Therefore, we have about <span><span class="MathJax_Preview">8~meV</span><script type="math/tex">8~meV</script></span> thermal broadening and <span><span class="MathJax_Preview">10~meV</span><script type="math/tex">10~meV</script></span> instrumental (combines sample quality, analyzer resolution, and light source broadening), i.e., we can expect better than <span><span class="MathJax_Preview">15~meV</span><script type="math/tex">15~meV</script></span> <span><span class="MathJax_Preview">(\sigma_{total} \le \sqrt{\sigma_x^2 + \sigma_y^2})</span><script type="math/tex">(\sigma_{total} \le \sqrt{\sigma_x^2 + \sigma_y^2})</script></span> resolution. </p>
               
             </div>
           </div>
