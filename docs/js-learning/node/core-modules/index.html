@@ -8,7 +8,7 @@
   
   <meta name="author" content="Pranab Das">
   <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>Working with data - Learning Javascript</title>
+  <title>Core modules - Learning Javascript</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
@@ -17,8 +17,8 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Working with data";
-    var mkdocs_page_input_path = "basics/working-with-data.md";
+    var mkdocs_page_name = "Core modules";
+    var mkdocs_page_input_path = "node/core-modules.md";
     var mkdocs_page_url = null;
   </script>
   
@@ -69,39 +69,23 @@
     <ul class="subnav">
                 <li class="">
                     
-    <a class="" href="../setup/">Setup</a>
+    <a class="" href="../../basics/setup/">Setup</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../console/">Console and external script</a>
-                </li>
-                <li class=" current">
-                    
-    <a class="current" href="./">Working with data</a>
-    <ul class="subnav">
-            
-    <li class="toctree-l3"><a href="#working-with-data">Working with data</a></li>
-    
-        <ul>
-        
-            <li><a class="toctree-l4" href="#common-arithmetic-operations">Common arithmetic operations</a></li>
-        
-            <li><a class="toctree-l4" href="#some-shorthand-notations">Some shorthand notations</a></li>
-        
-            <li><a class="toctree-l4" href="#string-concatenation">String concatenation</a></li>
-        
-        </ul>
-    
-
-    </ul>
+    <a class="" href="../../basics/console/">Console and external script</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../conditional-statement/">Conditional statement</a>
+    <a class="" href="../../basics/working-with-data/">Working with data</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../arrays/">Arrays</a>
+    <a class="" href="../../basics/conditional-statement/">Conditional statement</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../basics/arrays/">Arrays</a>
                 </li>
     </ul>
 	    </li>
@@ -153,19 +137,25 @@
     <ul class="subnav">
                 <li class="">
                     
-    <a class="" href="../../node/introduction/">Introduction</a>
+    <a class="" href="../introduction/">Introduction</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../node/std-input-output/">Standard input-output</a>
+    <a class="" href="../std-input-output/">Standard input-output</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">Core modules</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#core-modules">Core modules</a></li>
+    
+
+    </ul>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../node/core-modules/">Core modules</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../node/file-system/">File system</a>
+    <a class="" href="../file-system/">File system</a>
                 </li>
     </ul>
 	    </li>
@@ -192,11 +182,11 @@
     
       
         
-          <li>The Basics &raquo;</li>
+          <li>Node.js &raquo;</li>
         
       
     
-    <li>Working with data</li>
+    <li>Core modules</li>
     <li class="wy-breadcrumbs-aside">
         <a href="https://pranabdas.github.io">Homepage</a>
     </li>
@@ -206,68 +196,62 @@
           <div role="main">
             <div class="section">
               
-                <h3 id="working-with-data">Working with data</h3>
-<p>In javascript we define a variable with <code>var</code>. Once you define a variable, we can initialize it. We do not need to explicitly declare the data type (like whether integer, float or string). The data type is determined when you assign a value. We can check the datatype following way: </p>
-<pre><code class="js">&gt; var pi = 3.14; 
-  console.log(typeof pi)
+                <h3 id="core-modules">Core modules</h3>
+<p>These are the modules comes preinstalled with node.js like the <code>path</code> module we used earlier. </p>
+<pre><code class="js">const path = require(&quot;path&quot;); 
 
-number
+const dirUpload = path.join(__dirname, &quot;uploads&quot;); 
+
+console.log(dirUpload); 
 </code></pre>
 
-<h4 id="common-arithmetic-operations">Common arithmetic operations</h4>
-<pre><code class="js">var a = 5; 
-var b = 7; 
-var sum = 5 + 7; 
-console.log(sum)
+<p>The <code>util</code> module: </p>
+<pre><code class="js">const path = require(&quot;path&quot;); 
+const util = require(&quot;util&quot;); 
 
-12
+util.log(path.basename(__filename)); 
+
+util.log(&quot;  ^ the name of the current file.&quot;); 
 </code></pre>
 
-<pre><code class="js">var a = 3; 
-var b = 9; 
-var c = 6; 
-var result = a + b*c 
-console.log(result)
-
-57
+<pre><code class="js">28 Apr 22:37:34 - core.js
+28 Apr 22:37:34 -   ^ the name of the current file.
 </code></pre>
 
-<h4 id="some-shorthand-notations">Some shorthand notations</h4>
-<pre><code class="js">a = a + 4; 
-a += 4; 
+<p>We have dozens of such modules. </p>
+<pre><code class="js">const v8 = require(&quot;v8&quot;); 
+
+console.log(v8.getHeapStatistics()); 
 </code></pre>
 
-<p>The above works with <code>+, -, *, /</code> </p>
-<pre><code class="js">a = a + 1; 
-a++; 
-
-a = a -1; 
-a--;
+<pre><code class="js">{
+  total_heap_size: 4505600,
+  total_heap_size_executable: 524288,
+  total_physical_size: 3408264,
+  total_available_size: 2194589720,
+  used_heap_size: 2376352,
+  heap_size_limit: 2197815296,
+  malloced_memory: 8192,
+  peak_malloced_memory: 123200,
+  does_zap_garbage: 0,
+  number_of_native_contexts: 1,
+  number_of_detached_contexts: 0
+}
 </code></pre>
 
-<h4 id="string-concatenation">String concatenation</h4>
-<pre><code class="js">var greeting = &quot;Hello &quot;; 
-var name = &quot;Pranab&quot;; 
+<p><code>readline</code> module: </p>
+<pre><code class="js">const readline = require(&quot;readline&quot;); 
 
-console.log(greeting + name)
+const rl = readline.createInterface({
+    input: process.stdin, 
+    output: process.stdout
+}); 
 
-Hello Pranab
+rl.question(&quot;What is you name? &quot;, answer =&gt; {
+    console.log(`Hello ${answer}`); 
+    process.exit(); 
+}); 
 </code></pre>
-
-<p>Be careful to check the data type while using operators. Notice the following: </p>
-<pre><code class="js">var a = &quot;4&quot;; // this a string 
-var b = 5; 
-
-var sum = a + b; 
-var sub = a - b; 
-var mult = a * b; 
-
-console.log(&quot;sum = &quot; + sum + &quot;, sub =&quot; + sub + &quot;, mult =&quot; + mult)
-
-sum = 45, sub =-1, mult =20
-</code></pre>
-
-<p>Notice the string concatenation in case of addition, however subtraction and multiplication carried out properly even though <code>a</code> was a string. Obviously, it works only when the string contains only numbers. </p>
               
             </div>
           </div>
@@ -275,10 +259,10 @@ sum = 45, sub =-1, mult =20
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../conditional-statement/" class="btn btn-neutral float-right" title="Conditional statement">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../file-system/" class="btn btn-neutral float-right" title="File system">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../console/" class="btn btn-neutral" title="Console and external script"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../std-input-output/" class="btn btn-neutral" title="Standard input-output"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -305,10 +289,10 @@ sum = 45, sub =-1, mult =20
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../console/" style="color: #2980B9;">&laquo; Previous</a></span>
+        <span><a href="../std-input-output/" style="color: #2980B9;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../conditional-statement/" style="color: #2980B9">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../file-system/" style="color: #2980B9">Next &raquo;</a></span>
       
     </span>
 </div>
