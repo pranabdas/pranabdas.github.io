@@ -147,11 +147,16 @@
 <p><img alt="ARPES spectra" src="../img/res-band.png" /> </p>
 <p>We extract the Energy Distribution Curve (EDC) by integrating <span><span class="MathJax_Preview">\pm0.25~Å^{-1}</span><script type="math/tex">\pm0.25~Å^{-1}</script></span> range. </p>
 <p><img alt="ARPES spectra" src="../img/res-edc.png" /> </p>
-<p>The measurement was done at liquid nitrogen temperature; the sample reaches about <span><span class="MathJax_Preview">90~K</span><script type="math/tex">90~K</script></span>. At <span><span class="MathJax_Preview">90~K</span><script type="math/tex">90~K</script></span>, the Fermi-Dirac distribution looks like this: </p>
+<p>Thermal broadening is given by Fermi Dirac distribution: </p>
+<div>
+<div class="MathJax_Preview"> F(\epsilon) = \frac{1}{e^{(\epsilon - \mu)/k_B T} + 1} </div>
+<script type="math/tex; mode=display"> F(\epsilon) = \frac{1}{e^{(\epsilon - \mu)/k_B T} + 1} </script>
+</div>
+<p>Above measurement was carried out at liquid nitrogen temperature; the sample temperature reaches about <span><span class="MathJax_Preview">90~K</span><script type="math/tex">90~K</script></span>, at which the Fermi-Dirac distribution looks like this: </p>
 <p><img alt="Fermi Dirac distribution" src="../img/res-fermi-func.png" /> </p>
 <p>Now, we can convolute a Gaussian broadening of <span><span class="MathJax_Preview">10~meV</span><script type="math/tex">10~meV</script></span>, which fits our experimental data well. </p>
 <p><img alt="Fermi Dirac distribution" src="../img/res-fit.png" /> </p>
-<p>There is some room for adjusting the fitting parameters, but the slope is certainly better than <span><span class="MathJax_Preview">15~meV</span><script type="math/tex">15~meV</script></span> for our current data. Therefore, we have about <span><span class="MathJax_Preview">8~meV</span><script type="math/tex">8~meV</script></span> thermal broadening and <span><span class="MathJax_Preview">10~meV</span><script type="math/tex">10~meV</script></span> instrumental (combines sample quality, analyzer resolution, and light source broadening), i.e., we can expect better than <span><span class="MathJax_Preview">15~meV</span><script type="math/tex">15~meV</script></span> <span><span class="MathJax_Preview">(\sigma_{total} \le \sqrt{\sigma_x^2 + \sigma_y^2})</span><script type="math/tex">(\sigma_{total} \le \sqrt{\sigma_x^2 + \sigma_y^2})</script></span> resolution. </p>
+<p>There is some room for adjusting the fitting parameters, but the slope is certainly better than <span><span class="MathJax_Preview">15~meV</span><script type="math/tex">15~meV</script></span> for our current data. Therefore, we have about <span><span class="MathJax_Preview">8~meV</span><script type="math/tex">8~meV</script></span> thermal broadening at <span><span class="MathJax_Preview">90~K</span><script type="math/tex">90~K</script></span> and <span><span class="MathJax_Preview">10~meV</span><script type="math/tex">10~meV</script></span> instrumental (combines analyzer resolution, light source broadening etc.), i.e., we can expect better than <span><span class="MathJax_Preview">15~meV</span><script type="math/tex">15~meV</script></span> <span><span class="MathJax_Preview">(\sigma_{total} \le \sqrt{\sigma_x^2 + \sigma_y^2})</span><script type="math/tex">(\sigma_{total} \le \sqrt{\sigma_x^2 + \sigma_y^2})</script></span> resolution. </p>
               
             </div>
           </div>

@@ -8,7 +8,7 @@
   
   <meta name="author" content="Pranab Das">
   <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>Standard input-output - Learning Javascript</title>
+  <title>Understanding callbacks - Learning Javascript</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
@@ -17,8 +17,8 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Standard input-output";
-    var mkdocs_page_input_path = "node/std-input-output.md";
+    var mkdocs_page_name = "Understanding callbacks";
+    var mkdocs_page_input_path = "node/callbacks.md";
     var mkdocs_page_url = null;
   </script>
   
@@ -139,23 +139,9 @@
                     
     <a class="" href="../introduction/">Introduction</a>
                 </li>
-                <li class=" current">
+                <li class="">
                     
-    <a class="current" href="./">Standard input-output</a>
-    <ul class="subnav">
-            
-    <li class="toctree-l3"><a href="#standard-input-and-output">Standard input and output</a></li>
-    
-        <ul>
-        
-            <li><a class="toctree-l4" href="#example">Example</a></li>
-        
-            <li><a class="toctree-l4" href="#timer">Timer</a></li>
-        
-        </ul>
-    
-
-    </ul>
+    <a class="" href="../std-input-output/">Standard input-output</a>
                 </li>
                 <li class="">
                     
@@ -165,9 +151,15 @@
                     
     <a class="" href="../file-system/">File system</a>
                 </li>
-                <li class="">
+                <li class=" current">
                     
-    <a class="" href="../callbacks/">Understanding callbacks</a>
+    <a class="current" href="./">Understanding callbacks</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#understanding-callbacks">Understanding callbacks</a></li>
+    
+
+    </ul>
                 </li>
                 <li class="">
                     
@@ -213,7 +205,7 @@
         
       
     
-    <li>Standard input-output</li>
+    <li>Understanding callbacks</li>
     <li class="wy-breadcrumbs-aside">
         <a href="https://pranabdas.github.io">Homepage</a>
     </li>
@@ -223,69 +215,18 @@
           <div role="main">
             <div class="section">
               
-                <h3 id="standard-input-and-output">Standard input and output</h3>
-<p>We can use <code>process</code> to print something on the terminal, like <code>console.log</code>. </p>
-<pre><code class="js">process.stdout.write(&quot;Hello &quot;); 
-process.stdout.write(&quot;Node.js !\n&quot;); 
+                <h3 id="understanding-callbacks">Understanding callbacks</h3>
+<p>As we have seen we are using many asynchronous functions. These functions can execute simultaneously alongside the main function. The main function does not wait for the asynchronous function to finish. In other words, async function does not block the main block execution. </p>
+<p>In case of async function, we can pass another function as second argument. This is the callback function. Once the async function has finished, it can invoke our callback function. We can define what to do once the async task has finished inside this callback function. </p>
+<p>For example async <code>setTimeout()</code> function takes two arguments: <code>setTimeout(callback, delay)</code> </p>
+<pre><code class="js">let delay = 5000; 
+console.log(`Waiting for ${delay/1000} sec.`); 
 
-Hello Node.js !
-</code></pre>
+setTimeout(() =&gt; {
+    console.log(&quot;The waiting is over!&quot;);
+}, delay); 
 
-<h5 id="example">Example</h5>
-<pre><code class="js">const questions = [
-    &quot;What is your name?&quot;,
-    &quot;How old are you?&quot;,
-    &quot;What is your mother tongue?&quot;
-]
-
-const ask = (index = 0) =&gt; {
-    process.stdout.write(`${questions[index]} \n-:&gt;`);
-}
-
-ask(); 
-
-const ans = [];
-
-process.stdin.on(&quot;data&quot;, data =&gt; {
-    ans.push(data.toString().trim());
-
-    if (ans.length &lt; questions.length) {
-        ask(ans.length);
-    } else {
-        process.exit();
-    }
-});
-
-process.on('exit', () =&gt; {
-    const [name, age, lang] = ans; 
-    console.log(`Hey ${name}, so you are ${age} years old and you can speak ${lang}.`)
-}); 
-</code></pre>
-
-<h5 id="timer">Timer</h5>
-<pre><code class="js">const waitTime = 5000; // time is in millisecond 
-const waitInterval = 500; 
-let currentTime = 0; 
-
-const incTime = () =&gt; {
-    currentTime += waitInterval; 
-    const pc = Math.floor(currentTime/waitTime*100); 
-    process.stdout.clearLine(); 
-    process.stdout.cursorTo(0); 
-    process.stdout.write(`Waiting... ${pc}%`); 
-}; 
-
-console.log(`Setting a waiting time of ${waitTime/1000} seconds.`); 
-
-const timerFinished = () =&gt; {
-    clearInterval(interval); 
-    process.stdout.clearLine(); 
-    process.stdout.cursorTo(0); 
-    console.log(&quot;Done.&quot;); 
-}; 
-
-const interval = setInterval(incTime, waitInterval); 
-setTimeout(timerFinished, waitTime); 
+console.log(&quot;This is in the main program.&quot;); 
 </code></pre>
               
             </div>
@@ -294,10 +235,10 @@ setTimeout(timerFinished, waitTime);
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../core-modules/" class="btn btn-neutral float-right" title="Core modules">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../module.exports/" class="btn btn-neutral float-right" title="module.exports">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../introduction/" class="btn btn-neutral" title="Introduction"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../file-system/" class="btn btn-neutral" title="File system"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -324,10 +265,10 @@ setTimeout(timerFinished, waitTime);
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../introduction/" style="color: #2980B9;">&laquo; Previous</a></span>
+        <span><a href="../file-system/" style="color: #2980B9;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../core-modules/" style="color: #2980B9">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../module.exports/" style="color: #2980B9">Next &raquo;</a></span>
       
     </span>
 </div>
