@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+    <!--<![endif]-->
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+         
+        <meta name="author" content="Pranab Das" />
+         
+        <link rel="shortcut icon" href="../img/favicon.ico" />
+        
+        <title>
+            Commandline basics
+            - Linux tutorial
+        </title>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+        <link
+            rel="stylesheet"
+            href="../css/theme.css"
+            type="text/css"
+        />
+        <link
+            rel="stylesheet"
+            href="../css/theme_extra.css"
+            type="text/css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.1/styles/github.min.css"
+        /> 
+        <script>
+            // Current page data
+            var mkdocs_page_name = "Commandline basics";
+            var mkdocs_page_input_path = "commands.md";
+            var mkdocs_page_url = null;
+        </script>
+        
+        <script src="../js/jquery-2.1.1.min.js" defer></script>
+        <script src="../js/modernizr-2.8.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.1/highlight.min.js"></script>
+        <script>
+            hljs.initHighlightingOnLoad();
+        </script> 
+    </head>
+
+    <body class="wy-body-for-nav" role="document">
+        <div class="wy-grid-for-nav">
+            
+            <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+                <div class="wy-side-nav-search">
+                    <a href=".." class="icon icon-home">
+                        Linux tutorial</a
+                    > <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+                </div>
+
+                <div
+                    class="wy-menu wy-menu-vertical"
+                    data-spy="affix"
+                    role="navigation"
+                    aria-label="main navigation"
+                >
+                    <ul class="current">
+                         
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <a class="" href="..">Table of Contents</a>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <a class="" href="../setup/">Linux setup</a>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1 current"
+                        >
+                            
+    <a class="current" href="./">Commandline basics</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#basic-linuxunix-commands">Basic Linux/UNIX commands</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#encryptdecrypt-using-openssl">Encrypt/decrypt using Openssl</a></li>
+        
+            <li><a class="toctree-l3" href="#file-permissions">File permissions</a></li>
+        
+            <li><a class="toctree-l3" href="#backup-files-using-rsync">Backup files using rsync</a></li>
+        
+            <li><a class="toctree-l3" href="#system-process">System process:</a></li>
+        
+            <li><a class="toctree-l3" href="#using-tmux">Using tmux</a></li>
+        
+            <li><a class="toctree-l3" href="#keyboard-shortcuts">Keyboard shortcuts</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <a class="" href="../filesystem/">Linux filesystem</a>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <a class="" href="../vi/">VIM editor</a>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <a class="" href="../git/">Git</a>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <a class="" href="../network-setup/">Network setup</a>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <a class="" href="../shell-scripting/">Shell scripting</a>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <a class="" href="../network-security/">Network security</a>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <a class="" href="../firewall/">Linux Firewall</a>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <a class="" href="../apache/">Apache webserver</a>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <a class="" href="../pgp/">PGP Encryption</a>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <a class="" href="../docker/">Docker</a>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <a class="" href="../nextcloud/">NextCloud</a>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <a class="" href="../selinux/">SELinux</a>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <a class="" href="../hpc/">HPC</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+                &nbsp;
+            </nav>
+
+            <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+                
+                <nav
+                    class="wy-nav-top"
+                    role="navigation"
+                    aria-label="top navigation"
+                >
+                    <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+                    <a href=".."
+                        >Linux tutorial</a
+                    >
+                </nav>
+
+                
+                <div class="wy-nav-content">
+                    <div class="rst-content">
+                        <div role="navigation" aria-label="breadcrumbs navigation">
+    <ul class="wy-breadcrumbs">
+        <li><a href="https://pranabdas.github.io/">Home</a>&raquo;</li>
+        <li><a href="https://pranabdas.github.io/docs/">Docs</a>&raquo;</li>
+        <li>
+            <a href="..">Linux tutorial</a>
+            &raquo;
+        </li>
+           
+        <li>Commandline basics</li>
+        
+    </ul>
+    <hr />
+</div>
+                        <div role="main">
+                            <div class="section">
+                                 <h3 id="basic-linuxunix-commands">Basic Linux/UNIX commands</h3>
+<ul>
+<li>Print working directory:</li>
+</ul>
+<pre><code>pwd
+</code></pre>
+
+<ul>
+<li>List current directory:</li>
+</ul>
+<pre><code>ls
+</code></pre>
+
+<ul>
+<li>List a directory with details and hidden files:</li>
+</ul>
+<pre><code>ls -la
+</code></pre>
+
+<ul>
+<li>You can list not only current directory but another directory:</li>
+</ul>
+<pre><code>ls sub_directory
+</code></pre>
+
+<ul>
+<li>Your current directory is represented by <code>.</code></li>
+</ul>
+<pre><code>ls .
+</code></pre>
+
+<ul>
+<li>Parent directory is represented by <code>..</code></li>
+</ul>
+<pre><code>cd ..
+</code></pre>
+
+<p>There is a nice utility <strong>tree</strong> which displays the tree structure of a directory:</p>
+<pre><code>tree 
+tree -aCd -L 2 /
+</code></pre>
+
+<ul>
+<li>Create new directory:</li>
+</ul>
+<pre><code>mkdir new_dir
+</code></pre>
+
+<ul>
+<li>Change directory:</li>
+</ul>
+<pre><code>cd dir_name
+</code></pre>
+
+<ul>
+<li>Previous working directory:</li>
+</ul>
+<pre><code>cd -
+</code></pre>
+
+<ul>
+<li>Copy <code>file_original</code> to <code>file_final</code>:</li>
+</ul>
+<pre><code>cp file_original file_final
+</code></pre>
+
+<ul>
+<li>Move file:</li>
+</ul>
+<pre><code>mv file_source file_destination
+</code></pre>
+
+<ul>
+<li>Copy a directory along with the contents inside recursively:</li>
+</ul>
+<pre><code>cp -r source_path destination_path
+</code></pre>
+
+<ul>
+<li>Sometimes we need to copy files along with permissions, timestamps, and other attributes, use the <code>-p</code> flag:</li>
+</ul>
+<pre><code>cp -rp source_path destination_path
+</code></pre>
+
+<ul>
+<li>Move directory:</li>
+</ul>
+<pre><code>mv dir_source dir_destination
+</code></pre>
+
+<ul>
+<li>Disk usage, find folder size: </li>
+</ul>
+<pre><code>du -hs 
+du -hs path/
+</code></pre>
+
+<ul>
+<li>Display string/variable:</li>
+</ul>
+<pre><code>echo string
+echo $varialble
+echo string &gt; file
+echo string &gt;&gt; existing-file
+</code></pre>
+
+<ul>
+<li>Print (concatenate the contents to the standard output) the contents of a file: </li>
+</ul>
+<pre><code>cat file.txt 
+</code></pre>
+
+<ul>
+<li>Print only the head (default first 5 lines) of a file: </li>
+</ul>
+<pre><code>head file.txt 
+</code></pre>
+
+<ul>
+<li>You can print particular number of lines: </li>
+</ul>
+<pre><code>head -3 file.txt 
+</code></pre>
+
+<ul>
+<li>Print as much as fits in the shell window: </li>
+</ul>
+<pre><code>more file.txt 
+</code></pre>
+
+<ul>
+<li>See the end of a file: </li>
+</ul>
+<pre><code>tail file.txt 
+tail -10 file.txt 
+</code></pre>
+
+<ul>
+<li>Print the contents to a file: </li>
+</ul>
+<pre><code>cat file.txt &gt; file-copy.txt 
+</code></pre>
+
+<ul>
+<li>This seems same as copy. But you can use this to combine multiple files: </li>
+</ul>
+<pre><code>cat file.txt, file2.txt &gt; file-copy.txt 
+</code></pre>
+
+<ul>
+<li>Instead of overwriting file, you can append: </li>
+</ul>
+<pre><code>cat file3.txt &gt;&gt; file-copy.txt 
+</code></pre>
+
+<ul>
+<li>You can use <em>paste</em> to combine files as well:</li>
+</ul>
+<pre><code>paste file* &gt; file-all.txt 
+</code></pre>
+
+<ul>
+<li>Look for lines containing certain word. This will list the lines that contain the word <em>file</em> in the <em>cat</em> manual: </li>
+</ul>
+<pre><code>man cat | grep file 
+</code></pre>
+
+<ul>
+<li>Working with large files:</li>
+</ul>
+<pre><code>less file.txt
+man top | less
+cat file.txt | less
+</code></pre>
+
+<ul>
+<li>Create symbolic links:</li>
+</ul>
+<pre><code>ln -s /path/to/file.txt /path/to/link.txt
+</code></pre>
+
+<ul>
+<li>Bash expansion: If you need to create/copy/move/delete a series of files:</li>
+</ul>
+<pre><code>touch file_{01..05}.txt
+</code></pre>
+
+<p>It will create file_01.txt, file_02.txt and so on. </p>
+<ul>
+<li>Previous command: </li>
+</ul>
+<pre><code>apt update
+sudo !!
+</code></pre>
+
+<ul>
+<li>Check IP address: </li>
+</ul>
+<pre><code>ip addr
+</code></pre>
+
+<ul>
+<li>Connecting to a ssh server: </li>
+</ul>
+<pre><code>ssh &lt;username&gt;@&lt;xxx.xx.xx.xxx&gt; -p &lt;yyyy&gt;
+</code></pre>
+
+<p>where xxx.xx.xx.xxx is the IP address and yyyy is the port. </p>
+<ul>
+<li>
+<p>You can disconnect from the remote ssh by pressing [control] + [d] or typing <code>exit</code> on the terminal. </p>
+</li>
+<li>
+<p>Running ssh server on Windows Subsystem for Linux. Open the following file: </p>
+</li>
+</ul>
+<pre><code>sudo vi /etc/ssh/sshd_config
+</code></pre>
+
+<ul>
+<li>Change the port to anything above 1000 (default 22 might conflict with host Windows system). </li>
+<li>Change <code>PasswordAuthentication yes</code> </li>
+<li>
+<p>Add <code>AllowUsers &lt;your username&gt;</code> </p>
+</li>
+<li>
+<p>Save and exit. Following commands should be self explanatory: </p>
+</li>
+</ul>
+<pre><code>service ssh status 
+sudo service ssh start 
+sudo service ssh stop 
+sudo service ssh --full-restart 
+</code></pre>
+
+<ul>
+<li>Port forwarding. Let's say you are working on a python jupyter notebook on the remote server via ssh and you want to see the notebook in your local browser. You can forward the specific port to your local machine: </li>
+</ul>
+<pre><code>ssh -L 8888:127.0.0.1:8888 pranab@xxx.xx.x.xxx -p yyyy -i ~/.ssh/id_rsa 
+</code></pre>
+
+<p>Now you can see the notebook in your client machine. </p>
+<ul>
+<li>Adding SSH key-pair to connect to a server. Generate the key-pair in your client computer:</li>
+</ul>
+<pre><code>ssh-keygen
+</code></pre>
+
+<p>You may leave everything default and press enter. It will generate public and private key pair inside <code>~/.ssh</code> directory. Now we need to copy the public key to the host machine. Connect to remote host using password. Create a <code>.ssh</code> directory in the remote home directory. You can print the public key in your terminal <code>cat id_rsa.pub</code> and copy it to clipboard.</p>
+<pre><code>ssh &lt;username&gt;@&lt;xxx.xx.xx.xxx&gt; -p &lt;yyyy&gt;
+mkdir .ssh
+vi .ssh/authorized_keys
+</code></pre>
+
+<p>Paste the public key, save and exit. Then open <code>/etc/ssh/sshd_config</code> with <code>sudo vi</code> and uncomment the line <code>PubkeyAuthentication yes</code>. You may choose to set <code>PasswordAuthentication no</code> if you want. Set the following permissions: </p>
+<pre><code>sudo chmod 700 .ssh
+sudo chmod 600 .ssh/authorized_keys
+</code></pre>
+
+<p>Restart the ssh service on remote host</p>
+<pre><code>sudo service ssh restart 
+</code></pre>
+
+<p>Now you can connect from your remote computer using:</p>
+<pre><code>ssh pranab@172.16.1.183 -p 2127 -i ~/.ssh/id_rsa
+</code></pre>
+
+<ul>
+<li>Copying files via scp from remote to local or remote to local: </li>
+</ul>
+<pre><code>scp remote_username@10.10.0.2:/remote/file.txt /local/directory
+scp file.txt remote_username@10.10.0.2:/remote/directory
+</code></pre>
+
+<p>You can use <code>scp</code> to transfer files as well using ssh-keys:</p>
+<pre><code>scp -i ~/.ssh/id_rsa remote_username@10.10.0.2:/remote/file.txt /local/directory
+scp -P yyyy -i ~/.ssh/id_rsa file.txt remote_username@10.10.0.2:remote/directory
+</code></pre>
+
+<p>We can secure copy a directory using <code>-r</code> flag:</p>
+<pre><code>scp -i &quot;ssh_key.pem&quot; -r ~/Documents/mydir user@domain.com:Downloads/mydir 
+</code></pre>
+
+<ul>
+<li>Untar files: </li>
+</ul>
+<pre><code>tar -zxvf file.tar.gz
+</code></pre>
+
+<p>If you have got a zip file to unzip. You need to install <em>unzip</em>.</p>
+<pre><code>sudo apt install unzip 
+sudo dnf install unzip
+</code></pre>
+
+<p>Then: </p>
+<pre><code>unzip filename.zip
+</code></pre>
+
+<ul>
+<li>Make a script file executable: </li>
+<li>Create a file filename.sh </li>
+<li>Write down your script </li>
+<li>Make the file executable: <code>chmod +x filename.sh</code> </li>
+<li>
+<p>Run the script: <code>./filename.sh</code></p>
+</li>
+<li>
+<p>Verify the checksum </p>
+</li>
+</ul>
+<pre><code>md5 path/file.iso 
+shasum -a 256 path/file.iso 
+shasum -a 512 path/file.iso
+</code></pre>
+
+<h4 id="encryptdecrypt-using-openssl">Encrypt/decrypt using Openssl</h4>
+<pre><code>openssl aes-256-cbc -a -salt -pbkdf2 -in message.txt -out message.txt.enc
+openssl aes-256-cbc -d -a -salt -pbkdf2 -in message.txt.enc -out message-copy.txt
+</code></pre>
+
+<p>There are various options available in openssl. In the above, we have used AES-256 (Advanced Encryption Standard with 256 bit key length) symmetric encryption in CBC (Cipher Blocker Chaining) mode, used salt hashing, pbkdf2 (Password-Based Key Derivation Function 2) key stretching, and armor output (<code>-a</code>). Check openssl documentation for more details. </p>
+<h4 id="file-permissions">File permissions</h4>
+<p>When we list a file using <code>ls -la</code> or similar, we see permissions strings. What does they mean? 
+r =&gt; read
+w =&gt; write 
+x =&gt; execute </p>
+<p>and they are listed for user, group, and others. We can set the file permissions by using numeric conventions. r = 4, w = 2, and x = 1. Say we want to set rwx for user, rx for group and only x for others, we can set that by:</p>
+<pre><code>chmod 751 file.sh
+</code></pre>
+
+<p>Similarly, in symbolic notation, we can assign or add or remove permissions:</p>
+<pre><code>chmod u=rwx, g=rx, o= file.sh
+chmod u+x file.sh
+chmod g-x file.sh
+</code></pre>
+
+<p>We can change file permissions recursively as well:</p>
+<pre><code>chmod -R ugo-x /home/pranab
+chmod -R a-x /home/pranab
+</code></pre>
+
+<h4 id="backup-files-using-rsync">Backup files using <code>rsync</code></h4>
+<p>It can be used to mirror/copy files and folders in a local machine as well as to/from remote machines. It is a very powerful tool with lots of options and customizations. Here are few common ones: </p>
+<ul>
+<li>Copy/Sync files locally:</li>
+</ul>
+<pre><code>rsync -avh backup.tar /tmp/backups/
+</code></pre>
+
+<ul>
+<li>Copy folders locally:</li>
+</ul>
+<pre><code>rsync -avzh /root/rpmpkgs /tmp/backups/
+</code></pre>
+
+<ul>
+<li>Copy files over ssh:</li>
+</ul>
+<pre><code>rsync -avzhe &quot;ssh -i ~/.ssh/id_rsa -p yyyy&quot; pranab@xxx.xx.x.xxx:file.txt ~/Desktop/
+rsync -avzhe &quot;ssh -i ~/.ssh/id_rsa -p yyyy&quot; ~/Desktop/file.txt pranab@xxx.xx.x.xxx:docs
+</code></pre>
+
+<ul>
+<li>By default rsync won't remove deleted files from the destination. If you want to delete:</li>
+</ul>
+<pre><code>rsync -avzh --delete /home/file.txt /usr/desktop/
+</code></pre>
+
+<ul>
+<li>Commonly used flags: </li>
+</ul>
+<p>-v : verbose<br />
+-r : copies data recursively (but don’t preserve timestamps and permission while transferring data<br />
+-a : archive mode, archive mode allows copying files recursively and it also preserves symbolic links, file permissions, user &amp; group ownerships and timestamps<br />
+-z : compress file data<br />
+-h : human-readable<br />
+-e : protocol option.  </p>
+<p>If you are looking for more advanced and secure backup options, check out <a href="https://borgbackup.readthedocs.io/en/stable/" target="_blank">https://borgbackup.readthedocs.io/en/stable/</a></p>
+<h4 id="system-process">System process:</h4>
+<p>See processes in the current shell</p>
+<pre><code>ps
+</code></pre>
+
+<p>Show all processes:</p>
+<pre><code>ps -ef
+</code></pre>
+
+<p>Show all processes of all users</p>
+<pre><code>ps -aux
+ps -aux | head -10
+</code></pre>
+
+<p>You can exit by typing <code>q</code>. You can press <code>k</code> and provide PID to kill a process.</p>
+<p>You can kill a process by:</p>
+<pre><code>kill -SIGKILL &lt;pid&gt;
+</code></pre>
+
+<p>On the command line, you can terminate a command by <code>CTRL+C</code> or suspend by <code>CTRL+Z</code>. </p>
+<p>View process tree:</p>
+<pre><code>ps tree
+</code></pre>
+
+<p>Check load balance:</p>
+<pre><code>top
+</code></pre>
+
+<h4 id="using-tmux">Using tmux</h4>
+<p>tmux has many use case scenarios, one them is running something on a remote machine without interruption. Say you are working on a remote machine over ssh, and you need to update your remote machine. The updating process can be catastrophic if it is interrupted, it can leave your system on a broken state. Therefore it is a good idea to run the process using tmux so that even if you are disconnected from the ssh session, the process can continue. </p>
+<p>Installing tmux: </p>
+<pre><code>sudo apt install tmux
+</code></pre>
+
+<p>Launch a tmux window:</p>
+<pre><code>tmux
+</code></pre>
+
+<p>Run a process/command there. Now we can detach from tmux using keyboard shortcut: first send the tmux bind-key <code>[control] + [b]</code> followed by <code>[d]</code>. Now we get back our main terminal. We can create multiple tmux sessions. We can list tmux sessions by: </p>
+<pre><code>tmux ls
+</code></pre>
+
+<p>We can attach particular session:</p>
+<pre><code>tmux attach -c 2
+</code></pre>
+
+<p>Or attach the last working session or if there is only one session:</p>
+<pre><code>tmux attach
+</code></pre>
+
+<p>When we are in one of tmux window, we can use <code>[control] + [b]</code> followed by <code>[w]</code> for tmux window list. </p>
+<p>We can exit the tmux session by typing <code>exit</code> on the tmux window. Or when we are in main terminal: </p>
+<pre><code>tmux kill-session -t 0
+</code></pre>
+
+<h4 id="keyboard-shortcuts">Keyboard shortcuts</h4>
+<p>These are tested on macOS: </p>
+<ul>
+<li>CTRL-A: Move to the beginning of a line </li>
+<li>CTRL-E: Move to the end of a line </li>
+<li>ALT-LEFT: Move left one word </li>
+<li>ALT-RIGHT: Move right one word </li>
+<li>CTRL-K: kill/delete/cut from the cursor to the end </li>
+<li>Ctrl-X + Backspace: removes all the text from the cursor to the beginning </li>
+<li>CTRL-L: Clear screen </li>
+<li>CTRL-C: Terminate the foreground process </li>
+<li>CTRL-Z: Suspend the foreground process </li>
+<li>CTRL-D: Exit shell. </li>
+</ul> 
+                            </div>
+                        </div> <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../filesystem/" class="btn btn-neutral float-right" title="Linux filesystem">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../setup/" class="btn btn-neutral" title="Linux setup"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    <p>&copy; Copyright 2020 Pranab Das. All rights reserved.</p>
+  </div>
+
+</footer> 
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../setup/" style="color: #2980B9;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../filesystem/" style="color: #2980B9">Next &raquo;</a></span>
+      
+    </span>
+</div>
+        <script>
+            var base_url = "..";
+        </script>
+        <script src="../js/theme.js" defer></script>
+        <script src="../search/main.js" defer></script>
+    </body>
+</html>

@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+    <!--<![endif]-->
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+         
+        <meta name="author" content="Pranab Das" />
+         
+        <link rel="shortcut icon" href="../img/favicon.ico" />
+        
+        <title>
+            k-resolved DOS
+            - Quantum Espresso
+        </title>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+        <link
+            rel="stylesheet"
+            href="../css/theme.css"
+            type="text/css"
+        />
+        <link
+            rel="stylesheet"
+            href="../css/theme_extra.css"
+            type="text/css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.1/styles/github.min.css"
+        /> 
+        <script>
+            // Current page data
+            var mkdocs_page_name = "k-resolved DOS";
+            var mkdocs_page_input_path = "kpdos.md";
+            var mkdocs_page_url = null;
+        </script>
+        
+        <script src="../js/jquery-2.1.1.min.js" defer></script>
+        <script src="../js/modernizr-2.8.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.1/highlight.min.js"></script>
+        <script>
+            hljs.initHighlightingOnLoad();
+        </script> 
+    </head>
+
+    <body class="wy-body-for-nav" role="document">
+        <div class="wy-grid-for-nav">
+            
+            <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+                <div class="wy-side-nav-search">
+                    <a href=".." class="icon icon-home">
+                        Quantum Espresso</a
+                    > <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+                </div>
+
+                <div
+                    class="wy-menu wy-menu-vertical"
+                    data-spy="affix"
+                    role="navigation"
+                    aria-label="main navigation"
+                >
+                    <ul class="current">
+                         
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <a class="" href="..">Table of Contents</a>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <a class="" href="../dft/">DFT Introduction</a>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <a class="" href="../install/">QE Installation</a>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <a class="" href="../crystal-structure/">Crystal Structure</a>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <a class="" href="../pseudo/">Pseudo potentials</a>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <span class="caption-text">SCF (Silicon)</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../scf/scf/">Self Consistent Field</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../scf/ecutoff/">Convergence against cutoff energy</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../scf/kpoints/">Convergence against k-points</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../scf/alat/">Convergence against lattice constant</a>
+                </li>
+    </ul>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <a class="" href="../relax/">Cell relaxation</a>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <a class="" href="../dos/">DOS calculation</a>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <a class="" href="../band/">Band calculation</a>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <a class="" href="../al/al/">Metal system (Al)</a>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <a class="" href="../al/pdos/">Projected Density of States</a>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1 current"
+                        >
+                            
+    <a class="current" href="./">k-resolved DOS</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#k-resolved-pdos">k-resolved pDOS</a></li>
+    
+
+    </ul>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <a class="" href="../pdos-bands/">Orbital weights in bandstructure</a>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <a class="" href="../GaAs/GaAs/">Bandstructure of GaAs</a>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <a class="" href="../dft-u/">DFT+U calculation</a>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <a class="" href="../soc/">Spin-orbit coupling</a>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <a class="" href="../misc/">Miscellaneous</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+                &nbsp;
+            </nav>
+
+            <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+                
+                <nav
+                    class="wy-nav-top"
+                    role="navigation"
+                    aria-label="top navigation"
+                >
+                    <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+                    <a href=".."
+                        >Quantum Espresso</a
+                    >
+                </nav>
+
+                
+                <div class="wy-nav-content">
+                    <div class="rst-content">
+                        <div role="navigation" aria-label="breadcrumbs navigation">
+    <ul class="wy-breadcrumbs">
+        <li><a href="https://pranabdas.github.io/">Home</a>&raquo;</li>
+        <li><a href="https://pranabdas.github.io/docs/">Docs</a>&raquo;</li>
+        <li>
+            <a href="..">Quantum Espresso</a>
+            &raquo;
+        </li>
+           
+        <li>k-resolved DOS</li>
+        
+    </ul>
+    <hr />
+</div>
+                        <div role="main">
+                            <div class="section">
+                                 <h3 id="k-resolved-pdos">k-resolved pDOS</h3>
+<p>Here we will calculate k-resolved density of states. First we begin with self consistent field calculation. Here is the input:</p>
+<pre><code>&amp;CONTROL
+  calculation = 'scf'
+  prefix = 'silicon'
+  outdir = './tmp/' 
+  pseudo_dir = '../pseudo/'
+  verbosity = 'high'
+/
+
+&amp;SYSTEM
+  ibrav =  2
+  celldm(1) = 10.26
+  nat =  2,
+  ntyp = 1,
+  ecutwfc = 50
+  nbnd = 8
+/
+
+&amp;ELECTRONS
+  mixing_beta = 0.5
+/
+
+ATOMIC_SPECIES
+  Si 28.086 Si.pz-vbc.UPF
+
+ATOMIC_POSITIONS (alat)
+  Si 0.0 0.0 0.0
+  Si 0.25 0.25 0.25
+
+K_POINTS (automatic)
+  8 8 8 0 0 0 
+</code></pre>
+
+<p>We run the pw.x calculation:</p>
+<pre><code>$ pw.x -inp si-scf.in &gt; si-scf.out 
+</code></pre>
+
+<p>Next we perform the band calculation. Input as follows: </p>
+<pre><code>&amp;CONTROL
+  calculation = 'bands'
+  prefix = 'silicon'
+  outdir = './tmp/' 
+  pseudo_dir = '../pseudo/'
+  verbosity = 'high'
+/
+
+&amp;SYSTEM
+  ibrav =  2
+  celldm(1) = 10.26
+  nat =  2,
+  ntyp = 1,
+  ecutwfc = 50
+  nbnd = 8
+/
+
+&amp;ELECTRONS
+  mixing_beta = 0.5
+/
+
+ATOMIC_SPECIES
+  Si 28.086 Si.pz-vbc.UPF
+
+ATOMIC_POSITIONS (alat)
+  Si 0.0 0.0 0.0
+  Si 0.25 0.25 0.25
+
+K_POINTS {crystal_b}
+5
+  0.0000 0.5000 0.0000 20  !L
+  0.0000 0.0000 0.0000 30  !G
+  -0.500 0.0000 -0.500 10  !X
+  -0.375 0.2500 -0.375 30  !U
+  0.0000 0.0000 0.0000 20  !G
+</code></pre>
+
+<pre><code>$ pw.x -inp si-bands.in &gt; si-bands.out 
+</code></pre>
+
+<p>Calculate the orbital projections with k-resolved information:</p>
+<pre><code>&amp;projwfc
+    outdir       = './tmp/'
+    prefix       = 'silicon'
+    ngauss       = 0
+    degauss      = 0.036748
+    DeltaE       = 0.005
+    kresolveddos = .true.
+    filpdos      = 'silicon.k'
+/
+</code></pre>
+
+<pre><code>$ projwjc.x inp si-projwfc.in &gt; si-projwfc.out
+</code></pre>
+
+<p>This will give separate orbital projections, as well as total sum for k-resolved DOS. We can sum desired projections using <code>sumpdos.x</code> as well. For example: </p>
+<pre><code>sumpdos.x *\(Cl\)*\(p\) &gt; Cl_2p_tot.dat
+</code></pre>
+
+<p><img alt="kpdos.png" src="../img/kpdos.png" style="width:600px" /> </p>
+<p><strong>Note:</strong> If you are using <code>ibrav=0</code>, you can calculate <code>projwfc</code> with <code>lsym=.false.</code> option. </p> 
+                            </div>
+                        </div> <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../pdos-bands/" class="btn btn-neutral float-right" title="Orbital weights in bandstructure">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../al/pdos/" class="btn btn-neutral" title="Projected Density of States"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    <p>&copy; Copyright 2020 Pranab Das. All rights reserved.</p>
+  </div>
+
+</footer> 
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../al/pdos/" style="color: #2980B9;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../pdos-bands/" style="color: #2980B9">Next &raquo;</a></span>
+      
+    </span>
+</div>
+        <script>
+            var base_url = "..";
+        </script>
+        <script src="../js/theme.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+        <script src="../search/main.js" defer></script>
+    </body>
+</html>

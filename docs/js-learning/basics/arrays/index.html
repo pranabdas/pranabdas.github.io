@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+    <!--<![endif]-->
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+         
+        <meta name="author" content="Pranab Das" />
+         
+        <link rel="shortcut icon" href="../../img/favicon.ico" />
+        
+        <title>
+            Arrays
+            - Learning Javascript
+        </title>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+        <link
+            rel="stylesheet"
+            href="../../css/theme.css"
+            type="text/css"
+        />
+        <link
+            rel="stylesheet"
+            href="../../css/theme_extra.css"
+            type="text/css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.1/styles/github.min.css"
+        /> 
+        <script>
+            // Current page data
+            var mkdocs_page_name = "Arrays";
+            var mkdocs_page_input_path = "basics/arrays.md";
+            var mkdocs_page_url = null;
+        </script>
+        
+        <script src="../../js/jquery-2.1.1.min.js" defer></script>
+        <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.1/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.1/languages/javascript.min.js"></script>
+        <script>
+            hljs.initHighlightingOnLoad();
+        </script> 
+    </head>
+
+    <body class="wy-body-for-nav" role="document">
+        <div class="wy-grid-for-nav">
+            
+            <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+                <div class="wy-side-nav-search">
+                    <a href="../.." class="icon icon-home">
+                        Learning Javascript</a
+                    > <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+                </div>
+
+                <div
+                    class="wy-menu wy-menu-vertical"
+                    data-spy="affix"
+                    role="navigation"
+                    aria-label="main navigation"
+                >
+                    <ul class="current">
+                         
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <a class="" href="../..">Table of Contents</a>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <span class="caption-text">The Basics</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../setup/">Setup</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../console/">Console and external script</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../working-with-data/">Working with data</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../conditional-statement/">Conditional statement</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">Arrays</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#arrays">Arrays</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#properties-and-methods-of-array-object">Properties and methods of array (object)</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+    </ul>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <span class="caption-text">Functions and Objects</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../functions-objects/functions/">Functions</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../functions-objects/variable-scope/">Variable scope</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../functions-objects/objects/">Objects</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../functions-objects/map/">map()</a>
+                </li>
+    </ul>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <span class="caption-text">Loop</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../loop/loop/">loop</a>
+                </li>
+    </ul>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <span class="caption-text">DOM</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../DOM/dom/">Document Object Model</a>
+                </li>
+    </ul>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <span class="caption-text">Node.js</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../node/introduction/">Introduction</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../node/std-input-output/">Standard input-output</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../node/core-modules/">Core modules</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../node/file-system/">File system</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../node/callbacks/">Understanding callbacks</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../node/module.exports/">module.exports</a>
+                </li>
+    </ul>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <span class="caption-text">Electron.js</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../electron/electron/">Creating first Electron.js application</a>
+                </li>
+    </ul>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <span class="caption-text">React.js</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../react/react/">React.js</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../react/to-do-list/">To do list project</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../react/shopping-cart/">Shopping cart project</a>
+                </li>
+    </ul>
+                        </li>
+                        
+                    </ul>
+                </div>
+                &nbsp;
+            </nav>
+
+            <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+                
+                <nav
+                    class="wy-nav-top"
+                    role="navigation"
+                    aria-label="top navigation"
+                >
+                    <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+                    <a href="../.."
+                        >Learning Javascript</a
+                    >
+                </nav>
+
+                
+                <div class="wy-nav-content">
+                    <div class="rst-content">
+                        <div role="navigation" aria-label="breadcrumbs navigation">
+    <ul class="wy-breadcrumbs">
+        <li><a href="https://pranabdas.github.io/">Home</a>&raquo;</li>
+        <li><a href="https://pranabdas.github.io/docs/">Docs</a>&raquo;</li>
+        <li>
+            <a href="../..">Learning Javascript</a>
+            &raquo;
+        </li>
+          
+        <li>The Basics &raquo;</li>
+           
+        <li>Arrays</li>
+        
+    </ul>
+    <hr />
+</div>
+                        <div role="main">
+                            <div class="section">
+                                 <h3 id="arrays">Arrays</h3>
+<pre><code class="js">var colors 
+colors = [&quot;red&quot;, &quot;green&quot;, &quot;blue&quot;, &quot;orange&quot;]; 
+console.log(colors)
+</code></pre>
+
+<p>You can use another way to define arrays: </p>
+<pre><code class="js">colors = new Array(&quot;red&quot;, &quot;green&quot;, &quot;blue&quot;, &quot;yellow&quot;); 
+console.log(colors)
+</code></pre>
+
+<p>In javascript arrays an object like we saw the <code>Date()</code> object before. Arrays can hold mixed data types: </p>
+<pre><code class="js">var mixVar = [45, &quot;New York&quot;, true]
+console.log(mixVar)
+</code></pre>
+
+<p>We can access specific item by array index, which starts from 0: </p>
+<pre><code class="js">console.log(mixVar[1])
+
+New York
+</code></pre>
+
+<h4 id="properties-and-methods-of-array-object">Properties and methods of array (object)</h4>
+<p>Length of an array property: </p>
+<pre><code class="js">console.log(colors.length); 
+
+4
+</code></pre>
+
+<p>Methods: reverse the array: </p>
+<pre><code class="js">console.log(colors.reverse());
+
+[&quot;yellow&quot;, &quot;blue&quot;, &quot;green&quot;, &quot;red&quot;] (4)
+</code></pre>
+
+<p>Remove the first item: </p>
+<pre><code class="js">colors.shift(); 
+console.log(colors); 
+
+[&quot;blue&quot;, &quot;green&quot;, &quot;red&quot;] (3)
+</code></pre>
+
+<p>Add new items to the front of an array: </p>
+<pre><code class="js">colors.unshift(&quot;purple&quot;, &quot;orange&quot;); 
+console.log(colors); 
+
+[&quot;purple&quot;, &quot;orange&quot;, &quot;blue&quot;, &quot;green&quot;, &quot;red&quot;] (5)
+</code></pre>
+
+<p>Remove the last item of an array: </p>
+<pre><code class="js">var removedItem; 
+removedItem = colors.pop();  // in this way you can use the removed item 
+console.log(colors); 
+
+
+[&quot;purple&quot;, &quot;orange&quot;, &quot;blue&quot;, &quot;green&quot;] (4)
+
+console.log(removedItem);
+
+red
+</code></pre>
+
+<p>Add items to the end of the array: </p>
+<pre><code class="js">colors.push(&quot;pink&quot;)
+console.log(colors)
+
+[&quot;purple&quot;, &quot;orange&quot;, &quot;blue&quot;, &quot;green&quot;, &quot;pink&quot;] (5) 
+</code></pre>
+
+<p>You can remove items from the middle of the array: </p>
+<pre><code class="js">colors.splice(2, 1) // .splice(position, number of item to remove)
+console.log(colors)
+
+[&quot;purple&quot;, &quot;orange&quot;, &quot;green&quot;, &quot;pink&quot;] (4)
+</code></pre>
+
+<p>Copy an array using <code>.slice()</code> </p>
+<pre><code class="js">var themeColors = colors.slice()
+console.log(themeColors)
+
+[&quot;purple&quot;, &quot;orange&quot;, &quot;green&quot;, &quot;pink&quot;] (4)
+</code></pre>
+
+<p>Index of </p>
+<pre><code class="js">var pos = colors.indexOf(&quot;orange&quot;, 0); // give the position where to start the search, here 0. 
+console.log(pos); 
+
+1
+</code></pre>
+
+<p>Join the array elements: </p>
+<pre><code class="js">var stringArray = colors.join();
+console.log(stringArray)
+
+purple,orange,green,pink
+
+var stringArray = colors.join(&quot;, &quot;); // you can give the separator as argument 
+console.log(stringArray) 
+
+purple, orange, green, pink 
+</code></pre> 
+                            </div>
+                        </div> <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../functions-objects/functions/" class="btn btn-neutral float-right" title="Functions">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../conditional-statement/" class="btn btn-neutral" title="Conditional statement"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    <p>&copy; Copyright 2020 Pranab Das. All rights reserved.</p>
+  </div>
+
+</footer> 
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../conditional-statement/" style="color: #2980B9;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../../functions-objects/functions/" style="color: #2980B9">Next &raquo;</a></span>
+      
+    </span>
+</div>
+        <script>
+            var base_url = "../..";
+        </script>
+        <script src="../../js/theme.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+        <script src="../../search/main.js" defer></script>
+    </body>
+</html>

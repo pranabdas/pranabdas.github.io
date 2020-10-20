@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+    <!--<![endif]-->
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+         
+        <meta name="author" content="Pranab Das" />
+         
+        <link rel="shortcut icon" href="../img/favicon.ico" />
+        
+        <title>
+            Getting started
+            - Fortran programming
+        </title>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+        <link
+            rel="stylesheet"
+            href="../css/theme.css"
+            type="text/css"
+        />
+        <link
+            rel="stylesheet"
+            href="../css/theme_extra.css"
+            type="text/css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.1/styles/github.min.css"
+        /> 
+        <script>
+            // Current page data
+            var mkdocs_page_name = "Getting started";
+            var mkdocs_page_input_path = "gs.md";
+            var mkdocs_page_url = null;
+        </script>
+        
+        <script src="../js/jquery-2.1.1.min.js" defer></script>
+        <script src="../js/modernizr-2.8.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.1/highlight.min.js"></script>
+        <script>
+            hljs.initHighlightingOnLoad();
+        </script> 
+    </head>
+
+    <body class="wy-body-for-nav" role="document">
+        <div class="wy-grid-for-nav">
+            
+            <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+                <div class="wy-side-nav-search">
+                    <a href=".." class="icon icon-home">
+                        Fortran programming</a
+                    > <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+                </div>
+
+                <div
+                    class="wy-menu wy-menu-vertical"
+                    data-spy="affix"
+                    role="navigation"
+                    aria-label="main navigation"
+                >
+                    <ul class="current">
+                         
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <a class="" href="..">Table of Contents</a>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1 current"
+                        >
+                            
+    <a class="current" href="./">Getting started</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#setting-up-fortran-environment">Setting up Fortran environment</a></li>
+    
+
+    </ul>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <a class="" href="../basics/">Fortran basics</a>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <a class="" href="../array/">Array</a>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <a class="" href="../control/">Logical expression and control</a>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <a class="" href="../loop/">Loop</a>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <a class="" href="../file/">File I/O</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+                &nbsp;
+            </nav>
+
+            <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+                
+                <nav
+                    class="wy-nav-top"
+                    role="navigation"
+                    aria-label="top navigation"
+                >
+                    <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+                    <a href=".."
+                        >Fortran programming</a
+                    >
+                </nav>
+
+                
+                <div class="wy-nav-content">
+                    <div class="rst-content">
+                        <div role="navigation" aria-label="breadcrumbs navigation">
+    <ul class="wy-breadcrumbs">
+        <li><a href="https://pranabdas.github.io/">Home</a>&raquo;</li>
+        <li><a href="https://pranabdas.github.io/docs/">Docs</a>&raquo;</li>
+        <li>
+            <a href="..">Fortran programming</a>
+            &raquo;
+        </li>
+           
+        <li>Getting started</li>
+        
+    </ul>
+    <hr />
+</div>
+                        <div role="main">
+                            <div class="section">
+                                 <h3 id="setting-up-fortran-environment">Setting up Fortran environment</h3>
+<p>FORTRAN is often used in high performance scientific computing. I will be working on UNIX/Linux for this tutorials. If you are on Windows 10, you may consider using <a href="https://docs.microsoft.com/en-us/windows/wsl/install-win10" target="_blank">WSL</a>. We will be using <a href="https://gcc.gnu.org/fortran/" target="_blank">gfortran</a> to compile our programs. Install gfortran in your computer. </p>
+<p>On Ubuntu/Debian: </p>
+<pre><code>sudo apt install gcc gfortran
+</code></pre>
+
+<p>On macOS you can install using Homebrew:</p>
+<pre><code>brew install gcc
+</code></pre>
+
+<p>gfortran is part of gcc. You can use any text editor of your choice to write the code. We will be using <code>.f90</code> file extension for our source code files. The program can be compiled using: </p>
+<pre><code>gfortran source-file.f90
+</code></pre>
+
+<p>It will create a binary <code>a.out</code> in the same directory as the source code, which can be executed by:</p>
+<pre><code>./a.out
+</code></pre>
+
+<p>If you would like to specify the name of the executable instead of default <code>a.out</code>: </p>
+<pre><code>gfortran source-file.f90 -o XYapp
+</code></pre> 
+                            </div>
+                        </div> <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../basics/" class="btn btn-neutral float-right" title="Fortran basics">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href=".." class="btn btn-neutral" title="Table of Contents"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    <p>&copy; Copyright 2020 Pranab Das. All rights reserved.</p>
+  </div>
+
+</footer> 
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href=".." style="color: #2980B9;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../basics/" style="color: #2980B9">Next &raquo;</a></span>
+      
+    </span>
+</div>
+        <script>
+            var base_url = "..";
+        </script>
+        <script src="../js/theme.js" defer></script>
+        <script src="../search/main.js" defer></script>
+    </body>
+</html>

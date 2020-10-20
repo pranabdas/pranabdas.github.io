@@ -1,0 +1,81 @@
+==================================================================
+https://keybase.io/pranab
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://pranabdas.github.io
+  * I am pranab (https://keybase.io/pranab) on keybase.
+  * I have a public key with fingerprint DAB6 AC7A FD98 F6F9 D57E  F9DE FC51 0FA8 3BCA 2690
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0101d973ffffe4bf11372f30a6bd4ecb5e118e69eb5fc9b9b732202224bca9415c9b0a",
+      "fingerprint": "dab6ac7afd98f6f9d57ef9defc510fa83bca2690",
+      "host": "keybase.io",
+      "key_id": "fc510fa83bca2690",
+      "kid": "0101d973ffffe4bf11372f30a6bd4ecb5e118e69eb5fc9b9b732202224bca9415c9b0a",
+      "uid": "e9ef1a4be271982364d17efc5391a519",
+      "username": "pranab"
+    },
+    "merkle_root": {
+      "ctime": 1587793442,
+      "hash_meta": "e56d0c026be606ee52a4a5534b03da16d1780eeef9dd55554bfc81c366929257",
+      "seqno": 16046235
+    },
+    "revoke": {
+      "sig_ids": [
+        "45858278a390d9f7ed2909a37356adb2bbf96e65e0b6dfba416d233308f469290f"
+      ]
+    },
+    "service": {
+      "hostname": "pranabdas.github.io",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1587793452,
+  "expire_in": 157680000,
+  "prev": "5b50bc051227ee30814ea41ade3b1f11a7622a54a94e1776d9f65849df00ab92",
+  "seqno": 16,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.1.13
+Comment: https://keybase.io/crypto
+
+yMKxAnicrVNtaBxFGL60NtUUQW1FC37AqhUxjfM9O4eRgv0TgsWKomKS68zOu5f1
+LrfX3U1MzMXin2JRSK3WGkQKHikKVVobFbXSNhQbFFMhUqVqUwRTUagUi0EEcTYq
+qPjT+bHLDM/7PM/7vDPHL19eaGs5NLF42+5NB2ZbPp5uDBb6mrPto56J7YhXHPUq
+sPSDqoU0K1Ui6xU9hBG2StLQLWAmxJhKElKkhbEMAsMBYx+EAsPDQBllJCUEEUKY
+CbRimLtDpL12L4xqZUjqSVTLHK3VRuhA6tAqPxShslyC+0IYcIxC7VNXTYRCrrA/
+TvMKZ87oFDqi2J25TWnJ3n/g/2ffg0t0oCDEmhkgEiufUMEslrlbqrDmWOXAFJKa
+HgCHrie6po031u4NQFKpQimJ4yyPNsiiHIC5L6WijBHXnk77SwOQ6VyFC4sCRIQB
+gQQAJ5ppzikziFqNhdP0EUCelOVuub4CHwdUCEUU4dK5SGFrLXYKAjFBKHcWEhiK
+K5Crp1HZpZZ6xUc8xn3uE+lrqpBVoQRLFFKaSsqFtoYYEyoBggMywoZGMydOKKXI
+D1kuhkKvdyxXS4aiYIk8H9M/2rc67ShHWf+g+WNm9STO4iCuOkB/ltXTYp5PNlLP
+Kx4DU/qTq2SimnV3xVUMQZJGcc1145D/io676GC4HiVQinIEl8JHbuU6MOQoueHI
+BIhjQiSAM44ZuDa0BWqwuw5aCkI0Z27YgKUULgXBfaZsiJA2ivw9S+dTlx2nC7Cm
+s8EEvLHpoz2XFFraCq0rluWPqNB22RV/PS3UeWlhJ/6u+cDpYvneyT2dU63j+OTh
+ZnRSqid+e3r/6zdfHH3liDq7br5nf6k3br3jhq6t655b3lhsNNmadz4Zri7sWNy4
+4eVv5OpDz1516tfhzUcaIzNneirRmlNnD9z16eEvW7rb+249NnPlro/efOi1jrXz
+t794/8TsvlXjgPf++HA039hxcHVhe+nOZm83mbxxrnXh6+0TBfzWTOuTnK4vfLHy
+XOcxOb0Nv7ev7/sTqy5cs7bt+LLaTx0nzu1s++DDLT/s3UXf33Pw2xfO33P3mWd+
+bj5lzt/HpqYudn/+2Uub3n7jq/F3L1x7y3WPnt52/cKKanff1f7zc5Pru7b80nXT
+hsdXvrpxdG735iKzRx/8HRsxhOg=
+=T0fB
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/pranab
+
+==================================================================

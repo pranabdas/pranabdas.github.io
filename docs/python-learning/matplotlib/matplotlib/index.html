@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+    <!--<![endif]-->
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+         
+        <meta name="author" content="Pranab Das" />
+         
+        <link rel="shortcut icon" href="../../img/favicon.ico" />
+        
+        <title>
+            Basic Matplotlib
+            - Learning Python
+        </title>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+        <link
+            rel="stylesheet"
+            href="../../css/theme.css"
+            type="text/css"
+        />
+        <link
+            rel="stylesheet"
+            href="../../css/theme_extra.css"
+            type="text/css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.1/styles/github.min.css"
+        /> 
+        <script>
+            // Current page data
+            var mkdocs_page_name = "Basic Matplotlib";
+            var mkdocs_page_input_path = "matplotlib/matplotlib.md";
+            var mkdocs_page_url = null;
+        </script>
+        
+        <script src="../../js/jquery-2.1.1.min.js" defer></script>
+        <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.1/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.1/languages/python.min.js"></script>
+        <script>
+            hljs.initHighlightingOnLoad();
+        </script> 
+    </head>
+
+    <body class="wy-body-for-nav" role="document">
+        <div class="wy-grid-for-nav">
+            
+            <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+                <div class="wy-side-nav-search">
+                    <a href="../.." class="icon icon-home">
+                        Learning Python</a
+                    > <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+                </div>
+
+                <div
+                    class="wy-menu wy-menu-vertical"
+                    data-spy="affix"
+                    role="navigation"
+                    aria-label="main navigation"
+                >
+                    <ul class="current">
+                         
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <a class="" href="../..">Table of Contents</a>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <span class="caption-text">The Basics</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../introduction/introduction/">Introduction</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../introduction/setup/">Setting up</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../introduction/basics/">Get started</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../introduction/string-formatting/">More on string formatting</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../introduction/list-and-tuple/">Python Lists and Tuple</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../introduction/dictionary/">Dictionary</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../introduction/if-else/">if-else condition</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../introduction/while-loop/">while loop, break, continue</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../introduction/function/">Simple function</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../introduction/file-read-write/">File read-write</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../introduction/class/">Python class</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../introduction/python-packages/">Python packages</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../introduction/venv/">Virtual environment</a>
+                </li>
+    </ul>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <span class="caption-text">Numerical Python</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../numerical-python/numpy/">numpy</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../numerical-python/matrix-algebra/">Matrix algebra</a>
+                </li>
+    </ul>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <span class="caption-text">Matplotlib</span>
+    <ul class="subnav">
+                <li class=" current">
+                    
+    <a class="current" href="./">Basic Matplotlib</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#introduction-to-matplotlib">Introduction to matplotlib</a></li>
+    
+
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../subplot/">Subplots</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../histogram/">Histogram</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../contour-plot/">Contour plot</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../image-plot/">Image plot</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../custom-color-map/">Create custom color map</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../function-plot/">Function plot</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../custom-matplotlib/">Customizing Matplotlib</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../3d-plots/">Advanced 3D plots</a>
+                </li>
+    </ul>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <span class="caption-text">scipy</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../scipy/integration/">Integration using scipy</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../scipy/convolution/">Convolution</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../scipy/curve-fit/">Curve fitting</a>
+                </li>
+    </ul>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <span class="caption-text">Pandas</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../pandas/pandas/">Pandas Series and Dataframe</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../pandas/csv-excel/">CSV and excel</a>
+                </li>
+    </ul>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <span class="caption-text">Data Science</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../data-science/packages/">Packages</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../data-science/data-exploration/">Data Exploration</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../data-science/linear-regression/">Linear regression</a>
+                </li>
+    </ul>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <span class="caption-text">Machine Learning</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../machine-learning/probability-statistics/">Basic Probability and statistics</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../machine-learning/nearest-neighbor/">Nearest neighbor classification</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../machine-learning/generative-model/">Generative model</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../machine-learning/regression/">Regression</a>
+                </li>
+    </ul>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <span class="caption-text">Geopands</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../geopandas/maps/">Geo-maps</a>
+                </li>
+    </ul>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <span class="caption-text">Django</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../django/django/">Django</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../django/today/">Today app</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../django/todo/">To Do List App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../django/airline/">Airline app</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../django/learning-log/">Django learning log</a>
+                </li>
+    </ul>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <span class="caption-text">Misc</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../misc/misc/">Miscellaneous</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../misc/read-data-url/">Read data from url</a>
+                </li>
+    </ul>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <span class="caption-text">Projects</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../projects/singapore-traffic-camera/">Singapore traffic camera</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../projects/directory-encryption/">AES-256 encryption</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../projects/encrypt-upload-dropbox/">Encrypt and upload to Dropbox</a>
+                </li>
+    </ul>
+                        </li>
+                        
+                    </ul>
+                </div>
+                &nbsp;
+            </nav>
+
+            <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+                
+                <nav
+                    class="wy-nav-top"
+                    role="navigation"
+                    aria-label="top navigation"
+                >
+                    <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+                    <a href="../.."
+                        >Learning Python</a
+                    >
+                </nav>
+
+                
+                <div class="wy-nav-content">
+                    <div class="rst-content">
+                        <div role="navigation" aria-label="breadcrumbs navigation">
+    <ul class="wy-breadcrumbs">
+        <li><a href="https://pranabdas.github.io/">Home</a>&raquo;</li>
+        <li><a href="https://pranabdas.github.io/docs/">Docs</a>&raquo;</li>
+        <li>
+            <a href="../..">Learning Python</a>
+            &raquo;
+        </li>
+          
+        <li>Matplotlib &raquo;</li>
+           
+        <li>Basic Matplotlib</li>
+        
+    </ul>
+    <hr />
+</div>
+                        <div role="main">
+                            <div class="section">
+                                 <h3 id="introduction-to-matplotlib">Introduction to matplotlib</h3>
+<p><em>matplotlib</em> is a python graphical package to perform simple and advanced visual presentation. Let's dive into <em>matplotlib</em>. First task is to import the <em>matplotlib</em> into our program. We will also import <em>numpy</em> in order to do some numerical operations. </p>
+<pre><code class="python">import matplotlib.pyplot as plt 
+import numpy as np 
+# If you are using Jypyter notebook include the following line 
+# to show the figure inline on the browser. 
+%matplotlib inline 
+</code></pre>
+
+<p>Let's create two one dimensional array of data</p>
+<pre><code class="python">x = np.linspace(0, 10, 11);
+y = x**2; 
+</code></pre>
+
+<p>Make a x vs. y plot: </p>
+<pre><code class="python">plt.plot(x, y)
+plt.show()
+</code></pre>
+
+<p>This produces following output:<br />
+<img alt="x vs. y plot" src="../../img/mpl-x-vs-y.png" /></p>
+<p>Now let's improve the figure a bit. The plt.plot accepts 3 basic arguments in the following order: (x, y, format). This format is a short hand combination of {color}{marker}{line}. </p>
+<pre><code class="python">plt.plot(x, y, 'ro-')
+plt.show()
+</code></pre>
+
+<p><img alt="x vs. y plot" src="../../img/mpl-x-vs-y-2.png" /></p>
+<p>Looks like our figure size is too small, let's make it larger. </p>
+<pre><code class="python">plt.figure(figsize = (10, 8))
+plt.plot(x, y, 'ro-')
+plt.show()
+</code></pre>
+
+<p><img alt="x vs. y plot" src="../../img/mpl-x-vs-y-3.png" /></p>
+<p>How about setting a title, x-, y-label to our figure: </p>
+<pre><code class="python">plt.figure(figsize = (10, 8))
+plt.plot(x, y, 'ro-')
+plt.title('My simple plot')  
+plt.xlabel('X')
+plt.ylabel('Y')
+plt.show()
+</code></pre>
+
+<p><img alt="x vs. y plot" src="../../img/mpl-x-vs-y-4.png" /> </p>
+<p>Can you please increase the font size a bit? Sure: </p>
+<pre><code class="python">large = 22; med = 16; small = 12
+params = {'axes.titlesize': large,
+          'legend.fontsize': med,
+          'figure.figsize': (16, 10),
+          'axes.labelsize': med,
+          'axes.titlesize': med,
+          'xtick.labelsize': med,
+          'ytick.labelsize': med,
+          'figure.titlesize': large}
+plt.rcParams.update(params)
+
+plt.figure(figsize = (8, 6), dpi = 300)
+plt.plot(x, y, 'ro-')
+plt.title('My simple plot')  
+plt.xlabel('X')
+plt.ylabel('Y')
+plt.xlim(0, 10.5)
+plt.ylim(0, 110)
+plt.show()
+</code></pre>
+
+<p><img alt="x vs. y plot" src="../../img/mpl-x-vs-y-5.png" /> </p>
+<p>How can I append another plot on the same figure? </p>
+<pre><code class="python">y2 = x**3; 
+plt.plot(x, y, 'ro-', label='y'); 
+plt.plot(x, y2, 'g*-', label='y2'); 
+plt.title('My simple plot'); 
+plt.xlabel('X'); 
+plt.ylabel('Y'); 
+plt.legend(); 
+plt.xlim(1, 10.5); 
+plt.ylim(1, 1200); 
+plt.show(); 
+</code></pre>
+
+<p><img alt="x vs. y plot" src="../../img/mpl-x-vs-y-6.png" /> </p>
+<p>Notice that once we specify the <em>rcParams</em>, we do not need to specify again until we restart the kernel. You can go back to <em>matplotlib</em> defaults by: </p>
+<pre><code class="python">plt.rcParams.update(rcParamsDefault)
+</code></pre>
+
+<p>Now visit <a href="https://matplotlib.org">https://matplotlib.org</a> and explore yourself. </p> 
+                            </div>
+                        </div> <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../subplot/" class="btn btn-neutral float-right" title="Subplots">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../../numerical-python/matrix-algebra/" class="btn btn-neutral" title="Matrix algebra"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    <p>&copy; Copyright 2020 Pranab Das. All rights reserved.</p>
+  </div>
+
+</footer> 
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../../numerical-python/matrix-algebra/" style="color: #2980B9;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../subplot/" style="color: #2980B9">Next &raquo;</a></span>
+      
+    </span>
+</div>
+        <script>
+            var base_url = "../..";
+        </script>
+        <script src="../../js/theme.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+        <script src="../../search/main.js" defer></script>
+    </body>
+</html>

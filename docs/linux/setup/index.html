@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+    <!--<![endif]-->
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+         
+        <meta name="author" content="Pranab Das" />
+         
+        <link rel="shortcut icon" href="../img/favicon.ico" />
+        
+        <title>
+            Linux setup
+            - Linux tutorial
+        </title>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+        <link
+            rel="stylesheet"
+            href="../css/theme.css"
+            type="text/css"
+        />
+        <link
+            rel="stylesheet"
+            href="../css/theme_extra.css"
+            type="text/css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.1/styles/github.min.css"
+        /> 
+        <script>
+            // Current page data
+            var mkdocs_page_name = "Linux setup";
+            var mkdocs_page_input_path = "setup.md";
+            var mkdocs_page_url = null;
+        </script>
+        
+        <script src="../js/jquery-2.1.1.min.js" defer></script>
+        <script src="../js/modernizr-2.8.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.1/highlight.min.js"></script>
+        <script>
+            hljs.initHighlightingOnLoad();
+        </script> 
+    </head>
+
+    <body class="wy-body-for-nav" role="document">
+        <div class="wy-grid-for-nav">
+            
+            <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+                <div class="wy-side-nav-search">
+                    <a href=".." class="icon icon-home">
+                        Linux tutorial</a
+                    > <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+                </div>
+
+                <div
+                    class="wy-menu wy-menu-vertical"
+                    data-spy="affix"
+                    role="navigation"
+                    aria-label="main navigation"
+                >
+                    <ul class="current">
+                         
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <a class="" href="..">Table of Contents</a>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1 current"
+                        >
+                            
+    <a class="current" href="./">Linux setup</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#setting-up-linux">Setting up Linux</a></li>
+    
+
+    </ul>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <a class="" href="../commands/">Commandline basics</a>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <a class="" href="../filesystem/">Linux filesystem</a>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <a class="" href="../vi/">VIM editor</a>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <a class="" href="../git/">Git</a>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <a class="" href="../network-setup/">Network setup</a>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <a class="" href="../shell-scripting/">Shell scripting</a>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <a class="" href="../network-security/">Network security</a>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <a class="" href="../firewall/">Linux Firewall</a>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <a class="" href="../apache/">Apache webserver</a>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <a class="" href="../pgp/">PGP Encryption</a>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <a class="" href="../docker/">Docker</a>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <a class="" href="../nextcloud/">NextCloud</a>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <a class="" href="../selinux/">SELinux</a>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <a class="" href="../hpc/">HPC</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+                &nbsp;
+            </nav>
+
+            <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+                
+                <nav
+                    class="wy-nav-top"
+                    role="navigation"
+                    aria-label="top navigation"
+                >
+                    <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+                    <a href=".."
+                        >Linux tutorial</a
+                    >
+                </nav>
+
+                
+                <div class="wy-nav-content">
+                    <div class="rst-content">
+                        <div role="navigation" aria-label="breadcrumbs navigation">
+    <ul class="wy-breadcrumbs">
+        <li><a href="https://pranabdas.github.io/">Home</a>&raquo;</li>
+        <li><a href="https://pranabdas.github.io/docs/">Docs</a>&raquo;</li>
+        <li>
+            <a href="..">Linux tutorial</a>
+            &raquo;
+        </li>
+           
+        <li>Linux setup</li>
+        
+    </ul>
+    <hr />
+</div>
+                        <div role="main">
+                            <div class="section">
+                                 <h3 id="setting-up-linux">Setting up Linux</h3>
+<p>Specifically, here we will install Ubuntu. Ubuntu is very stable and popular Linux operating system. Most of the packages are well supported and the community support is the best. Here I am installing the latest version of Ubuntu (20.04), and setting it up for everyday use. I am doing a minimal installation in oder to avoid some unwanted games and apps being installed. Try to use the command line tools as much as possible. Not all tasks can be done by graphical programs. Graphical programs certainly need more system resources, they have more dependencies, and therefore prone to have more bugs and security issues. I will use the minimal network boot ISO for installation. </p>
+<p>Get the minimal ISO of <a href="http://archive.ubuntu.com/ubuntu/dists/focal/main/installer-amd64/current/legacy-images/netboot/mini.iso">Ubuntu 20.04 here</a>. </p>
+<p>During installation, I selected: </p>
+<ul>
+<li>Text interface for installation </li>
+<li>Default filesystem partition </li>
+<li>No automatic updates </li>
+<li>Ubuntu minimal desktop only </li>
+</ul>
+<p>Once boot into the system, make sure everything is up to date:</p>
+<pre><code>sudo apt update &amp;&amp; sudo apt upgrade 
+</code></pre>
+
+<p>Install essentials: </p>
+<pre><code>sudo apt install make 
+sudo apt install gcc 
+sudo apt install perl 
+sudo apt install git 
+sudo apt install vim
+</code></pre>
+
+<p>Oh-my-bash: <a href="https://github.com/ohmybash/oh-my-bash" target="_blank">https://github.com/ohmybash/oh-my-bash</a></p>
+<pre><code>git clone git://github.com/ohmybash/oh-my-bash.git ~/.oh-my-bash
+</code></pre>
+
+<p>Append the following to your <code>.bashrc</code>:</p>
+<pre><code>export OSH=$HOME/.oh-my-bash
+OSH_THEME=&quot;standard&quot;
+DISABLE_AUTO_UPDATE=&quot;true&quot;
+
+completions=(
+  git
+  composer
+  ssh
+)
+
+aliases=(
+  general
+)
+
+plugins=(
+  git
+  bashmarks
+)
+
+source $OSH/oh-my-bash.sh
+</code></pre>
+
+<p>Terminal size: 96 by 30 col. Text and background color: gray on black, Palette: solarized. </p>
+<p><strong>Installing fonts in Ubuntu/Debian:</strong> </p>
+<p>You can get a nice collection of fonts by installing the powerline fonts:</p>
+<pre><code>sudo apt install fonts-powerline
+</code></pre>
+
+<p>You can also manually install fonts (either .ttf or .otf) by putting them in the following path, and rebuilding the font cache:</p>
+<pre><code>mkdir ~/.local/share/fonts
+sudo fc-cache -f -v ~/.local/share/fonts
+</code></pre>
+
+<p><a href="https://fonts.google.com" target="_blank">https://fonts.google.com</a> has a large collection of awesome fonts. Choose to your liking. </p>
+<p>If you are going to access your system remotely via SSH, install the SSH server. </p>
+<pre><code>sudo apt install openssh-server
+</code></pre>
+
+<p>Setting up Python development. It will depend on your needs though.  </p>
+<pre><code>sudo apt install python3 python3-pip
+pip3 install jupyterlab
+pip3 install numpy scipy
+pip3 install matplotlib bokeh seaborn
+pip3 install pandas geopandas xlrd openpyxl
+pip3 install virtualenv
+</code></pre>
+
+<p>Append following to your <code>.bashrc</code>:</p>
+<pre><code>export PATH=&quot;/home/&lt;username&gt;/.local/bin:$PATH&quot;
+</code></pre>
+
+<p>Mkdocs:</p>
+<pre><code>pip3 install mkdocs
+pip3 install mkdocs-material
+</code></pre>
+
+<p>Jekyll:</p>
+<pre><code>sudo apt install ruby-full build-essential zlib1g-dev
+echo '# Install Ruby Gems to ~/gems' &gt;&gt; ~/.zshrc
+echo 'export GEM_HOME=&quot;$HOME/gems&quot;' &gt;&gt; ~/.zshrc
+echo 'export PATH=&quot;$HOME/gems/bin:$PATH&quot;' &gt;&gt; ~/.zshrc
+source ~/.zshrc
+gem install jekyll bundler
+</code></pre>
+
+<p>Jekyll on CentOS or RHEL prerequisite:</p>
+<pre><code>sudo dnf install ruby ruby-devel
+sudo dnf install gcc-c++
+</code></pre>
+
+<p>Dropbox:</p>
+<pre><code>cd ~ &amp;&amp; wget -O - &quot;https://www.dropbox.com/download?plat=lnx.x86_64&quot; | tar xzf -
+~/.dropbox-dist/dropboxd
+</code></pre>
+
+<p>Proton VPN:</p>
+<pre><code>sudo apt install -y openvpn dialog python3-pip python3-setuptools
+sudo pip3 install protonvpn-cli
+sudo protonvpn init
+protonvpn c -r
+protonvpn c -f
+</code></pre>
+
+<p><code>-r</code> or <code>-f</code> flags for connecting random and fastest servers, respectively. </p>
+<p>Zsh: </p>
+<p>You may try Z-shell (instead of BASH) with Oh My Zsh. It has tab auto completion, better history recall, and other cool features. </p>
+<pre><code>sudo apt install git
+sudo apt install zsh
+git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
+sudo chsh -s /bin/zsh
+exec zsh 
+source ~/.zshrc
+</code></pre>
+
+<p>Go to <code>~/.zshrc</code> and uncomment </p>
+<pre><code>export PATH=$HOME/bin:/usr/local/bin:$PATH
+</code></pre>
+
+<p>You may need to logout and log back in to take effect the full changes. These are some useful Oh My Zsh extensions: </p>
+<ul>
+<li>zsh-syntax-highlighting </li>
+<li>zsh-autosuggestions</li>
+</ul>
+<p><strong>Some graphical apps:</strong> </p>
+<ul>
+<li>Visual Studio Code </li>
+<li>Standard Notes </li>
+</ul>
+<p>Always backup your user files (documents you create, codes you write, important notes etc.) in a safe and secure place. You may encrypt your files and upload to a cloud service. You may keep another copy in an external drive. </p>
+<p><strong>Changing hostname:</strong>
+Print the current name and other information with <code>hostnamectl</code></p>
+<pre><code>hostnamectl --static set-hostname=&quot;ubuntu-work&quot;
+hostnamectl --pretty set-hostname=&quot;ubuntu-work&quot;
+</code></pre>
+
+<p>You need to restart the system to take effect the changes. </p>
+<p><strong>Installing snap on RHEL:</strong></p>
+<pre><code>sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+sudo dnf upgrade
+sudo dnf install snapd
+sudo systemctl enable --now snapd.socket
+sudo ln -s /var/lib/snapd/snap /snap
+sudo reboot
+</code></pre> 
+                            </div>
+                        </div> <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../commands/" class="btn btn-neutral float-right" title="Commandline basics">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href=".." class="btn btn-neutral" title="Table of Contents"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    <p>&copy; Copyright 2020 Pranab Das. All rights reserved.</p>
+  </div>
+
+</footer> 
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href=".." style="color: #2980B9;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../commands/" style="color: #2980B9">Next &raquo;</a></span>
+      
+    </span>
+</div>
+        <script>
+            var base_url = "..";
+        </script>
+        <script src="../js/theme.js" defer></script>
+        <script src="../search/main.js" defer></script>
+    </body>
+</html>

@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+    <!--<![endif]-->
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+         
+        <meta name="author" content="Pranab Das" />
+         
+        <link rel="shortcut icon" href="../../img/favicon.ico" />
+        
+        <title>
+            Django learning log
+            - Learning Python
+        </title>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+        <link
+            rel="stylesheet"
+            href="../../css/theme.css"
+            type="text/css"
+        />
+        <link
+            rel="stylesheet"
+            href="../../css/theme_extra.css"
+            type="text/css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.1/styles/github.min.css"
+        /> 
+        <script>
+            // Current page data
+            var mkdocs_page_name = "Django learning log";
+            var mkdocs_page_input_path = "django/learning-log.md";
+            var mkdocs_page_url = null;
+        </script>
+        
+        <script src="../../js/jquery-2.1.1.min.js" defer></script>
+        <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.1/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.1/languages/python.min.js"></script>
+        <script>
+            hljs.initHighlightingOnLoad();
+        </script> 
+    </head>
+
+    <body class="wy-body-for-nav" role="document">
+        <div class="wy-grid-for-nav">
+            
+            <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+                <div class="wy-side-nav-search">
+                    <a href="../.." class="icon icon-home">
+                        Learning Python</a
+                    > <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+                </div>
+
+                <div
+                    class="wy-menu wy-menu-vertical"
+                    data-spy="affix"
+                    role="navigation"
+                    aria-label="main navigation"
+                >
+                    <ul class="current">
+                         
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <a class="" href="../..">Table of Contents</a>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <span class="caption-text">The Basics</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../introduction/introduction/">Introduction</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../introduction/setup/">Setting up</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../introduction/basics/">Get started</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../introduction/string-formatting/">More on string formatting</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../introduction/list-and-tuple/">Python Lists and Tuple</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../introduction/dictionary/">Dictionary</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../introduction/if-else/">if-else condition</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../introduction/while-loop/">while loop, break, continue</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../introduction/function/">Simple function</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../introduction/file-read-write/">File read-write</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../introduction/class/">Python class</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../introduction/python-packages/">Python packages</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../introduction/venv/">Virtual environment</a>
+                </li>
+    </ul>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <span class="caption-text">Numerical Python</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../numerical-python/numpy/">numpy</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../numerical-python/matrix-algebra/">Matrix algebra</a>
+                </li>
+    </ul>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <span class="caption-text">Matplotlib</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../matplotlib/matplotlib/">Basic Matplotlib</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../matplotlib/subplot/">Subplots</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../matplotlib/histogram/">Histogram</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../matplotlib/contour-plot/">Contour plot</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../matplotlib/image-plot/">Image plot</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../matplotlib/custom-color-map/">Create custom color map</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../matplotlib/function-plot/">Function plot</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../matplotlib/custom-matplotlib/">Customizing Matplotlib</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../matplotlib/3d-plots/">Advanced 3D plots</a>
+                </li>
+    </ul>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <span class="caption-text">scipy</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../scipy/integration/">Integration using scipy</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../scipy/convolution/">Convolution</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../scipy/curve-fit/">Curve fitting</a>
+                </li>
+    </ul>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <span class="caption-text">Pandas</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../pandas/pandas/">Pandas Series and Dataframe</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../pandas/csv-excel/">CSV and excel</a>
+                </li>
+    </ul>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <span class="caption-text">Data Science</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../data-science/packages/">Packages</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../data-science/data-exploration/">Data Exploration</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../data-science/linear-regression/">Linear regression</a>
+                </li>
+    </ul>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <span class="caption-text">Machine Learning</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../machine-learning/probability-statistics/">Basic Probability and statistics</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../machine-learning/nearest-neighbor/">Nearest neighbor classification</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../machine-learning/generative-model/">Generative model</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../machine-learning/regression/">Regression</a>
+                </li>
+    </ul>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <span class="caption-text">Geopands</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../geopandas/maps/">Geo-maps</a>
+                </li>
+    </ul>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <span class="caption-text">Django</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../django/">Django</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../today/">Today app</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../todo/">To Do List App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../airline/">Airline app</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">Django learning log</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#learning-log-webapp">Learning log webapp</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#creating-models">Creating models</a></li>
+        
+            <li><a class="toctree-l4" href="#activating-models">Activating models</a></li>
+        
+            <li><a class="toctree-l4" href="#create-superuser">Create superuser</a></li>
+        
+            <li><a class="toctree-l4" href="#creating-pages">Creating pages</a></li>
+        
+            <li><a class="toctree-l4" href="#creating-templates">Creating templates</a></li>
+        
+            <li><a class="toctree-l4" href="#allow-users-to-create-entries">Allow users to create entries</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+    </ul>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <span class="caption-text">Misc</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../misc/misc/">Miscellaneous</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../misc/read-data-url/">Read data from url</a>
+                </li>
+    </ul>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <span class="caption-text">Projects</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../projects/singapore-traffic-camera/">Singapore traffic camera</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../projects/directory-encryption/">AES-256 encryption</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../projects/encrypt-upload-dropbox/">Encrypt and upload to Dropbox</a>
+                </li>
+    </ul>
+                        </li>
+                        
+                    </ul>
+                </div>
+                &nbsp;
+            </nav>
+
+            <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+                
+                <nav
+                    class="wy-nav-top"
+                    role="navigation"
+                    aria-label="top navigation"
+                >
+                    <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+                    <a href="../.."
+                        >Learning Python</a
+                    >
+                </nav>
+
+                
+                <div class="wy-nav-content">
+                    <div class="rst-content">
+                        <div role="navigation" aria-label="breadcrumbs navigation">
+    <ul class="wy-breadcrumbs">
+        <li><a href="https://pranabdas.github.io/">Home</a>&raquo;</li>
+        <li><a href="https://pranabdas.github.io/docs/">Docs</a>&raquo;</li>
+        <li>
+            <a href="../..">Learning Python</a>
+            &raquo;
+        </li>
+          
+        <li>Django &raquo;</li>
+           
+        <li>Django learning log</li>
+        
+    </ul>
+    <hr />
+</div>
+                        <div role="main">
+                            <div class="section">
+                                 <h3 id="learning-log-webapp">Learning log webapp</h3>
+<p>Here we will see some more advanced features like admin account and databases. </p>
+<ul>
+<li>Creating a Project in Django: </li>
+</ul>
+<pre><code class="py">django-admin.py startproject learning_log .
+</code></pre>
+
+<p>Our project is called <code>learning_log</code>. </p>
+<ul>
+<li>Creating a database for the project:</li>
+</ul>
+<pre><code class="py">python3 manage.py migrate
+</code></pre>
+
+<p>Now you will see a new file called <code>db.sqlite3</code> in the directory.</p>
+<ul>
+<li>Viewing the Project:</li>
+</ul>
+<pre><code class="py">python3 manage.py runserver
+</code></pre>
+
+<p>You can visit <code>localhost:8000</code> in your browser, and you should see a default django webpage. Django project is consists of a set of individual apps. This modular approach helps to organize complex apps. In order to start an app: </p>
+<pre><code>python3 manage.py startapp learning_log_app
+</code></pre>
+
+<p>We call our app <code>learning_log_app</code>. Check all the directory structure. </p>
+<h5 id="creating-models">Creating models</h5>
+<p>Open <code>learning_log_app/models.py</code> and define a model:</p>
+<pre><code class="py">class Topic(models.Model):
+    &quot;&quot;&quot;A topic the user is learning&quot;&quot;&quot;
+    text = models.CharField(max_length=200)
+    date_added = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        &quot;&quot;&quot;Return a string representation of the model&quot;&quot;&quot;
+        return self.text
+</code></pre>
+
+<p>We can build as many models we want. We can define it by our requirements. Here we are defining our Topic model based on the Django in-built <code>models.Model</code>.</p>
+<h5 id="activating-models">Activating models</h5>
+<p>Once we have defined a model in our app, we have to include in our global django settings. Open <code>learning_log/settings.py</code> add <code>learning_log_app</code> app to the list of <code>INSTALLED_APPS</code> list:</p>
+<pre><code class="py">INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+
+    # My apps
+    'learning_log_app',
+]
+</code></pre>
+
+<ul>
+<li>Make the migration to take changes effect:</li>
+</ul>
+<pre><code class="py">python3 manage.py makemigrations learning_log_app
+python3 manage.py migrate
+</code></pre>
+
+<h5 id="create-superuser">Create superuser</h5>
+<pre><code class="py">python3 manage.py createsuperuser
+</code></pre>
+
+<p>Provide username and password. </p>
+<ul>
+<li>Registering a model with the admin site: Open <code>learning_log_app/admin.py</code> and add the following:</li>
+</ul>
+<pre><code class="py">from learning_log_app.models import Topic
+
+admin.site.register(Topic)
+</code></pre>
+
+<p>Now we can start the server <code>python3 manage.py runserver</code> and login to <code>localhost:8000/admin</code> and create Topics. </p>
+<p>Let's define another model for the Entry. Open <code>learning_log_app/models.py</code> and define a model for <em>Entry</em>. </p>
+<pre><code class="py">class Entry(models.Model):
+    &quot;&quot;&quot;Something specific learned about a topic&quot;&quot;&quot;
+    topic = models.ForeignKey(Topic, on_delete=models.DO_NOTHING,)
+    text = models.TextField()
+    date_added = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        verbose_name_plural = 'entries'
+    def __str__(self):
+        &quot;&quot;&quot;Return a string representation of the model.&quot;&quot;&quot;
+        return self.text[:50] + &quot;...&quot;
+</code></pre>
+
+<p>Make changes to the <code>learning_log_app/admin.py</code>: </p>
+<pre><code class="py">from django.contrib import admin
+
+from learning_log_app.models import Topic
+from learning_log_app.models import Entry
+
+admin.site.register(Topic)
+admin.site.register(Entry)
+</code></pre>
+
+<p>Make migrations: </p>
+<pre><code class="py">python3 manage.py makemigrations learning_log_app
+python3 manage.py migrate
+</code></pre>
+
+<p>You can start server and check out the new changes. </p>
+<h5 id="creating-pages">Creating pages</h5>
+<p>Creating pages has three steps: (1) Mapping URL, (2) Writing views, (3) Writing templates. </p>
+<p><strong>Mapping URL:</strong> You have tell Django, what to look for when a url is requested. Open <code>learning_log/urls.py</code> and include the following. You will see that the <code>admin/</code> path is already registered when we created the admin account. Now we are including our home page (base url) will look for the urls in the learning_log_app app urls. </p>
+<pre><code class="py">from django.contrib import admin
+from django.urls import path, include
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', include('learning_log_app.urls'))
+]
+</code></pre>
+
+<p>Create an urls.py in the directory learning_log_app and include the following:</p>
+<pre><code class="py">&quot;&quot;&quot;This file includes the urls of our learning_log_app &quot;&quot;&quot;
+
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('', views.index, name='index'),
+]
+</code></pre>
+
+<p><strong>Writing view:</strong> A view function takes the request and prepares a webpage to render. Open <code>learning_log_app/views.py</code> and add the following:</p>
+<pre><code class="py">from django.shortcuts import render
+
+def index(request):
+    &quot;&quot;&quot;The home page for Learning Log&quot;&quot;&quot;
+    return render(request, 'learning_log_app/index.html')
+</code></pre>
+
+<p><strong>Writing a template:</strong> We will store the templates in the following directory: <code>learning_log_app/templates/learning_log_app</code>. Create an <code>learning_log_app/templates/learning_log_app/index.html</code>:</p>
+<pre><code class="html">&lt;html&gt;
+    &lt; head&gt;
+        &lt;title&gt;Learning log homepage&lt;/title&gt;
+    &lt; /head&gt;
+    &lt;body&gt;
+        &lt;h3&gt;Welcome to learning Log&lt;/h3&gt;
+        &lt;p&gt;Here you can keep track of the topics you are learning.&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p>Note that in the above code block there is an extra space in <code>head</code> tags, please remove the spaces in your actual code (my website search function has some issues with the <code>head</code> tag, and I am using this workaround to counter the error currently). We can browse the homepage <code>localhost:8000</code> and see the index page. </p>
+<p>Now that we know how to build a basic page, we will follow the same process to build a page to list our topics and another to show the entries for each topic. </p>
+<h5 id="creating-templates">Creating templates</h5>
+<p>In almost all web project you will find, there are some contents that are shared by several other pages. Instead of hard coding those common elements, we can build templates. Let's create a template <code>base.html</code> where we will include the title of the pages. Create a file <code>learning_log_app/templates/learning_log_app/base.html</code> and include our title html:</p>
+<pre><code class="html">&lt;html&gt;
+        &lt; head&gt;
+                &lt;title&gt;Learning log&lt;/title&gt;
+        &lt; /head&gt;
+        &lt;body&gt;
+                &lt;h3&gt;&lt;a href=&quot;{% url 'index' %}&quot;&gt;Learning log&lt;/a&gt;&lt;/h3&gt;
+                {% block content %}{% endblock content %}
+        &lt;/body&gt; 
+&lt;/html&gt;
+</code></pre>
+
+<p>Now we will use this template to build other pages. Let's rewrite our <code>learning_log_app/templates/learning_log_app/index.html</code> using this template:</p>
+<pre><code class="html">{% extends &quot;learning_log_app/base.html&quot; %}
+
+{% block content %}
+&lt;p&gt;Learning Log helps you keep track of your learning, for any topic you're learning about.&lt;/p&gt;
+{% endblock content %}
+</code></pre>
+
+<p>Let's create our Topics page. Register the url pattern in <code>learning_log_app/urls.py</code>:</p>
+<pre><code class="py">urlpatterns = [
+    url('', views.index, name='index'),
+
+    # Show all topics
+    url('topics/', views.topics, name='topics'),
+]
+</code></pre>
+
+<p>Register the views in <code>learning_log_app/view.py</code>:</p>
+<pre><code class="py">from learning_log_app.models import Topic
+
+def topics(request): 
+    &quot;&quot;&quot;Show all topics.&quot;&quot;&quot;
+    topics = Topic.objects.order_by('date_added')
+    context = {'topics': topics}
+    return render(request, 'learning_log_app/topics.html', context)
+</code></pre>
+
+<p>Create <code>learning_log_app/templates/learning_log_app/topics.html</code></p>
+<pre><code class="html">{% extends &quot;learning_log_app/base.html&quot; %}
+
+{% block content %}
+&lt;h3&gt;List of topics&lt;/h3&gt;
+&lt;ul&gt;
+    {% for topic in topics %}
+        &lt;li&gt;{{ topic }}&lt;/li&gt;
+    {% empty %}
+        &lt;li&gt;No topics have been added yet.&lt;/li&gt; 
+    {% endfor %}
+  &lt;/ul&gt;
+{% endblock content %}
+</code></pre>
+
+<p>Now let's add individual topics pages. Update the url pattern <code>learning_log_app/urls.py</code>: </p>
+<pre><code class="py">path('topics/(&lt;int:topic_id&gt;/', views.topic, name='topic'),
+</code></pre>
+
+<p>Update the views <code>learning_log_app/views.py</code>:</p>
+<pre><code class="py">def
+def topic(request, topic_id):
+    &quot;&quot;&quot;Show a single topic and all its entries.&quot;&quot;&quot;
+    topic = Topic.objects.get(id=topic_id)
+    entries = topic.entry_set.order_by('-date_added')
+    context = {'topic': topic, 'entries': entries}
+    return render(request, 'learning_log_app/topic.html', context)
+</code></pre>
+
+<p>Create a new <code>learning_log_app/templates/learning_log_app/topic.html</code>:</p>
+<pre><code class="html">{% extends 'learning_log_app /base.html' %} 
+{% block content %}
+  &lt;p&gt;Topic: {{ topic }}&lt;/p&gt;
+  &lt;p&gt;Entries:&lt;/p&gt;
+  &lt;ul&gt;
+  {% for entry in entries %}
+    &lt;li&gt;
+    &lt;p&gt;{{ entry.date_added|date:'M d, Y H:i' }}&lt;/p&gt; &lt;p&gt;{{ entry.text|linebreaks }}&lt;/p&gt;
+    &lt;/li&gt;
+  {% empty %}
+    &lt;li&gt;
+    &lt;p&gt;There are no entries for this topic yet.&lt;/p&gt;
+    &lt;/li&gt;
+  {% endfor %}
+  &lt;/ul&gt;
+{% endblock content %}
+</code></pre>
+
+<p>Link the specific topic pages in our <code>learning_log_app/templates/learning_log_app/topics.html</code>:</p>
+<pre><code>&lt;li&gt;
+&lt;a href=&quot;{% url 'topic' topic.id %}&quot;&gt;({{ topic.id }}) {{ topic }}&lt;/a&gt;
+&lt;/li&gt;
+</code></pre>
+
+<p>Working in Djngo shell:</p>
+<pre><code class="py">python3 manage.py shell
+</code></pre>
+
+<h4 id="allow-users-to-create-entries">Allow users to create entries</h4>
+<p>We can let users submit and edit topics and entries via <code>ModelForm</code>. Create a forms file <code>learning_log_app/forms.py</code>:</p>
+<pre><code class="py">from django import forms
+from .models import Topic
+
+class TopicForm(forms.ModelForm): 
+    class Meta:
+        model = Topic
+        fields = ['text'] 
+        labels = {'text': ''}
+</code></pre>
+
+<p><strong>URL for new Topics page:</strong> Add following to our <code>learning_log_app/urls.py</code>:</p>
+<pre><code class="py">path('new_topic/', views.new_topic, name='new_topic'),
+</code></pre>
+
+<p>Update new_topic() in <code>learning_log_app/views.py</code>:</p>
+<pre><code class="py">from django.shortcuts import render
+from django.http import HttpResponseRedirect
+from django.core.urlresolvers import reverse
+from learning_log_app.models import Topic
+from learning_log_app.forms import TopicForm
+
+def index(request):
+    &quot;&quot;&quot;The home page for Learning Log&quot;&quot;&quot;
+    return render(request, 'learning_log_app/index.html')
+
+def topics(request):
+    &quot;&quot;&quot;Show all topics.&quot;&quot;&quot;
+    topics = Topic.objects.order_by('date_added')
+    context = {'topics': topics}
+    return render(request, 'learning_log_app/topics.html', context)
+
+def topic(request, topic_id):
+    &quot;&quot;&quot;Show a single topic and all its entries.&quot;&quot;&quot;
+    topic = Topic.objects.get(id=topic_id)
+    entries = topic.entry_set.order_by('-date_added')
+    context = {'topic': topic, 'entries': entries}
+    return render(request, 'learning_log_app/topic.html', context)
+
+def new_topic(request):
+    &quot;&quot;&quot;Add a new topic.&quot;&quot;&quot;
+    if request.method != 'POST':
+        # No data submitted; create a blank form.
+        form = TopicForm()
+    else:
+        # POST data submitted; process data.
+        form = TopicForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect(reverse('learning_log_app:topics'))
+
+    context = {'form': form}
+    return render(request, 'learning_log_app/new_topic.html', context)
+</code></pre> 
+                            </div>
+                        </div> <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../misc/misc/" class="btn btn-neutral float-right" title="Miscellaneous">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../airline/" class="btn btn-neutral" title="Airline app"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    <p>&copy; Copyright 2020 Pranab Das. All rights reserved.</p>
+  </div>
+
+</footer> 
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../airline/" style="color: #2980B9;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../../misc/misc/" style="color: #2980B9">Next &raquo;</a></span>
+      
+    </span>
+</div>
+        <script>
+            var base_url = "../..";
+        </script>
+        <script src="../../js/theme.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+        <script src="../../search/main.js" defer></script>
+    </body>
+</html>

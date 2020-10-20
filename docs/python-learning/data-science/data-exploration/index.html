@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+    <!--<![endif]-->
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+         
+        <meta name="author" content="Pranab Das" />
+         
+        <link rel="shortcut icon" href="../../img/favicon.ico" />
+        
+        <title>
+            Data Exploration
+            - Learning Python
+        </title>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+        <link
+            rel="stylesheet"
+            href="../../css/theme.css"
+            type="text/css"
+        />
+        <link
+            rel="stylesheet"
+            href="../../css/theme_extra.css"
+            type="text/css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.1/styles/github.min.css"
+        /> 
+        <script>
+            // Current page data
+            var mkdocs_page_name = "Data Exploration";
+            var mkdocs_page_input_path = "data-science/data-exploration.md";
+            var mkdocs_page_url = null;
+        </script>
+        
+        <script src="../../js/jquery-2.1.1.min.js" defer></script>
+        <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.1/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.1/languages/python.min.js"></script>
+        <script>
+            hljs.initHighlightingOnLoad();
+        </script> 
+    </head>
+
+    <body class="wy-body-for-nav" role="document">
+        <div class="wy-grid-for-nav">
+            
+            <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+                <div class="wy-side-nav-search">
+                    <a href="../.." class="icon icon-home">
+                        Learning Python</a
+                    > <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+                </div>
+
+                <div
+                    class="wy-menu wy-menu-vertical"
+                    data-spy="affix"
+                    role="navigation"
+                    aria-label="main navigation"
+                >
+                    <ul class="current">
+                         
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <a class="" href="../..">Table of Contents</a>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <span class="caption-text">The Basics</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../introduction/introduction/">Introduction</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../introduction/setup/">Setting up</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../introduction/basics/">Get started</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../introduction/string-formatting/">More on string formatting</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../introduction/list-and-tuple/">Python Lists and Tuple</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../introduction/dictionary/">Dictionary</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../introduction/if-else/">if-else condition</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../introduction/while-loop/">while loop, break, continue</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../introduction/function/">Simple function</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../introduction/file-read-write/">File read-write</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../introduction/class/">Python class</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../introduction/python-packages/">Python packages</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../introduction/venv/">Virtual environment</a>
+                </li>
+    </ul>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <span class="caption-text">Numerical Python</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../numerical-python/numpy/">numpy</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../numerical-python/matrix-algebra/">Matrix algebra</a>
+                </li>
+    </ul>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <span class="caption-text">Matplotlib</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../matplotlib/matplotlib/">Basic Matplotlib</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../matplotlib/subplot/">Subplots</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../matplotlib/histogram/">Histogram</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../matplotlib/contour-plot/">Contour plot</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../matplotlib/image-plot/">Image plot</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../matplotlib/custom-color-map/">Create custom color map</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../matplotlib/function-plot/">Function plot</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../matplotlib/custom-matplotlib/">Customizing Matplotlib</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../matplotlib/3d-plots/">Advanced 3D plots</a>
+                </li>
+    </ul>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <span class="caption-text">scipy</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../scipy/integration/">Integration using scipy</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../scipy/convolution/">Convolution</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../scipy/curve-fit/">Curve fitting</a>
+                </li>
+    </ul>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <span class="caption-text">Pandas</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../pandas/pandas/">Pandas Series and Dataframe</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../pandas/csv-excel/">CSV and excel</a>
+                </li>
+    </ul>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <span class="caption-text">Data Science</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../packages/">Packages</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">Data Exploration</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#basic-data-exploration-using-pandas">Basic data exploration using Pandas</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#more-methods-for-data-exploration">More methods for data exploration</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../linear-regression/">Linear regression</a>
+                </li>
+    </ul>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <span class="caption-text">Machine Learning</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../machine-learning/probability-statistics/">Basic Probability and statistics</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../machine-learning/nearest-neighbor/">Nearest neighbor classification</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../machine-learning/generative-model/">Generative model</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../machine-learning/regression/">Regression</a>
+                </li>
+    </ul>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <span class="caption-text">Geopands</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../geopandas/maps/">Geo-maps</a>
+                </li>
+    </ul>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <span class="caption-text">Django</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../django/django/">Django</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../django/today/">Today app</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../django/todo/">To Do List App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../django/airline/">Airline app</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../django/learning-log/">Django learning log</a>
+                </li>
+    </ul>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <span class="caption-text">Misc</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../misc/misc/">Miscellaneous</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../misc/read-data-url/">Read data from url</a>
+                </li>
+    </ul>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <span class="caption-text">Projects</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../projects/singapore-traffic-camera/">Singapore traffic camera</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../projects/directory-encryption/">AES-256 encryption</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../projects/encrypt-upload-dropbox/">Encrypt and upload to Dropbox</a>
+                </li>
+    </ul>
+                        </li>
+                        
+                    </ul>
+                </div>
+                &nbsp;
+            </nav>
+
+            <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+                
+                <nav
+                    class="wy-nav-top"
+                    role="navigation"
+                    aria-label="top navigation"
+                >
+                    <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+                    <a href="../.."
+                        >Learning Python</a
+                    >
+                </nav>
+
+                
+                <div class="wy-nav-content">
+                    <div class="rst-content">
+                        <div role="navigation" aria-label="breadcrumbs navigation">
+    <ul class="wy-breadcrumbs">
+        <li><a href="https://pranabdas.github.io/">Home</a>&raquo;</li>
+        <li><a href="https://pranabdas.github.io/docs/">Docs</a>&raquo;</li>
+        <li>
+            <a href="../..">Learning Python</a>
+            &raquo;
+        </li>
+          
+        <li>Data Science &raquo;</li>
+           
+        <li>Data Exploration</li>
+        
+    </ul>
+    <hr />
+</div>
+                        <div role="main">
+                            <div class="section">
+                                 <h3 id="basic-data-exploration-using-pandas">Basic data exploration using Pandas</h3>
+<p>We will explore life expectancy data from WHO record. You can find such datasets from <a href="https://www.kaggle.com" target="_blank">Kaggle</a> and other databases online. You can also find a copy of the CSV file that we will be using <a href="https://pranabdas.github.io/drive/downloads/datasets/Life-Expectancy-Data.csv" target="_blank">here</a>.</p>
+<pre><code class="python">import pandas as pd
+</code></pre>
+
+<pre><code class="python"># Read the data from csv file
+data = pd.read_csv(&quot;~/Desktop/Life-Expectancy-Data.csv&quot;)
+</code></pre>
+
+<pre><code class="python"># Print the head of the data to get an overview 
+data.head()
+</code></pre>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Country</th>
+      <th>Year</th>
+      <th>Status</th>
+      <th>Life expectancy</th>
+      <th>Adult Mortality</th>
+      <th>infant deaths</th>
+      <th>Alcohol</th>
+      <th>percentage expenditure</th>
+      <th>Hepatitis B</th>
+      <th>Measles</th>
+      <th>...</th>
+      <th>Polio</th>
+      <th>Total expenditure</th>
+      <th>Diphtheria</th>
+      <th>HIV/AIDS</th>
+      <th>GDP</th>
+      <th>Population</th>
+      <th>thinness  1-19 years</th>
+      <th>thinness 5-9 years</th>
+      <th>Income composition of resources</th>
+      <th>Schooling</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Afghanistan</td>
+      <td>2015</td>
+      <td>Developing</td>
+      <td>65.0</td>
+      <td>263.0</td>
+      <td>62</td>
+      <td>0.01</td>
+      <td>71.279624</td>
+      <td>65.0</td>
+      <td>1154</td>
+      <td>...</td>
+      <td>6.0</td>
+      <td>8.16</td>
+      <td>65.0</td>
+      <td>0.1</td>
+      <td>584.259210</td>
+      <td>33736494.0</td>
+      <td>17.2</td>
+      <td>17.3</td>
+      <td>0.479</td>
+      <td>10.1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Afghanistan</td>
+      <td>2014</td>
+      <td>Developing</td>
+      <td>59.9</td>
+      <td>271.0</td>
+      <td>64</td>
+      <td>0.01</td>
+      <td>73.523582</td>
+      <td>62.0</td>
+      <td>492</td>
+      <td>...</td>
+      <td>58.0</td>
+      <td>8.18</td>
+      <td>62.0</td>
+      <td>0.1</td>
+      <td>612.696514</td>
+      <td>327582.0</td>
+      <td>17.5</td>
+      <td>17.5</td>
+      <td>0.476</td>
+      <td>10.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Afghanistan</td>
+      <td>2013</td>
+      <td>Developing</td>
+      <td>59.9</td>
+      <td>268.0</td>
+      <td>66</td>
+      <td>0.01</td>
+      <td>73.219243</td>
+      <td>64.0</td>
+      <td>430</td>
+      <td>...</td>
+      <td>62.0</td>
+      <td>8.13</td>
+      <td>64.0</td>
+      <td>0.1</td>
+      <td>631.744976</td>
+      <td>31731688.0</td>
+      <td>17.7</td>
+      <td>17.7</td>
+      <td>0.470</td>
+      <td>9.9</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Afghanistan</td>
+      <td>2012</td>
+      <td>Developing</td>
+      <td>59.5</td>
+      <td>272.0</td>
+      <td>69</td>
+      <td>0.01</td>
+      <td>78.184215</td>
+      <td>67.0</td>
+      <td>2787</td>
+      <td>...</td>
+      <td>67.0</td>
+      <td>8.52</td>
+      <td>67.0</td>
+      <td>0.1</td>
+      <td>669.959000</td>
+      <td>3696958.0</td>
+      <td>17.9</td>
+      <td>18.0</td>
+      <td>0.463</td>
+      <td>9.8</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Afghanistan</td>
+      <td>2011</td>
+      <td>Developing</td>
+      <td>59.2</td>
+      <td>275.0</td>
+      <td>71</td>
+      <td>0.01</td>
+      <td>7.097109</td>
+      <td>68.0</td>
+      <td>3013</td>
+      <td>...</td>
+      <td>68.0</td>
+      <td>7.87</td>
+      <td>68.0</td>
+      <td>0.1</td>
+      <td>63.537231</td>
+      <td>2978599.0</td>
+      <td>18.2</td>
+      <td>18.2</td>
+      <td>0.454</td>
+      <td>9.5</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 22 columns</p>
+</div>
+
+<pre><code class="python"># Let's see how many year data are there
+data['Year'].unique()
+</code></pre>
+
+<pre><code>array([2015, 2014, 2013, 2012, 2011, 2010, 2009, 2008, 2007, 2006, 2005,
+       2004, 2003, 2002, 2001, 2000])
+</code></pre>
+<pre><code class="python">data.columns
+</code></pre>
+
+<pre><code>Index(['Country', 'Year', 'Status', 'Life expectancy ', 'Adult Mortality',
+       'infant deaths', 'Alcohol', 'percentage expenditure', 'Hepatitis B',
+       'Measles ', ' BMI ', 'under-five deaths ', 'Polio', 'Total expenditure',
+       'Diphtheria ', ' HIV/AIDS', 'GDP', 'Population',
+       ' thinness  1-19 years', ' thinness 5-9 years',
+       'Income composition of resources', 'Schooling'],
+      dtype='object')
+</code></pre>
+<pre><code class="python"># Let us first select a subset of data (say we are interested in life expectancy)
+life_expectancy = data[['Country', 'Year', 'Life expectancy ']]
+</code></pre>
+
+<pre><code class="python"># Let's select few countries and plot the life expectancy over the years 
+life_expectancy_in = life_expectancy.loc[life_expectancy['Country'] == 'India']
+life_expectancy_sg = life_expectancy.loc[life_expectancy['Country'] == 'Singapore']
+life_expectancy_us = life_expectancy.loc[life_expectancy['Country'] == 'United States of America']
+life_expectancy_cn = life_expectancy.loc[life_expectancy['Country'] == 'China']
+</code></pre>
+
+<pre><code class="python"># Let's plot using matplotlib 
+import matplotlib.pyplot as plt
+%matplotlib inline
+plt.rcParams[&quot;figure.figsize&quot;] = (8, 6)
+
+plt.plot(life_expectancy_in['Year'], life_expectancy_in['Life expectancy '], \
+         label= 'IN', marker= 'o')
+plt.plot(life_expectancy_sg['Year'], life_expectancy_sg['Life expectancy '], \
+         label= 'SG', marker= 'o', color='r')
+plt.plot(life_expectancy_us['Year'], life_expectancy_us['Life expectancy '], \
+         label= 'US', marker= 'o', color='g')
+plt.plot(life_expectancy_cn['Year'], life_expectancy_cn['Life expectancy '], \
+         label= 'CN', marker= 'o', color='k')
+plt.xlabel('Year')
+plt.ylabel('Life expectancy')
+plt.legend()
+plt.show()
+</code></pre>
+
+<p><img alt="png" src="../../img/pandas-life-expectancy.png" /></p>
+<pre><code class="python">gdp_life_expectancy = data[['Country', 'Year', 'Life expectancy ', 'GDP']]
+</code></pre>
+
+<pre><code class="python">gdp_life_expectancy_2015 = gdp_life_expectancy.loc[gdp_life_expectancy['Year']==2015]
+</code></pre>
+
+<pre><code class="python">plt.scatter(gdp_life_expectancy_2015['GDP'], \
+            gdp_life_expectancy_2015['Life expectancy '])
+plt.xlabel('GDP (USD)')
+plt.ylabel('Life expectancy')
+plt.show()
+</code></pre>
+
+<p><img alt="png" src="../../img/pandas-life-expectancy-gdp.png" /></p>
+<pre><code class="python">gdp_life_expectancy_2015.loc[gdp_life_expectancy_2015['Life expectancy '] &gt; 85]
+</code></pre>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Country</th>
+      <th>Year</th>
+      <th>Life expectancy</th>
+      <th>GDP</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>737</th>
+      <td>Denmark</td>
+      <td>2015</td>
+      <td>86.0</td>
+      <td>5314.64416</td>
+    </tr>
+    <tr>
+      <th>2345</th>
+      <td>Slovenia</td>
+      <td>2015</td>
+      <td>88.0</td>
+      <td>2729.86383</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p>We can read data from url as well. By default, Pandas csv import assumes our data file has a header. If we do not have a header, we need to explicitly set the header to none. </p>
+<pre><code class="py">import pandas as pd 
+url = http://archive.ics.uci.edu/ml/machine-learning-databases/autos/imports-85.data
+df = pd.read_csv(url, header = None)
+</code></pre>
+
+<p>We can have a look at the imported data by following methods: </p>
+<pre><code class="py">df.head()     # first 5 rows of the dataframe
+df.head(10)   # first 10 rows
+df.tail()     # last 5 rows 
+</code></pre>
+
+<p>Without the column headers, it is difficult to identity the columns. For our car data the headers can be found on a separate file. You can download the file and have a look into it to figure out what each column represents. Here is another way to do the same:  </p>
+<pre><code class="py">import urllib
+url = &quot;http://archive.ics.uci.edu/ml/machine-learning-databases/autos/imports-85.names&quot;
+headers = {'User-Agent': 'Mozilla/5.0'}
+req = urllib.request.Request(url = url, headers = headers)
+data = urllib.request.urlopen(req).read().decode() 
+data.split(&quot;\n&quot;)        # this is not recommended for very big dataset 
+data.split(&quot;\n&quot;)[:20]   # first 20 items of the list
+data.split(&quot;\n&quot;)[-20:]  # last 20 items of the list 
+</code></pre>
+
+<p>From above methods, we can find out the headers for our data set, and assign to our dataframe: </p>
+<pre><code class="py">headers = [&quot;symboling&quot;, &quot;normalized-losses&quot;, &quot;make&quot;, &quot;fuel-type&quot;, &quot;aspiration&quot;,\
+          &quot;num-of-doors&quot;, &quot;body-style&quot;, &quot;drive-wheels&quot;, &quot;engine-location&quot;,\
+          &quot;wheel-base&quot;, &quot;length&quot;, &quot;width&quot;, &quot;height&quot;, &quot;curb-weight&quot;, &quot;engine-type&quot;,\
+          &quot;num-of-cylinders&quot;, &quot;engine-size&quot;, &quot;fuel-system&quot;, &quot;bore&quot;, &quot;stroke&quot;,\
+          &quot;compression-ratio&quot;, &quot;horsepower&quot;, &quot;peak-rpm&quot;, &quot;city-mpg&quot;, &quot;highway-mpg&quot;,\
+          &quot;price&quot;]
+df.columns = headers
+df.head()
+</code></pre>
+
+<p>Renaming a column:</p>
+<pre><code class="py">df[&quot;city-mpg&quot;] = 235/df[&quot;city-mpg&quot;]
+df.rename(columns={&quot;city_mpg&quot; : &quot;city-L/100km&quot;}, inplace=True)
+</code></pre>
+
+<p>We can save our data with the headers: </p>
+<pre><code class="py">df.to_csv(&quot;/Users/Pranab/Desktop/car_data.csv&quot;, index=None)
+</code></pre>
+
+<p>There are few other common formats: </p>
+<table>
+<thead>
+<tr>
+<th align="left">Format</th>
+<th align="left">Read</th>
+<th align="left">Save</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">csv</td>
+<td align="left">pd.read_csv()</td>
+<td align="left">df.to_csv()</td>
+</tr>
+<tr>
+<td align="left">json</td>
+<td align="left">pd.read_json()</td>
+<td align="left">df.to_json()</td>
+</tr>
+<tr>
+<td align="left">excel</td>
+<td align="left">pd.read_excel()</td>
+<td align="left">df.to_excel()</td>
+</tr>
+<tr>
+<td align="left">sql</td>
+<td align="left">pd.read_sql()</td>
+<td align="left">df.to_sql()</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Data types in Pandas:</strong> </p>
+<pre><code class="py">df.dtypes
+</code></pre>
+
+<p>The default pandas data import may not assign the correct data type. In that case we need to convert correct data type manually. But, before we do that we may need to do some cleanup. We will see that many of entries in our data is missing or not available. For example, many entries in our car data is "?". Many of the python functions and methods will result in error if we proceed with such entries. In the first attempt, we many replace the "?" by "NaN". </p>
+<pre><code class="py">df.replace(&quot;?&quot;, &quot;NaN&quot;, inplace=True) 
+df[&quot;price&quot;] = df[&quot;price&quot;].astype(&quot;float&quot;)
+df.dtypes
+</code></pre>
+
+<p>And we will see that we have correctly applied float type to our price column. Now let's have a overview of our dataset: </p>
+<pre><code class="py">df.describe()
+</code></pre>
+
+<p>If we want to see some basis statistics on Object columns as well: </p>
+<pre><code class="py">df.describe(include=&quot;all&quot;)
+</code></pre>
+
+<p>Following method can also be helpful:</p>
+<pre><code class="py">df.info()
+</code></pre>
+
+<p><strong>Strategy for missing data:</strong> </p>
+<ul>
+<li>Drop the row if there is a missing value. </li>
+<li>Replace/insert values for missing value. Inserting average of the whole dataset. If the datatype is categorical, we can replace by the most occurring data entry. </li>
+</ul>
+<p>Drop missing values using <strong>dropna</strong> method: </p>
+<pre><code class="py">df.dropna(subset=[&quot;price&quot;], axis=0, inplace=True)
+</code></pre>
+
+<p><code>axis=1</code> for dropping column. </p>
+<p>We can replace the missing values if appropriate: </p>
+<pre><code class="py">import numpy as np
+df[&quot;horsepower&quot;] = df[&quot;horsepower&quot;].astype(&quot;float&quot;)
+mean = df[&quot;horsepower&quot;].mean()
+df[&quot;horsepower&quot;].replace(np.nan, mean, inplace=True)
+</code></pre>
+
+<p><strong>Data normalization:</strong> </p>
+<p>When we work with different kind of data say car price and horse power, the prices are ranged from 5,000 - 50,000 USD while horse power maybe 20 to 200. If we use these two features to build a model, the price will influence the model more because of its higher values. In such cases we may need to normalize both data in similar ranges. Say we normalize both the columns in the range [0, 1]. </p>
+<pre><code class="py"># simple scaling 
+df[&quot;price&quot;] = df[&quot;price&quot;]/df[&quot;price&quot;].max()
+
+# min-max
+df[&quot;price&quot;] = (df[&quot;price&quot;] - df[&quot;price&quot;].mean())/(df[&quot;price&quot;].max() - df[&quot;price&quot;].min())
+
+# z-score 
+df[&quot;price&quot;] = (df[&quot;price&quot;] - df[&quot;price&quot;].mean())/df[&quot;price&quot;].std()
+</code></pre>
+
+<p><strong>Data binning:</strong> </p>
+<p>Say we want to categorize our price in to low, medium, and high price cars: </p>
+<pre><code class="py">bins = np.linspace(df[&quot;price&quot;].min(), df[&quot;price&quot;].max(), 4)
+categories = [&quot;low&quot;, &quot;medium&quot;, &quot;high&quot;]
+df[&quot;price-binned&quot;] = pd.cut(df[&quot;price&quot;], bins, labels=categories, include_lowest=True)
+</code></pre>
+
+<h4 id="more-methods-for-data-exploration">More methods for data exploration</h4>
+<p><strong>value_counts():</strong> </p>
+<pre><code class="py">drive_wheels_counts = df[&quot;drive-wheels&quot;].value_counts()
+drive_wheels_counts 
+</code></pre>
+
+<p><strong>Groupby():</strong> </p>
+<pre><code class="py">df_copy = df[[&quot;drive-wheels&quot;, &quot;body-style&quot;, &quot;price&quot;]]
+df_grp = df_copy.groupby([&quot;drive-wheels&quot;], as_index=False).mean()
+df_grp
+</code></pre>
+
+<p>We can groupby() using multiple variables: </p>
+<pre><code class="py">df_grp = df_copy.groupby([&quot;drive-wheels&quot;, &quot;body-style&quot;], as_index=False).mean()
+df_grp
+</code></pre>
+
+<p><strong>Pivot() table:</strong> </p>
+<pre><code class="py">df_pivot = df_grp.pivot(index=&quot;drive-wheels&quot;, columns=&quot;body-style&quot;)
+df_pivot
+</code></pre>
+
+<p><strong>Heatmap:</strong> </p>
+<pre><code class="py">import matplotlib.pyplot as plt
+%matplotlib inline
+
+plt.pcolor(df_pivot, cmap=&quot;RdBu&quot;)
+plt.colorbar()
+plt.show()
+</code></pre>
+
+<p><img alt="heatmap plot" src="../../img/heatmap.png" /> </p>
+<p><strong>Analysis of Variance (ANOVA):</strong> </p>
+<pre><code class="py">df_copy = df[[&quot;make&quot;, &quot;price&quot;]]
+df_grp = df_copy.groupby([&quot;make&quot;])
+
+from scipy import stats
+
+anova_honda_subaru = stats.f_oneway(df_grp.get_group(&quot;honda&quot;)[&quot;price&quot;], \
+                                    df_grp.get_group(&quot;subaru&quot;)[&quot;price&quot;])
+print(anova_honda_subaru)
+</code></pre>
+
+<p>Output:</p>
+<pre><code>F_onewayResult(statistic=0.19744030127462606, pvalue=0.6609478240622193)
+</code></pre>
+
+<p>Similarly: </p>
+<pre><code class="py">anova_honda_jaguar = stats.f_oneway(df_grp.get_group(&quot;honda&quot;)[&quot;price&quot;], \
+                                    df_grp.get_group(&quot;jaguar&quot;)[&quot;price&quot;])
+print(anova_honda_jaguar)
+</code></pre>
+
+<p>Output: </p>
+<pre><code>F_onewayResult(statistic=400.925870564337, pvalue=1.0586193512077862e-11)
+</code></pre>
+
+<p><strong>Pearson Correlation coefficient:</strong> </p>
+<pre><code class="py">p_coef, p_val = stats.pearsonr(df[&quot;horsepower&quot;], df[&quot;price&quot;]) 
+print (p_coef, p_val)
+</code></pre>
+
+<p>Output: </p>
+<pre><code>0.8096811975632288 6.058444649710002e-48
+</code></pre>
+
+<ul>
+<li>Pearson correlation coefficient +1 : positive correlation </li>
+<li>Pearson correlation coefficient -1 : negative correlation </li>
+<li>Pearson correlation coefficient 0 : no correlation </li>
+<li>Pvalue &lt; 0.001 : strong certainty </li>
+<li>Pvalue &gt; 0.1 : no certainty </li>
+</ul>
+<p>We can create correlation heatmaps between various parameters. </p> 
+                            </div>
+                        </div> <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../linear-regression/" class="btn btn-neutral float-right" title="Linear regression">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../packages/" class="btn btn-neutral" title="Packages"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    <p>&copy; Copyright 2020 Pranab Das. All rights reserved.</p>
+  </div>
+
+</footer> 
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../packages/" style="color: #2980B9;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../linear-regression/" style="color: #2980B9">Next &raquo;</a></span>
+      
+    </span>
+</div>
+        <script>
+            var base_url = "../..";
+        </script>
+        <script src="../../js/theme.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+        <script src="../../search/main.js" defer></script>
+    </body>
+</html>

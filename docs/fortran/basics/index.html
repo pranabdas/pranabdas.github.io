@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+    <!--<![endif]-->
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+         
+        <meta name="author" content="Pranab Das" />
+         
+        <link rel="shortcut icon" href="../img/favicon.ico" />
+        
+        <title>
+            Fortran basics
+            - Fortran programming
+        </title>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+        <link
+            rel="stylesheet"
+            href="../css/theme.css"
+            type="text/css"
+        />
+        <link
+            rel="stylesheet"
+            href="../css/theme_extra.css"
+            type="text/css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.1/styles/github.min.css"
+        /> 
+        <script>
+            // Current page data
+            var mkdocs_page_name = "Fortran basics";
+            var mkdocs_page_input_path = "basics.md";
+            var mkdocs_page_url = null;
+        </script>
+        
+        <script src="../js/jquery-2.1.1.min.js" defer></script>
+        <script src="../js/modernizr-2.8.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.1/highlight.min.js"></script>
+        <script>
+            hljs.initHighlightingOnLoad();
+        </script> 
+    </head>
+
+    <body class="wy-body-for-nav" role="document">
+        <div class="wy-grid-for-nav">
+            
+            <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+                <div class="wy-side-nav-search">
+                    <a href=".." class="icon icon-home">
+                        Fortran programming</a
+                    > <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+                </div>
+
+                <div
+                    class="wy-menu wy-menu-vertical"
+                    data-spy="affix"
+                    role="navigation"
+                    aria-label="main navigation"
+                >
+                    <ul class="current">
+                         
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <a class="" href="..">Table of Contents</a>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <a class="" href="../gs/">Getting started</a>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1 current"
+                        >
+                            
+    <a class="current" href="./">Fortran basics</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#fortran-basics">Fortran basics</a></li>
+    
+
+    </ul>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <a class="" href="../array/">Array</a>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <a class="" href="../control/">Logical expression and control</a>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <a class="" href="../loop/">Loop</a>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <a class="" href="../file/">File I/O</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+                &nbsp;
+            </nav>
+
+            <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+                
+                <nav
+                    class="wy-nav-top"
+                    role="navigation"
+                    aria-label="top navigation"
+                >
+                    <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+                    <a href=".."
+                        >Fortran programming</a
+                    >
+                </nav>
+
+                
+                <div class="wy-nav-content">
+                    <div class="rst-content">
+                        <div role="navigation" aria-label="breadcrumbs navigation">
+    <ul class="wy-breadcrumbs">
+        <li><a href="https://pranabdas.github.io/">Home</a>&raquo;</li>
+        <li><a href="https://pranabdas.github.io/docs/">Docs</a>&raquo;</li>
+        <li>
+            <a href="..">Fortran programming</a>
+            &raquo;
+        </li>
+           
+        <li>Fortran basics</li>
+        
+    </ul>
+    <hr />
+</div>
+                        <div role="main">
+                            <div class="section">
+                                 <h3 id="fortran-basics">Fortran basics</h3>
+<p>We will learn by doing. Let us start by writing a simple program that asks for some user input, performs some arithmetic operations, and returns a result. </p>
+<pre><code class="f90">PROGRAM add
+      IMPLICIT NONE
+
+      INTEGER :: a, b, output
+
+      PRINT *, &quot;Input a=&quot;
+      READ *, a
+      PRINT *, &quot;Input b=&quot;
+      READ *, b
+
+      output = a + b
+
+      PRINT *, &quot;Output:&quot;, a, &quot;+&quot;, b, &quot;=&quot;, output
+END PROGRAM add
+</code></pre>
+
+<p>We store the above code in a file named: <code>01-add.f90</code>. We compile and execute the code as follows: </p>
+<pre><code>gfortran 01-add.f90 
+./a.out
+</code></pre>
+
+<p>Now let's write another simple program that converts centimeter to inches:</p>
+<pre><code>PROGRAM cm2inch
+      IMPLICIT NONE
+
+      REAL :: cm, inch
+
+      PRINT &quot;(a,$)&quot;, &quot;Enter length in centimeter = &quot;
+      READ *, cm
+
+      inch = cm / 2.54
+
+      PRINT *, &quot;Length in inches = &quot;, inch
+END PROGRAM cm2inch
+</code></pre>
+
+<p>Calculate the circumference of a circle given the diameter: </p>
+<pre><code>PROGRAM circ
+    IMPLICIT NONE
+
+    REAL :: r, circum
+    REAL, PARAMETER :: pi = 3.14159
+
+    WRITE(*, &quot;(a)&quot;, advance='NO') &quot;Enter radius of the circle: &quot;
+    READ *, r
+
+    circum = 2 * pi * r
+
+    PRINT *, &quot;Circumference of the circle = &quot;, circum
+END PROGRAM circ
+</code></pre>
+
+<p>Formatting output:</p>
+<pre><code>PROGRAM format
+      IMPLICIT NONE
+
+      INTEGER :: no_of_students = 25
+      REAL :: result1, result2
+
+      result1 = SIN(1.23)
+      result2 = 1.234728 * EXP(12.0)
+
+      PRINT '(i4)', no_of_students    ! Interger with 4 spaces for it
+      PRINT '(f6.4)', result1         ! Real number with 6 spaces in which 4 
+                                      ! for the fractional part
+      PRINT '(e8.2)', result2         ! exponential with 2 spaces for 
+                                      ! fractional part
+END PROGRAM format
+</code></pre> 
+                            </div>
+                        </div> <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../array/" class="btn btn-neutral float-right" title="Array">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../gs/" class="btn btn-neutral" title="Getting started"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    <p>&copy; Copyright 2020 Pranab Das. All rights reserved.</p>
+  </div>
+
+</footer> 
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../gs/" style="color: #2980B9;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../array/" style="color: #2980B9">Next &raquo;</a></span>
+      
+    </span>
+</div>
+        <script>
+            var base_url = "..";
+        </script>
+        <script src="../js/theme.js" defer></script>
+        <script src="../search/main.js" defer></script>
+    </body>
+</html>

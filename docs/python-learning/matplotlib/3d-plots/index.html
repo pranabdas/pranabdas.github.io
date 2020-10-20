@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+    <!--<![endif]-->
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+         
+        <meta name="author" content="Pranab Das" />
+         
+        <link rel="shortcut icon" href="../../img/favicon.ico" />
+        
+        <title>
+            Advanced 3D plots
+            - Learning Python
+        </title>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+        <link
+            rel="stylesheet"
+            href="../../css/theme.css"
+            type="text/css"
+        />
+        <link
+            rel="stylesheet"
+            href="../../css/theme_extra.css"
+            type="text/css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.1/styles/github.min.css"
+        /> 
+        <script>
+            // Current page data
+            var mkdocs_page_name = "Advanced 3D plots";
+            var mkdocs_page_input_path = "matplotlib/3d-plots.md";
+            var mkdocs_page_url = null;
+        </script>
+        
+        <script src="../../js/jquery-2.1.1.min.js" defer></script>
+        <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.1/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.1/languages/python.min.js"></script>
+        <script>
+            hljs.initHighlightingOnLoad();
+        </script> 
+    </head>
+
+    <body class="wy-body-for-nav" role="document">
+        <div class="wy-grid-for-nav">
+            
+            <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+                <div class="wy-side-nav-search">
+                    <a href="../.." class="icon icon-home">
+                        Learning Python</a
+                    > <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+                </div>
+
+                <div
+                    class="wy-menu wy-menu-vertical"
+                    data-spy="affix"
+                    role="navigation"
+                    aria-label="main navigation"
+                >
+                    <ul class="current">
+                         
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <a class="" href="../..">Table of Contents</a>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <span class="caption-text">The Basics</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../introduction/introduction/">Introduction</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../introduction/setup/">Setting up</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../introduction/basics/">Get started</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../introduction/string-formatting/">More on string formatting</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../introduction/list-and-tuple/">Python Lists and Tuple</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../introduction/dictionary/">Dictionary</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../introduction/if-else/">if-else condition</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../introduction/while-loop/">while loop, break, continue</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../introduction/function/">Simple function</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../introduction/file-read-write/">File read-write</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../introduction/class/">Python class</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../introduction/python-packages/">Python packages</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../introduction/venv/">Virtual environment</a>
+                </li>
+    </ul>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <span class="caption-text">Numerical Python</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../numerical-python/numpy/">numpy</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../numerical-python/matrix-algebra/">Matrix algebra</a>
+                </li>
+    </ul>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <span class="caption-text">Matplotlib</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../matplotlib/">Basic Matplotlib</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../subplot/">Subplots</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../histogram/">Histogram</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../contour-plot/">Contour plot</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../image-plot/">Image plot</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../custom-color-map/">Create custom color map</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../function-plot/">Function plot</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../custom-matplotlib/">Customizing Matplotlib</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">Advanced 3D plots</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#advanced-3d-plots">Advanced 3D plots</a></li>
+    
+
+    </ul>
+                </li>
+    </ul>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <span class="caption-text">scipy</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../scipy/integration/">Integration using scipy</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../scipy/convolution/">Convolution</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../scipy/curve-fit/">Curve fitting</a>
+                </li>
+    </ul>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <span class="caption-text">Pandas</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../pandas/pandas/">Pandas Series and Dataframe</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../pandas/csv-excel/">CSV and excel</a>
+                </li>
+    </ul>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <span class="caption-text">Data Science</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../data-science/packages/">Packages</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../data-science/data-exploration/">Data Exploration</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../data-science/linear-regression/">Linear regression</a>
+                </li>
+    </ul>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <span class="caption-text">Machine Learning</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../machine-learning/probability-statistics/">Basic Probability and statistics</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../machine-learning/nearest-neighbor/">Nearest neighbor classification</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../machine-learning/generative-model/">Generative model</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../machine-learning/regression/">Regression</a>
+                </li>
+    </ul>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <span class="caption-text">Geopands</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../geopandas/maps/">Geo-maps</a>
+                </li>
+    </ul>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <span class="caption-text">Django</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../django/django/">Django</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../django/today/">Today app</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../django/todo/">To Do List App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../django/airline/">Airline app</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../django/learning-log/">Django learning log</a>
+                </li>
+    </ul>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <span class="caption-text">Misc</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../misc/misc/">Miscellaneous</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../misc/read-data-url/">Read data from url</a>
+                </li>
+    </ul>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <span class="caption-text">Projects</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../projects/singapore-traffic-camera/">Singapore traffic camera</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../projects/directory-encryption/">AES-256 encryption</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../projects/encrypt-upload-dropbox/">Encrypt and upload to Dropbox</a>
+                </li>
+    </ul>
+                        </li>
+                        
+                    </ul>
+                </div>
+                &nbsp;
+            </nav>
+
+            <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+                
+                <nav
+                    class="wy-nav-top"
+                    role="navigation"
+                    aria-label="top navigation"
+                >
+                    <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+                    <a href="../.."
+                        >Learning Python</a
+                    >
+                </nav>
+
+                
+                <div class="wy-nav-content">
+                    <div class="rst-content">
+                        <div role="navigation" aria-label="breadcrumbs navigation">
+    <ul class="wy-breadcrumbs">
+        <li><a href="https://pranabdas.github.io/">Home</a>&raquo;</li>
+        <li><a href="https://pranabdas.github.io/docs/">Docs</a>&raquo;</li>
+        <li>
+            <a href="../..">Learning Python</a>
+            &raquo;
+        </li>
+          
+        <li>Matplotlib &raquo;</li>
+           
+        <li>Advanced 3D plots</li>
+        
+    </ul>
+    <hr />
+</div>
+                        <div role="main">
+                            <div class="section">
+                                 <h3 id="advanced-3d-plots">Advanced 3D plots</h3>
+<pre><code class="py">import numpy as np
+import matplotlib.image as image
+import matplotlib.pyplot as plt
+import matplotlib.cm as cm
+import sys
+sys.path.append(&quot;/Users/Pranab/Documents/github/&quot;)
+import arpespythontools as arp
+%matplotlib inline
+
+
+# Get your data 
+FS, x, y = arp.import_itx('data/MAP_2pt_19_k_FS.itx')
+GX, x, y = arp.import_itx('data/MAP_2pt_19_k_horiz.itx')
+GY, x, y = arp.import_itx('data/MAP_2pt_19_k_vert.itx')
+
+# Extract the surfaces 
+FS_back = FS[158:494, 27:47]
+FS_front = FS[158:325, 5:26]
+GX = GX[98:298, 326:494].T
+GY = GY[98:298, 5:26].T
+
+xp, yp = FS_back.shape
+xp2, yp2 = FS_front.shape
+xp3, zp3 = GX.shape
+yp4, zp4 = GY.shape
+
+# masks
+xp5, zp5 = xp2, zp3
+yp6, zp6 = yp, zp3
+
+x = np.arange(0, xp, 1)
+y = np.arange(0, yp, 1)
+Y, X = np.meshgrid(y, x)
+
+x = np.arange(0, xp2, 1)
+y = np.arange(-yp, -yp+yp2, 1)
+Y2, X2 = np.meshgrid(y, x)
+
+x = np.arange(xp-xp3, xp, 1)
+z = -np.arange(0, zp3, 1)
+Z3, X3 = np.meshgrid(z, x)
+
+y = np.arange(yp, yp+yp4, 1)
+z = -np.arange(0, zp4, 1)
+Z4, Y4 = np.meshgrid(z, y)
+
+x = np.arange(0, xp5, 1)
+z = -np.arange(0, zp5, 1)
+Z5, X5 = np.meshgrid(z, x)
+M_front = np.zeros([xp5, zp5])
+M_front[0, 0] = 1
+
+y = np.arange(0, yp6, 1)
+z = -np.arange(0, zp6, 1)
+Z6, Y6 = np.meshgrid(z, y)
+M_right = np.zeros([yp6, zp6])
+M_right[0, 0] = 1
+
+fig = plt.figure(figsize=(12, 12))
+ax = fig.gca(projection='3d')
+
+ax.dist=20
+ax.view_init(elev=30, azim=-45)
+
+cm_style = cm.get_cmap('plasma')
+
+normed_FS_back = FS_back / np.max(FS_back)
+mapped_FS_back = cm_style(normed_FS_back)
+
+normed_FS_front = FS_front / np.max(FS_front)
+mapped_FS_front = cm_style(normed_FS_front)
+
+normed_GX = GX / np.max(GX)
+mapped_GX = cm_style(normed_GX*3)
+
+normed_GY = GY / np.max(GY)
+mapped_GY = cm_style(normed_GY*3)
+
+mapped_M_front = cm_style(M_front)
+mapped_M_right = cm_style(M_right)
+
+ax.plot_surface(X, Y, X - X + 0, facecolors=mapped_FS_back,
+                rstride=1, cstride=1,
+                antialiased=False, shade=False)
+
+ax.plot_surface(X2, Y2, X2 - X2 + 0, facecolors=mapped_FS_front,
+                rstride=1, cstride=1,
+                antialiased=False, shade=False)
+
+ax.plot_surface(X3, Z3-Z3, -Z3 -zp3, facecolors=mapped_GX,
+                rstride=1, cstride=1,
+                antialiased=False, shade=False)
+
+ax.plot_surface(Z4-Z4+xp2, Y4-2*yp, -Z4-zp4, facecolors=mapped_GY,
+                rstride=1, cstride=1,
+                antialiased=False, shade=False)
+
+ax.plot_surface(X5, Z5-Z5-yp, -Z5 -zp5, facecolors=mapped_M_front,
+                rstride=1, cstride=1,
+                antialiased=False, shade=False)
+
+ax.plot_surface(Z6-Z6+xp, Y6, -Z6-zp6, facecolors=mapped_M_right,
+                rstride=1, cstride=1,
+                antialiased=False, shade=False)
+
+ax.plot([xp2, xp2+xp2/2, xp, xp2, xp2, xp, xp, xp, xp, xp, xp], \
+        [0, 0, 0, -yp2/2+1, -yp2+1, yp-1, yp/2, yp-1, yp-1, yp-1, yp-1], \
+        [-zp3, -zp3, -zp3, -zp3, -zp3, -zp3, -zp3, -zp3*0.25, -zp3*0.50, \
+        -zp3*0.75, 0], '+', c='k', markersize= 10)
+
+ax.set_zlim3d([-250, 50])
+plt.axis('off')
+plt.show()
+</code></pre>
+
+<p><img alt="3D plot" src="../../img/3d-plot.png" /> </p>
+<p><strong>Wrapping 2D image on to a spherical surface:</strong> </p>
+<pre><code class="py">import numpy as np
+import matplotlib.image as image
+import matplotlib.pyplot as plt
+import matplotlib.cm as cm
+%matplotlib inline
+plt.style.use('dark_background')
+
+earth = image.imread('data/earth_texture2048x1024.png')
+xp, yp, __ = earth.shape
+
+x = np.arange(0, xp, 1)
+y = np.arange(0, yp, 1)
+Y, X = np.meshgrid(y, x)
+
+phi = np.linspace(0, 2 * np.pi, yp)
+theta = np.linspace(0, np.pi, xp)
+phigrid, thetagrid = np.meshgrid(phi, theta)
+
+x = np.sin(thetagrid) * np.cos(phigrid)
+y = np.sin(thetagrid) * np.sin(phigrid)
+z = np.cos(thetagrid)
+
+fig = plt.figure(figsize=(12,12))
+ax = fig.gca(projection='3d')
+ax.dist=20
+ax.view_init(elev=10, azim=60)
+
+ax.plot_surface(x, y, z, facecolors=earth,
+                rstride=4, cstride=4,
+                antialiased=True, shade=False)
+
+ax.set_xlim3d([-1.25, 1.25])
+ax.set_ylim3d([-1.25, 1.25])
+plt.axis('off')
+plt.show()
+</code></pre>
+
+<p><img alt="3D sphere plot" src="../../img/3d-sphere.png" /> </p>
+<p>We can also make animation by looping through azimuth: </p>
+<pre><code class="py">fig = plt.figure(figsize=(12,12))
+ax = fig.gca(projection='3d')
+ax.dist=20
+
+for azim in range(0, 360, 5):
+    fig = plt.figure()
+    ax = fig.gca(projection='3d')
+    ax.plot_surface(x, y, z, facecolors=earth,
+                rstride=4, cstride=4,
+                antialiased=False, shade=False)
+
+    ax.view_init(elev=10, azim=azim)
+
+    filename = 'temp/earth'+ &quot;{0:0=3d}&quot;.format(azim) + '.png'
+    plt.axis('off')
+    plt.savefig(filename, dpi=300, bbox_inches='tight', pad_inches=0)
+    ax.set_xlim3d([-1.25, 1.25])
+    ax.set_ylim3d([-1.25, 1.25])
+    plt.gca()
+    plt.clf()
+
+from PIL import Image
+import glob
+
+# Create the frames
+frames = []
+imgs = glob.glob(&quot;temp/*.png&quot;)
+for i in imgs:
+    new_frame = Image.open(i)
+    frames.append(new_frame)
+
+frames[0].save('earth.gif', format='GIF',
+               append_images=frames[1:],
+               save_all=True,
+               duration=300, loop=0)
+</code></pre> 
+                            </div>
+                        </div> <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../scipy/integration/" class="btn btn-neutral float-right" title="Integration using scipy">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../custom-matplotlib/" class="btn btn-neutral" title="Customizing Matplotlib"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    <p>&copy; Copyright 2020 Pranab Das. All rights reserved.</p>
+  </div>
+
+</footer> 
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../custom-matplotlib/" style="color: #2980B9;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../../scipy/integration/" style="color: #2980B9">Next &raquo;</a></span>
+      
+    </span>
+</div>
+        <script>
+            var base_url = "../..";
+        </script>
+        <script src="../../js/theme.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+        <script src="../../search/main.js" defer></script>
+    </body>
+</html>

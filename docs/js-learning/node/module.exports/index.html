@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+    <!--<![endif]-->
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+         
+        <meta name="author" content="Pranab Das" />
+         
+        <link rel="shortcut icon" href="../../img/favicon.ico" />
+        
+        <title>
+            module.exports
+            - Learning Javascript
+        </title>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+        <link
+            rel="stylesheet"
+            href="../../css/theme.css"
+            type="text/css"
+        />
+        <link
+            rel="stylesheet"
+            href="../../css/theme_extra.css"
+            type="text/css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.1/styles/github.min.css"
+        /> 
+        <script>
+            // Current page data
+            var mkdocs_page_name = "module.exports";
+            var mkdocs_page_input_path = "node/module.exports.md";
+            var mkdocs_page_url = null;
+        </script>
+        
+        <script src="../../js/jquery-2.1.1.min.js" defer></script>
+        <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.1/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.1/languages/javascript.min.js"></script>
+        <script>
+            hljs.initHighlightingOnLoad();
+        </script> 
+    </head>
+
+    <body class="wy-body-for-nav" role="document">
+        <div class="wy-grid-for-nav">
+            
+            <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+                <div class="wy-side-nav-search">
+                    <a href="../.." class="icon icon-home">
+                        Learning Javascript</a
+                    > <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+                </div>
+
+                <div
+                    class="wy-menu wy-menu-vertical"
+                    data-spy="affix"
+                    role="navigation"
+                    aria-label="main navigation"
+                >
+                    <ul class="current">
+                         
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <a class="" href="../..">Table of Contents</a>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <span class="caption-text">The Basics</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../basics/setup/">Setup</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../basics/console/">Console and external script</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../basics/working-with-data/">Working with data</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../basics/conditional-statement/">Conditional statement</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../basics/arrays/">Arrays</a>
+                </li>
+    </ul>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <span class="caption-text">Functions and Objects</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../functions-objects/functions/">Functions</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../functions-objects/variable-scope/">Variable scope</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../functions-objects/objects/">Objects</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../functions-objects/map/">map()</a>
+                </li>
+    </ul>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <span class="caption-text">Loop</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../loop/loop/">loop</a>
+                </li>
+    </ul>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <span class="caption-text">DOM</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../DOM/dom/">Document Object Model</a>
+                </li>
+    </ul>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <span class="caption-text">Node.js</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../introduction/">Introduction</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../std-input-output/">Standard input-output</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../core-modules/">Core modules</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../file-system/">File system</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../callbacks/">Understanding callbacks</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">module.exports</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#moduleexports">module.exports</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#exporting-function-with-multiple-return-values">Exporting function with multiple return values</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+    </ul>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <span class="caption-text">Electron.js</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../electron/electron/">Creating first Electron.js application</a>
+                </li>
+    </ul>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <span class="caption-text">React.js</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../react/react/">React.js</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../react/to-do-list/">To do list project</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../react/shopping-cart/">Shopping cart project</a>
+                </li>
+    </ul>
+                        </li>
+                        
+                    </ul>
+                </div>
+                &nbsp;
+            </nav>
+
+            <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+                
+                <nav
+                    class="wy-nav-top"
+                    role="navigation"
+                    aria-label="top navigation"
+                >
+                    <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+                    <a href="../.."
+                        >Learning Javascript</a
+                    >
+                </nav>
+
+                
+                <div class="wy-nav-content">
+                    <div class="rst-content">
+                        <div role="navigation" aria-label="breadcrumbs navigation">
+    <ul class="wy-breadcrumbs">
+        <li><a href="https://pranabdas.github.io/">Home</a>&raquo;</li>
+        <li><a href="https://pranabdas.github.io/docs/">Docs</a>&raquo;</li>
+        <li>
+            <a href="../..">Learning Javascript</a>
+            &raquo;
+        </li>
+          
+        <li>Node.js &raquo;</li>
+           
+        <li>module.exports</li>
+        
+    </ul>
+    <hr />
+</div>
+                        <div role="main">
+                            <div class="section">
+                                 <h3 id="moduleexports">module.exports</h3>
+<p>We can structure our codes with modular approach. We write our libraries in separate source files, and call them in the main program as we need them. </p>
+<p>We write the following function in file named <code>myModule.js</code> : </p>
+<pre><code class="js">module.exports.square = function square(x) {
+    return x**2; 
+}; 
+</code></pre>
+
+<p>Now we can have a main program, say <code>main.js</code> where we can call this function. </p>
+<pre><code class="js">const myModule = require('./myModule'); 
+
+var x = 5; 
+var x2 = myModule.square(x); 
+console.log(x2); 
+</code></pre>
+
+<h5 id="exporting-function-with-multiple-return-values">Exporting function with multiple return values</h5>
+<p>One way is to return an object:  </p>
+<pre><code class="js">module.exports.addMult = (input1, input2) =&gt; {
+    add = input1 + input2; 
+    mult = input1 * input2; 
+    return { add: add, mult: mult };
+}; 
+</code></pre>
+
+<p>Note the use of arrow function to make it concise. </p>
+<pre><code class="js">const myModule = require('./myModule'); 
+
+var result = myModule.addMult(3, 4); 
+console.log(`Add. = ${result.add} \nMult. = ${result.mult}`); 
+</code></pre> 
+                            </div>
+                        </div> <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../electron/electron/" class="btn btn-neutral float-right" title="Creating first Electron.js application">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../callbacks/" class="btn btn-neutral" title="Understanding callbacks"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    <p>&copy; Copyright 2020 Pranab Das. All rights reserved.</p>
+  </div>
+
+</footer> 
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../callbacks/" style="color: #2980B9;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../../electron/electron/" style="color: #2980B9">Next &raquo;</a></span>
+      
+    </span>
+</div>
+        <script>
+            var base_url = "../..";
+        </script>
+        <script src="../../js/theme.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+        <script src="../../search/main.js" defer></script>
+    </body>
+</html>

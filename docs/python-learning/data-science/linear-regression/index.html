@@ -1,0 +1,1119 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+    <!--<![endif]-->
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+         
+        <meta name="author" content="Pranab Das" />
+         
+        <link rel="shortcut icon" href="../../img/favicon.ico" />
+        
+        <title>
+            Linear regression
+            - Learning Python
+        </title>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+        <link
+            rel="stylesheet"
+            href="../../css/theme.css"
+            type="text/css"
+        />
+        <link
+            rel="stylesheet"
+            href="../../css/theme_extra.css"
+            type="text/css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.1/styles/github.min.css"
+        /> 
+        <script>
+            // Current page data
+            var mkdocs_page_name = "Linear regression";
+            var mkdocs_page_input_path = "data-science/linear-regression.md";
+            var mkdocs_page_url = null;
+        </script>
+        
+        <script src="../../js/jquery-2.1.1.min.js" defer></script>
+        <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.1/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.1/languages/python.min.js"></script>
+        <script>
+            hljs.initHighlightingOnLoad();
+        </script> 
+    </head>
+
+    <body class="wy-body-for-nav" role="document">
+        <div class="wy-grid-for-nav">
+            
+            <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+                <div class="wy-side-nav-search">
+                    <a href="../.." class="icon icon-home">
+                        Learning Python</a
+                    > <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+                </div>
+
+                <div
+                    class="wy-menu wy-menu-vertical"
+                    data-spy="affix"
+                    role="navigation"
+                    aria-label="main navigation"
+                >
+                    <ul class="current">
+                         
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <a class="" href="../..">Table of Contents</a>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <span class="caption-text">The Basics</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../introduction/introduction/">Introduction</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../introduction/setup/">Setting up</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../introduction/basics/">Get started</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../introduction/string-formatting/">More on string formatting</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../introduction/list-and-tuple/">Python Lists and Tuple</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../introduction/dictionary/">Dictionary</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../introduction/if-else/">if-else condition</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../introduction/while-loop/">while loop, break, continue</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../introduction/function/">Simple function</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../introduction/file-read-write/">File read-write</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../introduction/class/">Python class</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../introduction/python-packages/">Python packages</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../introduction/venv/">Virtual environment</a>
+                </li>
+    </ul>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <span class="caption-text">Numerical Python</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../numerical-python/numpy/">numpy</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../numerical-python/matrix-algebra/">Matrix algebra</a>
+                </li>
+    </ul>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <span class="caption-text">Matplotlib</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../matplotlib/matplotlib/">Basic Matplotlib</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../matplotlib/subplot/">Subplots</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../matplotlib/histogram/">Histogram</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../matplotlib/contour-plot/">Contour plot</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../matplotlib/image-plot/">Image plot</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../matplotlib/custom-color-map/">Create custom color map</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../matplotlib/function-plot/">Function plot</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../matplotlib/custom-matplotlib/">Customizing Matplotlib</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../matplotlib/3d-plots/">Advanced 3D plots</a>
+                </li>
+    </ul>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <span class="caption-text">scipy</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../scipy/integration/">Integration using scipy</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../scipy/convolution/">Convolution</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../scipy/curve-fit/">Curve fitting</a>
+                </li>
+    </ul>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <span class="caption-text">Pandas</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../pandas/pandas/">Pandas Series and Dataframe</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../pandas/csv-excel/">CSV and excel</a>
+                </li>
+    </ul>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <span class="caption-text">Data Science</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../packages/">Packages</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../data-exploration/">Data Exploration</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">Linear regression</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#linear-regression">Linear regression</a></li>
+    
+
+    </ul>
+                </li>
+    </ul>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <span class="caption-text">Machine Learning</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../machine-learning/probability-statistics/">Basic Probability and statistics</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../machine-learning/nearest-neighbor/">Nearest neighbor classification</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../machine-learning/generative-model/">Generative model</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../machine-learning/regression/">Regression</a>
+                </li>
+    </ul>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <span class="caption-text">Geopands</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../geopandas/maps/">Geo-maps</a>
+                </li>
+    </ul>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <span class="caption-text">Django</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../django/django/">Django</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../django/today/">Today app</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../django/todo/">To Do List App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../django/airline/">Airline app</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../django/learning-log/">Django learning log</a>
+                </li>
+    </ul>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <span class="caption-text">Misc</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../misc/misc/">Miscellaneous</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../misc/read-data-url/">Read data from url</a>
+                </li>
+    </ul>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <span class="caption-text">Projects</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../projects/singapore-traffic-camera/">Singapore traffic camera</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../projects/directory-encryption/">AES-256 encryption</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../projects/encrypt-upload-dropbox/">Encrypt and upload to Dropbox</a>
+                </li>
+    </ul>
+                        </li>
+                        
+                    </ul>
+                </div>
+                &nbsp;
+            </nav>
+
+            <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+                
+                <nav
+                    class="wy-nav-top"
+                    role="navigation"
+                    aria-label="top navigation"
+                >
+                    <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+                    <a href="../.."
+                        >Learning Python</a
+                    >
+                </nav>
+
+                
+                <div class="wy-nav-content">
+                    <div class="rst-content">
+                        <div role="navigation" aria-label="breadcrumbs navigation">
+    <ul class="wy-breadcrumbs">
+        <li><a href="https://pranabdas.github.io/">Home</a>&raquo;</li>
+        <li><a href="https://pranabdas.github.io/docs/">Docs</a>&raquo;</li>
+        <li>
+            <a href="../..">Learning Python</a>
+            &raquo;
+        </li>
+          
+        <li>Data Science &raquo;</li>
+           
+        <li>Linear regression</li>
+        
+    </ul>
+    <hr />
+</div>
+                        <div role="main">
+                            <div class="section">
+                                 <h3 id="linear-regression">Linear regression</h3>
+<p>We find a line for which the mean squared error is least. </p>
+<div>
+<div class="MathJax_Preview"> MSE (a, b) = \frac{1}{n} \sum_i^n (y_i - (ax_i + b))^2  </div>
+<script type="math/tex; mode=display"> MSE (a, b) = \frac{1}{n} \sum_i^n (y_i - (ax_i + b))^2  </script>
+</div>
+<p>The solution for <span><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> and <span><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span> has nice forms (bar denotes the average): </p>
+<div>
+<div class="MathJax_Preview"> b = \bar{y} - a \bar{x}  </div>
+<script type="math/tex; mode=display"> b = \bar{y} - a \bar{x}  </script>
+</div>
+<div>
+<div class="MathJax_Preview"> a = \frac{\sum_i^n (y_i - \bar{y})(x_i - \bar{x})}{\sum_i^n (x_i - \bar{x})^2}  </div>
+<script type="math/tex; mode=display"> a = \frac{\sum_i^n (y_i - \bar{y})(x_i - \bar{x})}{\sum_i^n (x_i - \bar{x})^2}  </script>
+</div>
+<p>Here we will use a data set of used car prices. The data was downloaded from <a href="http://archive.ics.uci.edu/ml/machine-learning-databases/autos/" target="_blank">http://archive.ics.uci.edu/ml/machine-learning-databases/autos/</a>. You can find a copy <a href="https://pranabdas.github.io/drive/downloads/datasets/car-price.csv" target="_blank">here</a> as well. </p>
+<pre><code class="python">import pandas as pd
+import numpy as np 
+import matplotlib.pyplot as plt
+%matplotlib inline
+plt.rcParams[&quot;figure.figsize&quot;] = (8, 6)
+</code></pre>
+
+<pre><code class="python"># First load our data
+data = pd.read_csv(&quot;~/Desktop/car-price.csv&quot;)
+</code></pre>
+
+<pre><code class="python"># Let's have a look with head()
+data.head()
+</code></pre>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Unnamed: 0</th>
+      <th>symboling</th>
+      <th>normalized-losses</th>
+      <th>make</th>
+      <th>fuel-type</th>
+      <th>aspiration</th>
+      <th>num-of-doors</th>
+      <th>body-style</th>
+      <th>drive-wheel</th>
+      <th>engine-location</th>
+      <th>...</th>
+      <th>engine-size</th>
+      <th>fuel-system</th>
+      <th>bore</th>
+      <th>stroke</th>
+      <th>compression-ratio</th>
+      <th>horsepower</th>
+      <th>peak-rpm</th>
+      <th>city-mpg</th>
+      <th>highway-mpg</th>
+      <th>price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>3</td>
+      <td>?</td>
+      <td>alfa-romero</td>
+      <td>gas</td>
+      <td>std</td>
+      <td>two</td>
+      <td>convertible</td>
+      <td>rwd</td>
+      <td>front</td>
+      <td>...</td>
+      <td>130</td>
+      <td>mpfi</td>
+      <td>3.47</td>
+      <td>2.68</td>
+      <td>9.0</td>
+      <td>111</td>
+      <td>5000</td>
+      <td>21</td>
+      <td>27</td>
+      <td>13495</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>3</td>
+      <td>?</td>
+      <td>alfa-romero</td>
+      <td>gas</td>
+      <td>std</td>
+      <td>two</td>
+      <td>convertible</td>
+      <td>rwd</td>
+      <td>front</td>
+      <td>...</td>
+      <td>130</td>
+      <td>mpfi</td>
+      <td>3.47</td>
+      <td>2.68</td>
+      <td>9.0</td>
+      <td>111</td>
+      <td>5000</td>
+      <td>21</td>
+      <td>27</td>
+      <td>16500</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2</td>
+      <td>1</td>
+      <td>?</td>
+      <td>alfa-romero</td>
+      <td>gas</td>
+      <td>std</td>
+      <td>two</td>
+      <td>hatchback</td>
+      <td>rwd</td>
+      <td>front</td>
+      <td>...</td>
+      <td>152</td>
+      <td>mpfi</td>
+      <td>2.68</td>
+      <td>3.47</td>
+      <td>9.0</td>
+      <td>154</td>
+      <td>5000</td>
+      <td>19</td>
+      <td>26</td>
+      <td>16500</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>3</td>
+      <td>2</td>
+      <td>164</td>
+      <td>audi</td>
+      <td>gas</td>
+      <td>std</td>
+      <td>four</td>
+      <td>sedan</td>
+      <td>fwd</td>
+      <td>front</td>
+      <td>...</td>
+      <td>109</td>
+      <td>mpfi</td>
+      <td>3.19</td>
+      <td>3.40</td>
+      <td>10.0</td>
+      <td>102</td>
+      <td>5500</td>
+      <td>24</td>
+      <td>30</td>
+      <td>13950</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>4</td>
+      <td>2</td>
+      <td>164</td>
+      <td>audi</td>
+      <td>gas</td>
+      <td>std</td>
+      <td>four</td>
+      <td>sedan</td>
+      <td>4wd</td>
+      <td>front</td>
+      <td>...</td>
+      <td>136</td>
+      <td>mpfi</td>
+      <td>3.19</td>
+      <td>3.40</td>
+      <td>8.0</td>
+      <td>115</td>
+      <td>5500</td>
+      <td>18</td>
+      <td>22</td>
+      <td>17450</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 27 columns</p>
+</div>
+
+<pre><code class="python"># Replace the ? marks with NaN
+data.replace(&quot;?&quot;, &quot;NaN&quot;, inplace=True)
+</code></pre>
+
+<pre><code class="python">data.head()
+</code></pre>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Unnamed: 0</th>
+      <th>symboling</th>
+      <th>normalized-losses</th>
+      <th>make</th>
+      <th>fuel-type</th>
+      <th>aspiration</th>
+      <th>num-of-doors</th>
+      <th>body-style</th>
+      <th>drive-wheel</th>
+      <th>engine-location</th>
+      <th>...</th>
+      <th>engine-size</th>
+      <th>fuel-system</th>
+      <th>bore</th>
+      <th>stroke</th>
+      <th>compression-ratio</th>
+      <th>horsepower</th>
+      <th>peak-rpm</th>
+      <th>city-mpg</th>
+      <th>highway-mpg</th>
+      <th>price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>3</td>
+      <td>NaN</td>
+      <td>alfa-romero</td>
+      <td>gas</td>
+      <td>std</td>
+      <td>two</td>
+      <td>convertible</td>
+      <td>rwd</td>
+      <td>front</td>
+      <td>...</td>
+      <td>130</td>
+      <td>mpfi</td>
+      <td>3.47</td>
+      <td>2.68</td>
+      <td>9.0</td>
+      <td>111</td>
+      <td>5000</td>
+      <td>21</td>
+      <td>27</td>
+      <td>13495</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>3</td>
+      <td>NaN</td>
+      <td>alfa-romero</td>
+      <td>gas</td>
+      <td>std</td>
+      <td>two</td>
+      <td>convertible</td>
+      <td>rwd</td>
+      <td>front</td>
+      <td>...</td>
+      <td>130</td>
+      <td>mpfi</td>
+      <td>3.47</td>
+      <td>2.68</td>
+      <td>9.0</td>
+      <td>111</td>
+      <td>5000</td>
+      <td>21</td>
+      <td>27</td>
+      <td>16500</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>alfa-romero</td>
+      <td>gas</td>
+      <td>std</td>
+      <td>two</td>
+      <td>hatchback</td>
+      <td>rwd</td>
+      <td>front</td>
+      <td>...</td>
+      <td>152</td>
+      <td>mpfi</td>
+      <td>2.68</td>
+      <td>3.47</td>
+      <td>9.0</td>
+      <td>154</td>
+      <td>5000</td>
+      <td>19</td>
+      <td>26</td>
+      <td>16500</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>3</td>
+      <td>2</td>
+      <td>164</td>
+      <td>audi</td>
+      <td>gas</td>
+      <td>std</td>
+      <td>four</td>
+      <td>sedan</td>
+      <td>fwd</td>
+      <td>front</td>
+      <td>...</td>
+      <td>109</td>
+      <td>mpfi</td>
+      <td>3.19</td>
+      <td>3.40</td>
+      <td>10.0</td>
+      <td>102</td>
+      <td>5500</td>
+      <td>24</td>
+      <td>30</td>
+      <td>13950</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>4</td>
+      <td>2</td>
+      <td>164</td>
+      <td>audi</td>
+      <td>gas</td>
+      <td>std</td>
+      <td>four</td>
+      <td>sedan</td>
+      <td>4wd</td>
+      <td>front</td>
+      <td>...</td>
+      <td>136</td>
+      <td>mpfi</td>
+      <td>3.19</td>
+      <td>3.40</td>
+      <td>8.0</td>
+      <td>115</td>
+      <td>5500</td>
+      <td>18</td>
+      <td>22</td>
+      <td>17450</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 27 columns</p>
+</div>
+
+<pre><code class="python"># Get some basic statistical description 
+data.describe()
+</code></pre>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Unnamed: 0</th>
+      <th>symboling</th>
+      <th>wheel-base</th>
+      <th>length</th>
+      <th>width</th>
+      <th>height</th>
+      <th>curb-weight</th>
+      <th>engine-size</th>
+      <th>compression-ratio</th>
+      <th>city-mpg</th>
+      <th>highway-mpg</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>205.000000</td>
+      <td>205.000000</td>
+      <td>205.000000</td>
+      <td>205.000000</td>
+      <td>205.000000</td>
+      <td>205.000000</td>
+      <td>205.000000</td>
+      <td>205.000000</td>
+      <td>205.000000</td>
+      <td>205.000000</td>
+      <td>205.000000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>102.000000</td>
+      <td>0.834146</td>
+      <td>98.756585</td>
+      <td>174.049268</td>
+      <td>65.907805</td>
+      <td>53.724878</td>
+      <td>2555.565854</td>
+      <td>126.907317</td>
+      <td>10.142537</td>
+      <td>25.219512</td>
+      <td>30.751220</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>59.322565</td>
+      <td>1.245307</td>
+      <td>6.021776</td>
+      <td>12.337289</td>
+      <td>2.145204</td>
+      <td>2.443522</td>
+      <td>520.680204</td>
+      <td>41.642693</td>
+      <td>3.972040</td>
+      <td>6.542142</td>
+      <td>6.886443</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>0.000000</td>
+      <td>-2.000000</td>
+      <td>86.600000</td>
+      <td>141.100000</td>
+      <td>60.300000</td>
+      <td>47.800000</td>
+      <td>1488.000000</td>
+      <td>61.000000</td>
+      <td>7.000000</td>
+      <td>13.000000</td>
+      <td>16.000000</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>51.000000</td>
+      <td>0.000000</td>
+      <td>94.500000</td>
+      <td>166.300000</td>
+      <td>64.100000</td>
+      <td>52.000000</td>
+      <td>2145.000000</td>
+      <td>97.000000</td>
+      <td>8.600000</td>
+      <td>19.000000</td>
+      <td>25.000000</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>102.000000</td>
+      <td>1.000000</td>
+      <td>97.000000</td>
+      <td>173.200000</td>
+      <td>65.500000</td>
+      <td>54.100000</td>
+      <td>2414.000000</td>
+      <td>120.000000</td>
+      <td>9.000000</td>
+      <td>24.000000</td>
+      <td>30.000000</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>153.000000</td>
+      <td>2.000000</td>
+      <td>102.400000</td>
+      <td>183.100000</td>
+      <td>66.900000</td>
+      <td>55.500000</td>
+      <td>2935.000000</td>
+      <td>141.000000</td>
+      <td>9.400000</td>
+      <td>30.000000</td>
+      <td>34.000000</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>204.000000</td>
+      <td>3.000000</td>
+      <td>120.900000</td>
+      <td>208.100000</td>
+      <td>72.300000</td>
+      <td>59.800000</td>
+      <td>4066.000000</td>
+      <td>326.000000</td>
+      <td>23.000000</td>
+      <td>49.000000</td>
+      <td>54.000000</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<pre><code class="python">data.info()
+</code></pre>
+
+<pre><code>&lt;class 'pandas.core.frame.DataFrame'&gt;
+RangeIndex: 205 entries, 0 to 204
+Data columns (total 27 columns):
+ #   Column             Non-Null Count  Dtype  
+---  ------             --------------  -----  
+ 0   Unnamed: 0         205 non-null    int64  
+ 1   symboling          205 non-null    int64  
+ 2   normalized-losses  205 non-null    object 
+ 3   make               205 non-null    object 
+ 4   fuel-type          205 non-null    object 
+ 5   aspiration         205 non-null    object 
+ 6   num-of-doors       205 non-null    object 
+ 7   body-style         205 non-null    object 
+ 8   drive-wheel        205 non-null    object 
+ 9   engine-location    205 non-null    object 
+ 10  wheel-base         205 non-null    float64
+ 11  length             205 non-null    float64
+ 12  width              205 non-null    float64
+ 13  height             205 non-null    float64
+ 14  curb-weight        205 non-null    int64  
+ 15  engine-type        205 non-null    object 
+ 16  num-of-cylinder    205 non-null    object 
+ 17  engine-size        205 non-null    int64  
+ 18  fuel-system        205 non-null    object 
+ 19  bore               205 non-null    object 
+ 20  stroke             205 non-null    object 
+ 21  compression-ratio  205 non-null    float64
+ 22  horsepower         205 non-null    object 
+ 23  peak-rpm           205 non-null    object 
+ 24  city-mpg           205 non-null    int64  
+ 25  highway-mpg        205 non-null    int64  
+ 26  price              205 non-null    object 
+dtypes: float64(5), int64(6), object(16)
+memory usage: 43.4+ KB
+</code></pre>
+<pre><code class="python"># Some data are set as object while importing. we can fix that. 
+data[&quot;price&quot;] = data[&quot;price&quot;].astype(&quot;float&quot;)
+</code></pre>
+
+<pre><code class="python">data['price'].head()
+</code></pre>
+
+<pre><code>0    13495.0
+1    16500.0
+2    16500.0
+3    13950.0
+4    17450.0
+Name: price, dtype: float64
+</code></pre>
+<pre><code class="python"># Let's plot engine-size vs. price 
+
+plt.scatter(data['engine-size'], data['price'])
+plt.title(&quot;Engine Size vs. Price&quot;)
+plt.xlabel(&quot;Engine Size (HP)&quot;) 
+plt.ylabel(&quot;Price (USD)&quot;)
+plt.show()
+</code></pre>
+
+<p><img alt="png" src="../../img/pandas-car-price.png" /></p>
+<pre><code class="python"># Regplot using seaborn
+import seaborn as sns 
+
+sns.regplot(x=&quot;engine-size&quot;, y=&quot;price&quot;, data=data)
+plt.show()
+</code></pre>
+
+<p><img alt="linear regression plot" src="../../img/pandas-linear-regression.png" /></p>
+<p><strong>Residual Plot:</strong></p>
+<p>We can plot the errors to see if our model is good fit for the data or whether the residual plot shows certain trends. </p>
+<pre><code class="py">sns.residplot(x=&quot;engine-size&quot;, y=&quot;price&quot;, data=df)
+plt.show()
+</code></pre>
+
+<p><img alt="residual plot" src="../../img/pandas-residual-plot.png" /> </p>
+<p><strong>Linear Regression Model in Scikit learn:</strong> </p>
+<pre><code class="python">from sklearn.linear_model import LinearRegression 
+
+# Linear Regression does not work with NaN data points 
+data_copy = data.dropna(subset=[&quot;engine-size&quot;], axis=0)
+data_copy = data_copy.dropna(subset=[&quot;price&quot;], axis=0)
+
+lm = LinearRegression()
+X = data_copy[&quot;engine-size&quot;] 
+Y = data_copy[&quot;price&quot;] 
+lm.fit(X, Y)
+
+print(lm.intercept_, lm.coef_)
+</code></pre>
+
+<pre><code>-7963.338906281042 [166.86001569]
+</code></pre>
+<p>We can predict Y values for given X: </p>
+<pre><code class="py">lm.predict(np.array([[250]]))
+</code></pre>
+
+<pre><code class="python"># Correlation 
+import scipy.stats as stats 
+
+pearson_coef, p_values = stats.pearsonr(data_copy[&quot;engine-size&quot;], data_copy[&quot;price&quot;])
+print(pearson_coef, p_values)
+</code></pre>
+
+<pre><code>0.8723351674455185 9.265491622198389e-64
+</code></pre>
+<p><strong>Distribution plot:</strong> </p>
+<p>Compare predicted data to the actual test data. </p>
+<pre><code class="py">ax1 = sns.distplot(df[&quot;price&quot;], hist=False, color=&quot;r&quot;, label=&quot;test data&quot;)
+sns.distplot(Yhat, hist=False, color=&quot;b&quot;, label=&quot;Predicted values&quot;, ax=ax1)
+</code></pre>
+
+<p><strong>Multiple liner regression:</strong> </p>
+<p>Instead of one dependent variable we can include multiple variables. </p>
+<div>
+<div class="MathJax_Preview"> y = b_0 + b_1 x_1 + b_2 x_2 + ... </div>
+<script type="math/tex; mode=display"> y = b_0 + b_1 x_1 + b_2 x_2 + ... </script>
+</div>
+<p>Where X is values for ["horsepower", "curb-weight", "engine-size", "highway-mpg"]. Let's do it with two variables: </p>
+<pre><code class="py">df[&quot;highway-mpg&quot;] = df[&quot;highway-mpg&quot;].astype(&quot;float&quot;)
+mean = df[&quot;highway-mpg&quot;].mean()
+df[&quot;highway-mpg&quot;].replace(np.nan, mean, inplace=True)
+
+Z = df[['horsepower', 'highway-mpg']]
+lm.fit(Z, df[['price']]); 
+print(lm.coef_, lm.intercept_)
+lm.predict(np.array([[150, 30]]))
+</code></pre>
+
+<p><strong>Polynomial regression:</strong> </p>
+<div>
+<div class="MathJax_Preview"> \hat{Y} = b_0 + b_1 x_1 + b_2 (x_2)^2 + b_3 (x_3)^3 + ... </div>
+<script type="math/tex; mode=display"> \hat{Y} = b_0 + b_1 x_1 + b_2 (x_2)^2 + b_3 (x_3)^3 + ... </script>
+</div>
+<pre><code class="py">f = np.polyfit(df[&quot;horsepower&quot;], df[&quot;price&quot;], 3)  # third order poly
+p = np.poly1d(f)
+print(p)
+</code></pre> 
+                            </div>
+                        </div> <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../machine-learning/probability-statistics/" class="btn btn-neutral float-right" title="Basic Probability and statistics">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../data-exploration/" class="btn btn-neutral" title="Data Exploration"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    <p>&copy; Copyright 2020 Pranab Das. All rights reserved.</p>
+  </div>
+
+</footer> 
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../data-exploration/" style="color: #2980B9;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../../machine-learning/probability-statistics/" style="color: #2980B9">Next &raquo;</a></span>
+      
+    </span>
+</div>
+        <script>
+            var base_url = "../..";
+        </script>
+        <script src="../../js/theme.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+        <script src="../../search/main.js" defer></script>
+    </body>
+</html>

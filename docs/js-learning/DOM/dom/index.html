@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+    <!--<![endif]-->
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+         
+        <meta name="author" content="Pranab Das" />
+         
+        <link rel="shortcut icon" href="../../img/favicon.ico" />
+        
+        <title>
+            Document Object Model
+            - Learning Javascript
+        </title>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+        <link
+            rel="stylesheet"
+            href="../../css/theme.css"
+            type="text/css"
+        />
+        <link
+            rel="stylesheet"
+            href="../../css/theme_extra.css"
+            type="text/css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.1/styles/github.min.css"
+        /> 
+        <script>
+            // Current page data
+            var mkdocs_page_name = "Document Object Model";
+            var mkdocs_page_input_path = "DOM/dom.md";
+            var mkdocs_page_url = null;
+        </script>
+        
+        <script src="../../js/jquery-2.1.1.min.js" defer></script>
+        <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.1/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.1/languages/javascript.min.js"></script>
+        <script>
+            hljs.initHighlightingOnLoad();
+        </script> 
+    </head>
+
+    <body class="wy-body-for-nav" role="document">
+        <div class="wy-grid-for-nav">
+            
+            <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+                <div class="wy-side-nav-search">
+                    <a href="../.." class="icon icon-home">
+                        Learning Javascript</a
+                    > <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+                </div>
+
+                <div
+                    class="wy-menu wy-menu-vertical"
+                    data-spy="affix"
+                    role="navigation"
+                    aria-label="main navigation"
+                >
+                    <ul class="current">
+                         
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <a class="" href="../..">Table of Contents</a>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <span class="caption-text">The Basics</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../basics/setup/">Setup</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../basics/console/">Console and external script</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../basics/working-with-data/">Working with data</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../basics/conditional-statement/">Conditional statement</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../basics/arrays/">Arrays</a>
+                </li>
+    </ul>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <span class="caption-text">Functions and Objects</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../functions-objects/functions/">Functions</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../functions-objects/variable-scope/">Variable scope</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../functions-objects/objects/">Objects</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../functions-objects/map/">map()</a>
+                </li>
+    </ul>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <span class="caption-text">Loop</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../loop/loop/">loop</a>
+                </li>
+    </ul>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <span class="caption-text">DOM</span>
+    <ul class="subnav">
+                <li class=" current">
+                    
+    <a class="current" href="./">Document Object Model</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#document-object-model">Document Object Model</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#queryselector">querySelector</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+    </ul>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <span class="caption-text">Node.js</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../node/introduction/">Introduction</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../node/std-input-output/">Standard input-output</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../node/core-modules/">Core modules</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../node/file-system/">File system</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../node/callbacks/">Understanding callbacks</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../node/module.exports/">module.exports</a>
+                </li>
+    </ul>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <span class="caption-text">Electron.js</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../electron/electron/">Creating first Electron.js application</a>
+                </li>
+    </ul>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <span class="caption-text">React.js</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../react/react/">React.js</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../react/to-do-list/">To do list project</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../react/shopping-cart/">Shopping cart project</a>
+                </li>
+    </ul>
+                        </li>
+                        
+                    </ul>
+                </div>
+                &nbsp;
+            </nav>
+
+            <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+                
+                <nav
+                    class="wy-nav-top"
+                    role="navigation"
+                    aria-label="top navigation"
+                >
+                    <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+                    <a href="../.."
+                        >Learning Javascript</a
+                    >
+                </nav>
+
+                
+                <div class="wy-nav-content">
+                    <div class="rst-content">
+                        <div role="navigation" aria-label="breadcrumbs navigation">
+    <ul class="wy-breadcrumbs">
+        <li><a href="https://pranabdas.github.io/">Home</a>&raquo;</li>
+        <li><a href="https://pranabdas.github.io/docs/">Docs</a>&raquo;</li>
+        <li>
+            <a href="../..">Learning Javascript</a>
+            &raquo;
+        </li>
+          
+        <li>DOM &raquo;</li>
+           
+        <li>Document Object Model</li>
+        
+    </ul>
+    <hr />
+</div>
+                        <div role="main">
+                            <div class="section">
+                                 <h3 id="document-object-model">Document Object Model</h3>
+<p>The Web browser is itself an object, Browser Object. We can interact with it like we do with any other object. We can get the window size using an object property, or open a new tab using a method. The html content inside the BOM, is called DOM. Here, we will discuss how we can interact with various DOM elements. </p>
+<p>For example, you can type these things in the console: </p>
+<pre><code class="js">document.URL 
+document.title 
+document.head 
+document.body 
+</code></pre>
+
+<p>And it will return specific DOM elements. </p>
+<p>For this tutorial, we will use another html file <code>dom-tutorial.html</code>. </p>
+<h4 id="queryselector">querySelector</h4>
+<p>We can use <code>querySelector</code> to target any element in the html as we do in CSS. Note that <code>querySelector</code> will return the first instance of the selection, while <code>querySelectorAll</code> will return the list of all matching elements. Now try yourself: </p>
+<pre><code class="js">document.querySelector(&quot;h2&quot;)
+document.querySelector(&quot;.description&quot;) 
+document.querySelector(&quot;ul&quot;)
+document.querySelectorAll(&quot;h4&quot;) 
+document.querySelectorAll(&quot;li&quot;)
+</code></pre>
+
+<p><strong>Access and change element:</strong> </p>
+<p>We can select and change and element in the html document: </p>
+<pre><code class="js">document.querySelector(&quot;h4.city&quot;).innerHTML 
+document.querySelector(&quot;h4.city&quot;).outerHTML 
+</code></pre>
+
+<p>Now we can change these elements by simply assigning new values. </p>
+<pre><code class="js">document.querySelector(&quot;h4.city&quot;).innerHTML = &quot;List of cities:&quot;
+</code></pre>
+
+<p>We can access and change <code>class</code> or <code>id</code> as well: </p>
+<pre><code class="js">document.querySelector(&quot;.city&quot;).className 
+document.querySelector(&quot;.city&quot;).classList 
+document.querySelector(&quot;.city&quot;).classList.add(&quot;new-class&quot;) 
+document.querySelector(&quot;.city&quot;).classList.remove(&quot;new-class&quot;)
+</code></pre> 
+                            </div>
+                        </div> <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../node/introduction/" class="btn btn-neutral float-right" title="Introduction">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../../loop/loop/" class="btn btn-neutral" title="loop"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    <p>&copy; Copyright 2020 Pranab Das. All rights reserved.</p>
+  </div>
+
+</footer> 
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../../loop/loop/" style="color: #2980B9;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../../node/introduction/" style="color: #2980B9">Next &raquo;</a></span>
+      
+    </span>
+</div>
+        <script>
+            var base_url = "../..";
+        </script>
+        <script src="../../js/theme.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+        <script src="../../search/main.js" defer></script>
+    </body>
+</html>

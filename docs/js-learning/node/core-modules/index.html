@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+    <!--<![endif]-->
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+         
+        <meta name="author" content="Pranab Das" />
+         
+        <link rel="shortcut icon" href="../../img/favicon.ico" />
+        
+        <title>
+            Core modules
+            - Learning Javascript
+        </title>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+        <link
+            rel="stylesheet"
+            href="../../css/theme.css"
+            type="text/css"
+        />
+        <link
+            rel="stylesheet"
+            href="../../css/theme_extra.css"
+            type="text/css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.1/styles/github.min.css"
+        /> 
+        <script>
+            // Current page data
+            var mkdocs_page_name = "Core modules";
+            var mkdocs_page_input_path = "node/core-modules.md";
+            var mkdocs_page_url = null;
+        </script>
+        
+        <script src="../../js/jquery-2.1.1.min.js" defer></script>
+        <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.1/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.1/languages/javascript.min.js"></script>
+        <script>
+            hljs.initHighlightingOnLoad();
+        </script> 
+    </head>
+
+    <body class="wy-body-for-nav" role="document">
+        <div class="wy-grid-for-nav">
+            
+            <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+                <div class="wy-side-nav-search">
+                    <a href="../.." class="icon icon-home">
+                        Learning Javascript</a
+                    > <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+                </div>
+
+                <div
+                    class="wy-menu wy-menu-vertical"
+                    data-spy="affix"
+                    role="navigation"
+                    aria-label="main navigation"
+                >
+                    <ul class="current">
+                         
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <a class="" href="../..">Table of Contents</a>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <span class="caption-text">The Basics</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../basics/setup/">Setup</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../basics/console/">Console and external script</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../basics/working-with-data/">Working with data</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../basics/conditional-statement/">Conditional statement</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../basics/arrays/">Arrays</a>
+                </li>
+    </ul>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <span class="caption-text">Functions and Objects</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../functions-objects/functions/">Functions</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../functions-objects/variable-scope/">Variable scope</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../functions-objects/objects/">Objects</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../functions-objects/map/">map()</a>
+                </li>
+    </ul>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <span class="caption-text">Loop</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../loop/loop/">loop</a>
+                </li>
+    </ul>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <span class="caption-text">DOM</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../DOM/dom/">Document Object Model</a>
+                </li>
+    </ul>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <span class="caption-text">Node.js</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../introduction/">Introduction</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../std-input-output/">Standard input-output</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">Core modules</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#core-modules">Core modules</a></li>
+    
+
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../file-system/">File system</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../callbacks/">Understanding callbacks</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../module.exports/">module.exports</a>
+                </li>
+    </ul>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <span class="caption-text">Electron.js</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../electron/electron/">Creating first Electron.js application</a>
+                </li>
+    </ul>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <span class="caption-text">React.js</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../react/react/">React.js</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../react/to-do-list/">To do list project</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../react/shopping-cart/">Shopping cart project</a>
+                </li>
+    </ul>
+                        </li>
+                        
+                    </ul>
+                </div>
+                &nbsp;
+            </nav>
+
+            <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+                
+                <nav
+                    class="wy-nav-top"
+                    role="navigation"
+                    aria-label="top navigation"
+                >
+                    <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+                    <a href="../.."
+                        >Learning Javascript</a
+                    >
+                </nav>
+
+                
+                <div class="wy-nav-content">
+                    <div class="rst-content">
+                        <div role="navigation" aria-label="breadcrumbs navigation">
+    <ul class="wy-breadcrumbs">
+        <li><a href="https://pranabdas.github.io/">Home</a>&raquo;</li>
+        <li><a href="https://pranabdas.github.io/docs/">Docs</a>&raquo;</li>
+        <li>
+            <a href="../..">Learning Javascript</a>
+            &raquo;
+        </li>
+          
+        <li>Node.js &raquo;</li>
+           
+        <li>Core modules</li>
+        
+    </ul>
+    <hr />
+</div>
+                        <div role="main">
+                            <div class="section">
+                                 <h3 id="core-modules">Core modules</h3>
+<p>These are the modules comes preinstalled with node.js like the <code>path</code> module we used earlier. </p>
+<pre><code class="js">const path = require(&quot;path&quot;); 
+
+const dirUpload = path.join(__dirname, &quot;uploads&quot;); 
+
+console.log(dirUpload); 
+</code></pre>
+
+<p>The <code>util</code> module: </p>
+<pre><code class="js">const path = require(&quot;path&quot;); 
+const util = require(&quot;util&quot;); 
+
+util.log(path.basename(__filename)); 
+
+util.log(&quot;  ^ the name of the current file.&quot;); 
+</code></pre>
+
+<pre><code class="js">28 Apr 22:37:34 - core.js
+28 Apr 22:37:34 -   ^ the name of the current file.
+</code></pre>
+
+<p>We have dozens of such modules. </p>
+<pre><code class="js">const v8 = require(&quot;v8&quot;); 
+
+console.log(v8.getHeapStatistics()); 
+</code></pre>
+
+<pre><code class="js">{
+  total_heap_size: 4505600,
+  total_heap_size_executable: 524288,
+  total_physical_size: 3408264,
+  total_available_size: 2194589720,
+  used_heap_size: 2376352,
+  heap_size_limit: 2197815296,
+  malloced_memory: 8192,
+  peak_malloced_memory: 123200,
+  does_zap_garbage: 0,
+  number_of_native_contexts: 1,
+  number_of_detached_contexts: 0
+}
+</code></pre>
+
+<p><code>readline</code> module: </p>
+<pre><code class="js">const readline = require(&quot;readline&quot;); 
+
+const rl = readline.createInterface({
+    input: process.stdin, 
+    output: process.stdout
+}); 
+
+rl.question(&quot;What is you name? &quot;, answer =&gt; {
+    console.log(`Hello ${answer}`); 
+    process.exit(); 
+}); 
+</code></pre> 
+                            </div>
+                        </div> <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../file-system/" class="btn btn-neutral float-right" title="File system">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../std-input-output/" class="btn btn-neutral" title="Standard input-output"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    <p>&copy; Copyright 2020 Pranab Das. All rights reserved.</p>
+  </div>
+
+</footer> 
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../std-input-output/" style="color: #2980B9;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../file-system/" style="color: #2980B9">Next &raquo;</a></span>
+      
+    </span>
+</div>
+        <script>
+            var base_url = "../..";
+        </script>
+        <script src="../../js/theme.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+        <script src="../../search/main.js" defer></script>
+    </body>
+</html>

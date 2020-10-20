@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+    <!--<![endif]-->
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+         
+        <meta name="author" content="Pranab Das" />
+         
+        <link rel="shortcut icon" href="../../img/favicon.ico" />
+        
+        <title>
+            Conditional statement
+            - Learning Javascript
+        </title>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+        <link
+            rel="stylesheet"
+            href="../../css/theme.css"
+            type="text/css"
+        />
+        <link
+            rel="stylesheet"
+            href="../../css/theme_extra.css"
+            type="text/css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.1/styles/github.min.css"
+        /> 
+        <script>
+            // Current page data
+            var mkdocs_page_name = "Conditional statement";
+            var mkdocs_page_input_path = "basics/conditional-statement.md";
+            var mkdocs_page_url = null;
+        </script>
+        
+        <script src="../../js/jquery-2.1.1.min.js" defer></script>
+        <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.1/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.1/languages/javascript.min.js"></script>
+        <script>
+            hljs.initHighlightingOnLoad();
+        </script> 
+    </head>
+
+    <body class="wy-body-for-nav" role="document">
+        <div class="wy-grid-for-nav">
+            
+            <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+                <div class="wy-side-nav-search">
+                    <a href="../.." class="icon icon-home">
+                        Learning Javascript</a
+                    > <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+                </div>
+
+                <div
+                    class="wy-menu wy-menu-vertical"
+                    data-spy="affix"
+                    role="navigation"
+                    aria-label="main navigation"
+                >
+                    <ul class="current">
+                         
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <a class="" href="../..">Table of Contents</a>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <span class="caption-text">The Basics</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../setup/">Setup</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../console/">Console and external script</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../working-with-data/">Working with data</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">Conditional statement</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#if-condition">If condition</a></li>
+    
+
+    <li class="toctree-l3"><a href="#if-else">if-else</a></li>
+    
+
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../arrays/">Arrays</a>
+                </li>
+    </ul>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <span class="caption-text">Functions and Objects</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../functions-objects/functions/">Functions</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../functions-objects/variable-scope/">Variable scope</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../functions-objects/objects/">Objects</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../functions-objects/map/">map()</a>
+                </li>
+    </ul>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <span class="caption-text">Loop</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../loop/loop/">loop</a>
+                </li>
+    </ul>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <span class="caption-text">DOM</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../DOM/dom/">Document Object Model</a>
+                </li>
+    </ul>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <span class="caption-text">Node.js</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../node/introduction/">Introduction</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../node/std-input-output/">Standard input-output</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../node/core-modules/">Core modules</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../node/file-system/">File system</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../node/callbacks/">Understanding callbacks</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../node/module.exports/">module.exports</a>
+                </li>
+    </ul>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <span class="caption-text">Electron.js</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../electron/electron/">Creating first Electron.js application</a>
+                </li>
+    </ul>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <span class="caption-text">React.js</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../react/react/">React.js</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../react/to-do-list/">To do list project</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../react/shopping-cart/">Shopping cart project</a>
+                </li>
+    </ul>
+                        </li>
+                        
+                    </ul>
+                </div>
+                &nbsp;
+            </nav>
+
+            <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+                
+                <nav
+                    class="wy-nav-top"
+                    role="navigation"
+                    aria-label="top navigation"
+                >
+                    <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+                    <a href="../.."
+                        >Learning Javascript</a
+                    >
+                </nav>
+
+                
+                <div class="wy-nav-content">
+                    <div class="rst-content">
+                        <div role="navigation" aria-label="breadcrumbs navigation">
+    <ul class="wy-breadcrumbs">
+        <li><a href="https://pranabdas.github.io/">Home</a>&raquo;</li>
+        <li><a href="https://pranabdas.github.io/docs/">Docs</a>&raquo;</li>
+        <li>
+            <a href="../..">Learning Javascript</a>
+            &raquo;
+        </li>
+          
+        <li>The Basics &raquo;</li>
+           
+        <li>Conditional statement</li>
+        
+    </ul>
+    <hr />
+</div>
+                        <div role="main">
+                            <div class="section">
+                                 <h4 id="if-condition">If condition</h4>
+<pre><code class="js">var age = 33; 
+
+if (age &gt; 18) {
+    console.log(&quot;Your are an adult.&quot;);
+}
+</code></pre>
+
+<h4 id="if-else">if-else</h4>
+<pre><code class="js">var age = 15; 
+
+if (age &gt; 18) {
+    console.log(&quot;You are an adult.&quot;); 
+} else {
+    console.log(&quot;You are not an adult yet.&quot;);
+}
+</code></pre>
+
+<p>During equality test, use <code>===</code> for strict equality: </p>
+<pre><code class="js">a = 4; 
+b = &quot;4&quot;; 
+
+a == b // this will result true. 
+a === b // this will result false 
+</code></pre>
+
+<p>And and or operators are denoted by <code>&amp;&amp;</code> and <code>||</code>, respectively. </p>
+<pre><code class="js">var age = 35; 
+
+if (age &gt; 18 &amp;&amp; age &lt; 60) {
+    console.log(&quot;You are an adult but not a senior citizen.&quot;); 
+}
+</code></pre>
+
+<p>There is a shorthand for if-else condition as well:</p>
+<pre><code class="js">if (a==b) {
+    console.log(&quot;Match&quot;); 
+} else {
+    console.log(&quot;No match&quot;);
+}
+</code></pre>
+
+<p>is same as: </p>
+<pre><code class="js">a==b ? console.log(&quot;Match&quot;) : console.log(&quot;No match&quot;); 
+</code></pre> 
+                            </div>
+                        </div> <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../arrays/" class="btn btn-neutral float-right" title="Arrays">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../working-with-data/" class="btn btn-neutral" title="Working with data"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    <p>&copy; Copyright 2020 Pranab Das. All rights reserved.</p>
+  </div>
+
+</footer> 
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../working-with-data/" style="color: #2980B9;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../arrays/" style="color: #2980B9">Next &raquo;</a></span>
+      
+    </span>
+</div>
+        <script>
+            var base_url = "../..";
+        </script>
+        <script src="../../js/theme.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+        <script src="../../search/main.js" defer></script>
+    </body>
+</html>

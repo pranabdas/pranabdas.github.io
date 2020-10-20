@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+    <!--<![endif]-->
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+         
+        <meta name="author" content="Pranab Das" />
+         
+        <link rel="shortcut icon" href="../../img/favicon.ico" />
+        
+        <title>
+            Bandstructure of GaAs
+            - Quantum Espresso
+        </title>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+        <link
+            rel="stylesheet"
+            href="../../css/theme.css"
+            type="text/css"
+        />
+        <link
+            rel="stylesheet"
+            href="../../css/theme_extra.css"
+            type="text/css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.1/styles/github.min.css"
+        /> 
+        <script>
+            // Current page data
+            var mkdocs_page_name = "Bandstructure of GaAs";
+            var mkdocs_page_input_path = "GaAs/GaAs.md";
+            var mkdocs_page_url = null;
+        </script>
+        
+        <script src="../../js/jquery-2.1.1.min.js" defer></script>
+        <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.1/highlight.min.js"></script>
+        <script>
+            hljs.initHighlightingOnLoad();
+        </script> 
+    </head>
+
+    <body class="wy-body-for-nav" role="document">
+        <div class="wy-grid-for-nav">
+            
+            <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+                <div class="wy-side-nav-search">
+                    <a href="../.." class="icon icon-home">
+                        Quantum Espresso</a
+                    > <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+                </div>
+
+                <div
+                    class="wy-menu wy-menu-vertical"
+                    data-spy="affix"
+                    role="navigation"
+                    aria-label="main navigation"
+                >
+                    <ul class="current">
+                         
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <a class="" href="../..">Table of Contents</a>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <a class="" href="../../dft/">DFT Introduction</a>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <a class="" href="../../install/">QE Installation</a>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <a class="" href="../../crystal-structure/">Crystal Structure</a>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <a class="" href="../../pseudo/">Pseudo potentials</a>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <span class="caption-text">SCF (Silicon)</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../scf/scf/">Self Consistent Field</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../scf/ecutoff/">Convergence against cutoff energy</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../scf/kpoints/">Convergence against k-points</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../scf/alat/">Convergence against lattice constant</a>
+                </li>
+    </ul>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <a class="" href="../../relax/">Cell relaxation</a>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <a class="" href="../../dos/">DOS calculation</a>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <a class="" href="../../band/">Band calculation</a>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <a class="" href="../../al/al/">Metal system (Al)</a>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <a class="" href="../../al/pdos/">Projected Density of States</a>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <a class="" href="../../kpdos/">k-resolved DOS</a>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <a class="" href="../../pdos-bands/">Orbital weights in bandstructure</a>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1 current"
+                        >
+                            
+    <a class="current" href="./">Bandstructure of GaAs</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#calculating-bandstructure-of-gaas">Calculating bandstructure of GaAs</a></li>
+    
+
+    </ul>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <a class="" href="../../dft-u/">DFT+U calculation</a>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <a class="" href="../../soc/">Spin-orbit coupling</a>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <a class="" href="../../misc/">Miscellaneous</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+                &nbsp;
+            </nav>
+
+            <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+                
+                <nav
+                    class="wy-nav-top"
+                    role="navigation"
+                    aria-label="top navigation"
+                >
+                    <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+                    <a href="../.."
+                        >Quantum Espresso</a
+                    >
+                </nav>
+
+                
+                <div class="wy-nav-content">
+                    <div class="rst-content">
+                        <div role="navigation" aria-label="breadcrumbs navigation">
+    <ul class="wy-breadcrumbs">
+        <li><a href="https://pranabdas.github.io/">Home</a>&raquo;</li>
+        <li><a href="https://pranabdas.github.io/docs/">Docs</a>&raquo;</li>
+        <li>
+            <a href="../..">Quantum Espresso</a>
+            &raquo;
+        </li>
+           
+        <li>Bandstructure of GaAs</li>
+        
+    </ul>
+    <hr />
+</div>
+                        <div role="main">
+                            <div class="section">
+                                 <h3 id="calculating-bandstructure-of-gaas">Calculating bandstructure of GaAs</h3>
+<p>Now that we have calculated the bandstructure of silicon (semiconductor) and aluminum (metal), let us proceed with a compound which has two different atoms. We follow the steps like before: </p>
+<p>1) First check the lattice constant with cell relaxation according to our chosen pseudo potential. We use that lattice constant in our next steps. 
+Our lattice constant = 10.6867 * 0.508176602 / 0.5 = 10.861462. </p>
+<pre><code>pw.x &lt; GaAs.relax.in &gt; GaAs.relax.out
+</code></pre>
+
+<p>2) Perform self consistent field calculation. </p>
+<pre><code>pw.x &lt; GaAs.scf.in &gt; GaAs.scf.out
+</code></pre>
+
+<p>3) Give denser k-points and perform non-self consistent calculation. This step is only necessary if you need to obtain density of states. </p>
+<pre><code>pw.x &lt; GaAs.nscf.in &gt; GaAs.nscf.out
+</code></pre>
+
+<p>4) Perform bandstructure calculation </p>
+<pre><code>pw.x &lt; GaAs.bands.in &gt; GaAs.bands.out 
+</code></pre>
+
+<p>5) Post process the data and plot the bandstructure. </p>
+<pre><code>bands.x &lt; GaAs.bands-pp.in &gt; GaAs.bands-pp.out 
+plotband.x
+</code></pre>
+
+<p>If everything goes well, you will get the bandstructure as below: </p>
+<p><img alt="GaAs-bandstructure" src="../../img/band-GaAs.png" style="width:600px" /> </p> 
+                            </div>
+                        </div> <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../dft-u/" class="btn btn-neutral float-right" title="DFT+U calculation">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../../pdos-bands/" class="btn btn-neutral" title="Orbital weights in bandstructure"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    <p>&copy; Copyright 2020 Pranab Das. All rights reserved.</p>
+  </div>
+
+</footer> 
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../../pdos-bands/" style="color: #2980B9;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../../dft-u/" style="color: #2980B9">Next &raquo;</a></span>
+      
+    </span>
+</div>
+        <script>
+            var base_url = "../..";
+        </script>
+        <script src="../../js/theme.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+        <script src="../../search/main.js" defer></script>
+    </body>
+</html>
