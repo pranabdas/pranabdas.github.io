@@ -191,11 +191,11 @@
                 </li>
                 <li class="">
                     
-    <a class="" href="../../matplotlib/custom-matplotlib/">Customizing Matplotlib</a>
+    <a class="" href="../../matplotlib/3d-plots/">Advanced 3D plots</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../matplotlib/3d-plots/">Advanced 3D plots</a>
+    <a class="" href="../../matplotlib/custom-matplotlib/">Customizing Matplotlib</a>
                 </li>
     </ul>
                         </li>
@@ -279,6 +279,10 @@
     <ul class="subnav">
                 <li class="">
                     
+    <a class="" href="../../machine-learning/ml/">ML Introduction</a>
+                </li>
+                <li class="">
+                    
     <a class="" href="../../machine-learning/probability-statistics/">Basic Probability and statistics</a>
                 </li>
                 <li class="">
@@ -334,6 +338,19 @@
                 <li class="">
                     
     <a class="" href="../../django/learning-log/">Django learning log</a>
+                </li>
+    </ul>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <span class="caption-text">Databases</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../database/sql/">SQL basics</a>
                 </li>
     </ul>
                         </li>
@@ -706,7 +723,7 @@ plt.show()
 
 <p>We can read data from url as well. By default, Pandas csv import assumes our data file has a header. If we do not have a header, we need to explicitly set the header to none. </p>
 <pre><code class="py">import pandas as pd 
-url = http://archive.ics.uci.edu/ml/machine-learning-databases/autos/imports-85.data
+url = 'http://archive.ics.uci.edu/ml/machine-learning-databases/autos/imports-85.data'
 df = pd.read_csv(url, header = None)
 </code></pre>
 
@@ -810,7 +827,6 @@ df.dtypes
 <pre><code class="py">df.dropna(subset=[&quot;price&quot;], axis=0, inplace=True)
 </code></pre>
 
-<p><code>axis=1</code> for dropping column. </p>
 <p>We can replace the missing values if appropriate: </p>
 <pre><code class="py">import numpy as np
 df[&quot;horsepower&quot;] = df[&quot;horsepower&quot;].astype(&quot;float&quot;)

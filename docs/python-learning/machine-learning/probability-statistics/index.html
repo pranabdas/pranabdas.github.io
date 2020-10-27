@@ -191,11 +191,11 @@
                 </li>
                 <li class="">
                     
-    <a class="" href="../../matplotlib/custom-matplotlib/">Customizing Matplotlib</a>
+    <a class="" href="../../matplotlib/3d-plots/">Advanced 3D plots</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../matplotlib/3d-plots/">Advanced 3D plots</a>
+    <a class="" href="../../matplotlib/custom-matplotlib/">Customizing Matplotlib</a>
                 </li>
     </ul>
                         </li>
@@ -265,22 +265,16 @@
                             
     <span class="caption-text">Machine Learning</span>
     <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../ml/">ML Introduction</a>
+                </li>
                 <li class=" current">
                     
     <a class="current" href="./">Basic Probability and statistics</a>
     <ul class="subnav">
             
     <li class="toctree-l3"><a href="#basic-probability-and-statistics">Basic probability and statistics</a></li>
-    
-        <ul>
-        
-            <li><a class="toctree-l4" href="#correlation">Correlation</a></li>
-        
-            <li><a class="toctree-l4" href="#how-is-machine-learning-different-from-an-algorithm">How is machine learning different from an algorithm?</a></li>
-        
-            <li><a class="toctree-l4" href="#cross-validation">Cross validation</a></li>
-        
-        </ul>
     
 
     </ul>
@@ -338,6 +332,19 @@
                 <li class="">
                     
     <a class="" href="../../django/learning-log/">Django learning log</a>
+                </li>
+    </ul>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <span class="caption-text">Databases</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../database/sql/">SQL basics</a>
                 </li>
     </ul>
                         </li>
@@ -420,11 +427,12 @@
                         <div role="main">
                             <div class="section">
                                  <h3 id="basic-probability-and-statistics">Basic probability and statistics</h3>
-<p>Expectation value of <span><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> = (<span><span class="MathJax_Preview">\bar{x}</span><script type="math/tex">\bar{x}</script></span>) = <span><span class="MathJax_Preview">\sum_i^n P(x_i) x_i</span><script type="math/tex">\sum_i^n P(x_i) x_i</script></span>.  </p>
-<p>Expectation value of <span><span class="MathJax_Preview">x^2</span><script type="math/tex">x^2</script></span> = <span><span class="MathJax_Preview">\sum_i^n P(x_i) x_i^2</span><script type="math/tex">\sum_i^n P(x_i) x_i^2</script></span>.</p>
-<p>Standard deviation (<span><span class="MathJax_Preview">\sigma</span><script type="math/tex">\sigma</script></span>) = <span><span class="MathJax_Preview">\sqrt{Variance}</span><script type="math/tex">\sqrt{Variance}</script></span> = Expectation value of <span><span class="MathJax_Preview">(x_i - \bar{x})^2</span><script type="math/tex">(x_i - \bar{x})^2</script></span>  </p>
-<p><span><span class="MathJax_Preview">\sigma (x) = \bar{x^2} - \bar{x}^2 = &lt;x^2&gt; - &lt;x&gt;^2</span><script type="math/tex">\sigma (x) = \bar{x^2} - \bar{x}^2 = <x^2> - <x>^2</script></span> </p>
-<h4 id="correlation">Correlation</h4>
+<p>Expectation value <span><span class="MathJax_Preview">\bar{x} = \sum_i^n P(x_i) x_i</span><script type="math/tex">\bar{x} = \sum_i^n P(x_i) x_i</script></span>. </p>
+<p>In case of continuous distribution: <span><span class="MathJax_Preview">\bar{x} = \int_{\infty}^{\infty} x p(x) dx</span><script type="math/tex">\bar{x} = \int_{\infty}^{\infty} x p(x) dx</script></span>. </p>
+<p>Expectation value of <span><span class="MathJax_Preview">&lt;x^2&gt;</span><script type="math/tex"><x^2></script></span> = <span><span class="MathJax_Preview">\sum_i^n P(x_i) x_i^2</span><script type="math/tex">\sum_i^n P(x_i) x_i^2</script></span>.</p>
+<p>Standard deviation (<span><span class="MathJax_Preview">\sigma</span><script type="math/tex">\sigma</script></span>) = <span><span class="MathJax_Preview">\sqrt{Variance}</span><script type="math/tex">\sqrt{Variance}</script></span> </p>
+<p>Variance = Expectation value of <span><span class="MathJax_Preview">(x_i - \bar{x})^2 = &lt;x^2&gt; - &lt;x&gt;^2</span><script type="math/tex">(x_i - \bar{x})^2 = <x^2> - <x>^2</script></span> </p>
+<p><strong>Correlation:</strong> </p>
 <p>Uncorrelated: <span><span class="MathJax_Preview">\mathcal{E}(XY) = \mathcal{E}(X) \mathcal{E}(Y)</span><script type="math/tex">\mathcal{E}(XY) = \mathcal{E}(X) \mathcal{E}(Y)</script></span>, where <span><span class="MathJax_Preview">\mathcal{E}</span><script type="math/tex">\mathcal{E}</script></span> denotes expectation values. </p>
 <p>Positive correlation: <span><span class="MathJax_Preview">\mathcal{E}(XY) &gt; \mathcal{E}(X) \mathcal{E}(Y)</span><script type="math/tex">\mathcal{E}(XY) > \mathcal{E}(X) \mathcal{E}(Y)</script></span> </p>
 <p>Negative correlation: <span><span class="MathJax_Preview">\mathcal{E}(XY) &lt; \mathcal{E}(X) \mathcal{E}(Y)</span><script type="math/tex">\mathcal{E}(XY) < \mathcal{E}(X) \mathcal{E}(Y)</script></span></p>
@@ -437,10 +445,11 @@
 </div>
 <p>Range for Pearson's coefficient: [-1, 1]. </p>
 <p><strong>Note:</strong> If two variables are uncorrelated, their covariance is 0. However, the reverse need not be true: two variables can dependent on each other and still can have zero covariance. </p>
-<h4 id="how-is-machine-learning-different-from-an-algorithm">How is machine learning different from an algorithm?</h4>
-<p>If we have a well defined problem (say distance between two points), we may find an exact steps or algorithm to find the answer. However, in machine learning deals with problems there is no such exact steps, and often the problems itself are not well defined (such a image recognition). In such situation, we collect a set of input and output (called training set), and based on those trends we make decision on future inputs. </p>
-<h4 id="cross-validation">Cross validation</h4>
-<p>We can divide available dataset in k-folds. Use (k-1) folds for training, and use remaining 1-fold data points for error estimation. Then pick another set of (k-1) fold points for training, and 1-fold points for error estimation and so on. </p> 
+<p><strong>Bayes' rule:</strong>  </p>
+<div>
+<div class="MathJax_Preview"> P(A|B) = \frac{P(A \cap B)}{P(B)} = \frac{P(A) P(B|A)}{P(B)}  </div>
+<script type="math/tex; mode=display"> P(A|B) = \frac{P(A \cap B)}{P(B)} = \frac{P(A) P(B|A)}{P(B)}  </script>
+</div> 
                             </div>
                         </div> <footer>
   
@@ -449,7 +458,7 @@
         <a href="../nearest-neighbor/" class="btn btn-neutral float-right" title="Nearest neighbor classification">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../../data-science/linear-regression/" class="btn btn-neutral" title="Linear regression"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../ml/" class="btn btn-neutral" title="ML Introduction"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -471,7 +480,7 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../../data-science/linear-regression/" style="color: #2980B9;">&laquo; Previous</a></span>
+        <span><a href="../ml/" style="color: #2980B9;">&laquo; Previous</a></span>
       
       
         <span style="margin-left: 15px"><a href="../nearest-neighbor/" style="color: #2980B9">Next &raquo;</a></span>

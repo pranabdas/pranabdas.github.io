@@ -197,11 +197,11 @@
                 </li>
                 <li class="">
                     
-    <a class="" href="../../matplotlib/custom-matplotlib/">Customizing Matplotlib</a>
+    <a class="" href="../../matplotlib/3d-plots/">Advanced 3D plots</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../matplotlib/3d-plots/">Advanced 3D plots</a>
+    <a class="" href="../../matplotlib/custom-matplotlib/">Customizing Matplotlib</a>
                 </li>
     </ul>
                         </li>
@@ -273,6 +273,10 @@
     <ul class="subnav">
                 <li class="">
                     
+    <a class="" href="../../machine-learning/ml/">ML Introduction</a>
+                </li>
+                <li class="">
+                    
     <a class="" href="../../machine-learning/probability-statistics/">Basic Probability and statistics</a>
                 </li>
                 <li class="">
@@ -328,6 +332,19 @@
                 <li class="">
                     
     <a class="" href="../../django/learning-log/">Django learning log</a>
+                </li>
+    </ul>
+                        </li>
+                        
+                        <li
+                            class="toctree-l1"
+                        >
+                            
+    <span class="caption-text">Databases</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../database/sql/">SQL basics</a>
                 </li>
     </ul>
                         </li>
@@ -442,6 +459,41 @@ pip3 install virtualenv
 
 <p>Upgrade pip packages:</p>
 <pre><code>pip install &lt;package-name&gt; --upgrade
+</code></pre>
+
+<p><strong>Python development inside Docker container:</strong> </p>
+<p>An alternative setup option is to run your python development inside a docker container. Here is a sample <a href="https://github.com/pranabdas/python-learning/blob/master/Dockerfile">Dockerfile</a>: </p>
+<pre><code class="dockerfile"># Start from Ubuntu 20.04 LTS
+FROM ubuntu:focal
+
+# Update OS
+RUN apt update &amp;&amp; apt upgrade -y
+
+# Install software packages 
+RUN apt install -y python3 python3-pip fonts-open-sans
+
+# Install pip packages 
+RUN pip3 install jupyterlab numpy scipy matplotlib pandas xlrd openpyxl \
+seaborn scikit-learn
+
+# bashrc settings
+RUN echo 'alias jupyter-notebook=&quot;jupyter-notebook --allow-root --no-browser&quot;' \
+&gt;&gt; $HOME/.bashrc
+
+# leave in `/home` which we can map with the host
+WORKDIR /home
+</code></pre>
+
+<p>Build the docker image: </p>
+<pre><code>docker build -t pydev .
+</code></pre>
+
+<p>Run docker with port forwarding and host directory mapping:</p>
+<pre><code>docker run -ti -p 8888:8888 -v ${pwd}:/home pydev bash
+</code></pre>
+
+<p>Launch Jupyter kernel: </p>
+<pre><code>jupyter-notebook --ip 0.0.0.0
 </code></pre> 
                             </div>
                         </div> <footer>

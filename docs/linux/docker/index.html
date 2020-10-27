@@ -166,6 +166,12 @@
         
             <li><a class="toctree-l3" href="#installing-apache-on-a-docker-container">Installing apache on a docker container</a></li>
         
+            <li><a class="toctree-l3" href="#dockerfile">Dockerfile</a></li>
+        
+            <li><a class="toctree-l3" href="#docker-hub">Docker hub</a></li>
+        
+            <li><a class="toctree-l3" href="#transferring-docker-image-offline">Transferring Docker image offline</a></li>
+        
         </ul>
     
 
@@ -328,6 +334,87 @@ docker run --net=host centos httpd -D FOREGROUND &amp;
 <p>Now if you browse your host IP address you should be able to view the default website. We can stop the httpd, by killing the container.</p>
 <pre><code>docker ps
 docker kill &lt;container-id&gt;
+</code></pre>
+
+<h4 id="dockerfile">Dockerfile</h4>
+<p>Write the <code>Dockerfile</code>: </p>
+<pre><code># Start from Ubuntu 20.04 LTS
+FROM ubuntu:focal
+
+# Update OS
+RUN apt update \
+ &amp;&amp; apt upgrade -y
+
+# Install software packages 
+RUN apt install -y python3 \
+ &amp;&amp; apt install -y python3-pip \
+ &amp;&amp; apt install -y git \
+ &amp;&amp; apt install -y fonts-open-sans
+
+# Install pip packages 
+RUN pip3 install jupyterlab numpy scipy matplotlib
+
+# bashrc settings
+RUN echo 'alias jupyter-notebook=&quot;jupyter-notebook --allow-root --no-browser&quot;' \
+&gt;&gt; $HOME/.bashrc
+
+# clone code from git repository
+WORKDIR /root
+RUN git clone https://github.com/pranabdas/arpespythontools.git
+
+# matplotlib customizations
+RUN mkdir -p /root/.config/matplotlib \
+ &amp;&amp; touch /root/.config/matplotlib/matplotlibrc \
+ &amp;&amp; echo 'font.family       : sans-serif' &gt;&gt; /root/.config/matplotlib/matplotlibrc \
+ &amp;&amp; echo 'font.style        : normal' &gt;&gt; /root/.config/matplotlib/matplotlibrc \
+ &amp;&amp; echo 'font.weight       : regular' &gt;&gt; /root/.config/matplotlib/matplotlibrc \
+ &amp;&amp; echo 'font.sans-serif   : Open Sans, DejaVu Sans' &gt;&gt; /root/.config/matplotlib/matplotlibrc\
+ &amp;&amp; echo 'axes.linewidth    : 0.8' &gt;&gt; /root/.config/matplotlib/matplotlibrc \
+ &amp;&amp; echo 'axes.titlesize    : 16' &gt;&gt; /root/.config/matplotlib/matplotlibrc \
+ &amp;&amp; echo 'axes.labelsize    : 16' &gt;&gt; /root/.config/matplotlib/matplotlibrc \
+ &amp;&amp; echo 'xtick.major.size  : 8' &gt;&gt; /root/.config/matplotlib/matplotlibrc \
+ &amp;&amp; echo 'xtick.minor.size  : 4' &gt;&gt; /root/.config/matplotlib/matplotlibrc \
+ &amp;&amp; echo 'xtick.major.width : 0.8' &gt;&gt; /root/.config/matplotlib/matplotlibrc \
+ &amp;&amp; echo 'xtick.minor.width : 0.6' &gt;&gt; /root/.config/matplotlib/matplotlibrc \
+ &amp;&amp; echo 'xtick.labelsize   : 16' &gt;&gt; /root/.config/matplotlib/matplotlibrc \
+ &amp;&amp; echo 'xtick.direction   : in' &gt;&gt; /root/.config/matplotlib/matplotlibrc \
+ &amp;&amp; echo 'ytick.major.size  : 8' &gt;&gt; /root/.config/matplotlib/matplotlibrc \
+ &amp;&amp; echo 'ytick.minor.size  : 4' &gt;&gt; /root/.config/matplotlib/matplotlibrc \
+ &amp;&amp; echo 'ytick.major.width : 0.8' &gt;&gt; /root/.config/matplotlib/matplotlibrc \
+ &amp;&amp; echo 'ytick.minor.width : 0.6' &gt;&gt; /root/.config/matplotlib/matplotlibrc \
+ &amp;&amp; echo 'ytick.labelsize   : 16' &gt;&gt; /root/.config/matplotlib/matplotlibrc \
+ &amp;&amp; echo 'ytick.direction   : in' &gt;&gt; /root/.config/matplotlib/matplotlibrc \
+ &amp;&amp; echo 'image.origin      : lower' &gt;&gt; /root/.config/matplotlib/matplotlibrc
+
+# leave in `/home` which we can map with the host
+WORKDIR /home
+</code></pre>
+
+<p>Build docker image: </p>
+<pre><code>docker build -t arptools .
+</code></pre>
+
+<p>Launch: </p>
+<pre><code>docker run -ti --net=host -v /host/path:/home arptools bash
+</code></pre>
+
+<h4 id="docker-hub">Docker hub</h4>
+<p>Login: </p>
+<pre><code>sudo docker login docker.io
+</code></pre>
+
+<p>Tag a local image: </p>
+<pre><code>sudo docker tag localimage:latest username/localimage:latest
+</code></pre>
+
+<p>Push a local image: </p>
+<pre><code>sudo docker push username/localimage:latest
+</code></pre>
+
+<h4 id="transferring-docker-image-offline">Transferring Docker image offline</h4>
+<pre><code>docker pull ubuntu
+docker save -o ubuntu_image.docker ubuntu
+docker load -i ubuntu_image.docker
 </code></pre> 
                             </div>
                         </div> <footer>
