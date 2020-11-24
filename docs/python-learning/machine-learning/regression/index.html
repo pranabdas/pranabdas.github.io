@@ -445,12 +445,57 @@
 <div class="MathJax_Preview">  L(w, b) = \sum_i [y_i - (w \cdot x_i + b)]^2  </div>
 <script type="math/tex; mode=display">  L(w, b) = \sum_i [y_i - (w \cdot x_i + b)]^2  </script>
 </div>
+<p>Predictor/independent variable (x): used to predict the response variable. 
+Response variable (y): the variable that we want to predict. </p>
+<p>In one dimension, the problem becomes fitting a straight line of the form: <span><span class="MathJax_Preview">\hat{y} = wx +b</span><script type="math/tex">\hat{y} = wx +b</script></span>, where <span><span class="MathJax_Preview">w</span><script type="math/tex">w</script></span> is the slope and <span><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span> is the intercept. If we were given a bunch of training data points <span><span class="MathJax_Preview">(x_1, y_1),</span><script type="math/tex">(x_1, y_1),</script></span> <span><span class="MathJax_Preview">(x_2, y_2),</span><script type="math/tex">(x_2, y_2),</script></span> <span><span class="MathJax_Preview">...,</span><script type="math/tex">...,</script></span> <span><span class="MathJax_Preview">(x_n, y_n)</span><script type="math/tex">(x_n, y_n)</script></span>, our task is to find a line (<span><span class="MathJax_Preview">w</span><script type="math/tex">w</script></span> and <span><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span>) for which the square error is minimum. </p>
+<p>We can find the minimum of the square loss function and obtain solution for <span><span class="MathJax_Preview">w</span><script type="math/tex">w</script></span> and <span><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span>:</p>
+<div>
+<div class="MathJax_Preview"> \frac{dL}{dw} = \frac{dL}{db} = 0 </div>
+<script type="math/tex; mode=display"> \frac{dL}{dw} = \frac{dL}{db} = 0 </script>
+</div>
+<div>
+<div class="MathJax_Preview"> \Rightarrow \sum_i^n 2 (y_i - (w x_i + b)) = 0 </div>
+<script type="math/tex; mode=display"> \Rightarrow \sum_i^n 2 (y_i - (w x_i + b)) = 0 </script>
+</div>
+<div>
+<div class="MathJax_Preview"> \Rightarrow \sum_i^n y_i = w \sum_i^n x_i + nb </div>
+<script type="math/tex; mode=display"> \Rightarrow \sum_i^n y_i = w \sum_i^n x_i + nb </script>
+</div>
+<div>
+<div class="MathJax_Preview"> \Rightarrow b = \frac{1}{n} \sum_i^n y_i - \frac{w}{n} \sum_i^n x_i = \bar{y} -w \bar{x} </div>
+<script type="math/tex; mode=display"> \Rightarrow b = \frac{1}{n} \sum_i^n y_i - \frac{w}{n} \sum_i^n x_i = \bar{y} -w \bar{x} </script>
+</div>
+<p>We can solve for <span><span class="MathJax_Preview">w</span><script type="math/tex">w</script></span> by setting <span><span class="MathJax_Preview">\frac{dL}{dw} = 0</span><script type="math/tex">\frac{dL}{dw} = 0</script></span>:  </p>
+<div>
+<div class="MathJax_Preview"> w = \frac{\sum_i^n (y_i - \bar{y})(x_i - \bar{x})}{\sum_i^n (x_i - \bar{x})^2}  </div>
+<script type="math/tex; mode=display"> w = \frac{\sum_i^n (y_i - \bar{y})(x_i - \bar{x})}{\sum_i^n (x_i - \bar{x})^2}  </script>
+</div>
+<p>The above method can be extended for more than one predictor variable. In that case, </p>
+<div>
+<div class="MathJax_Preview"> \hat{y} = w^{(1)} x^{(1)} + w^{(2)} x^{(2)} + w^{(k)} x^{(k)} + b = w \cdot x + b  </div>
+<script type="math/tex; mode=display"> \hat{y} = w^{(1)} x^{(1)} + w^{(2)} x^{(2)} + w^{(k)} x^{(k)} + b = w \cdot x + b  </script>
+</div>
+<p>We can incorporate <span><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span> in <span><span class="MathJax_Preview">w</span><script type="math/tex">w</script></span> by assuming an extra predictor variable: </p>
+<div>
+<div class="MathJax_Preview"> \hat{y} = w \cdot x + b = \tilde{w} \cdot \tilde{x}  </div>
+<script type="math/tex; mode=display"> \hat{y} = w \cdot x + b = \tilde{w} \cdot \tilde{x}  </script>
+</div>
+<p>where <span><span class="MathJax_Preview">\tilde{x} = (1, x)</span><script type="math/tex">\tilde{x} = (1, x)</script></span> and <span><span class="MathJax_Preview">\tilde{w} = (b, w)</span><script type="math/tex">\tilde{w} = (b, w)</script></span>. </p>
+<p>Our variables can be written as matrices: </p>
+<p><span><span class="MathJax_Preview">X = \begin{pmatrix} \leftarrow &amp; \tilde{x_1} &amp; \rightarrow \\ \leftarrow &amp; \tilde{x_2} &amp; \rightarrow \\ \leftarrow &amp; ... &amp; \rightarrow \\ \leftarrow &amp; \tilde{x_n} &amp; \rightarrow \end{pmatrix}</span><script type="math/tex">X = \begin{pmatrix} \leftarrow & \tilde{x_1} & \rightarrow \\ \leftarrow & \tilde{x_2} & \rightarrow \\ \leftarrow & ... & \rightarrow \\ \leftarrow & \tilde{x_n} & \rightarrow \end{pmatrix}</script></span>, <span><span class="MathJax_Preview">y = \begin{pmatrix} y_1 \\ y_2 \\ ... \\ y_n \end{pmatrix}</span><script type="math/tex">y = \begin{pmatrix} y_1 \\ y_2 \\ ... \\ y_n \end{pmatrix}</script></span></p>
+<p>The loss function is minimized at: <span><span class="MathJax_Preview">\tilde{w} = (X^TX)^{-1}(X^Ty)</span><script type="math/tex">\tilde{w} = (X^TX)^{-1}(X^Ty)</script></span>. </p>
+<p>Scaling of data is not important when we have multiple variable in case of linear regression. </p>
 <h4 id="ridge-regression">Ridge regression</h4>
 <div>
 <div class="MathJax_Preview">  L(w, b) = \sum_i [y_i - (w \cdot x_i + b)]^2 + \lambda |w|^2  </div>
 <script type="math/tex; mode=display">  L(w, b) = \sum_i [y_i - (w \cdot x_i + b)]^2 + \lambda |w|^2  </script>
 </div>
-<p>Linear regression is a good choice when we have lots of training data. In reality, we can vary <span><span class="MathJax_Preview">\lambda</span><script type="math/tex">\lambda</script></span> and choose a value for which the test error is minimum. </p>
+<p>Linear regression is a good choice when we have lots of training data. When we try to minimize <span><span class="MathJax_Preview">L</span><script type="math/tex">L</script></span> with higher value of of <span><span class="MathJax_Preview">\lambda</span><script type="math/tex">\lambda</script></span>, it will result in lower <span><span class="MathJax_Preview">w</span><script type="math/tex">w</script></span>'s. Increasing <span><span class="MathJax_Preview">\lambda</span><script type="math/tex">\lambda</script></span> results in less weight for training data. In reality, we can vary <span><span class="MathJax_Preview">\lambda</span><script type="math/tex">\lambda</script></span> and choose a value for which the test error is minimum. </p>
+<p>In case of Ridge regression also, we have a closed form solution:</p>
+<div>
+<div class="MathJax_Preview">  w = (X^T X + \lambda I)^{-1}(X^T y)  </div>
+<script type="math/tex; mode=display">  w = (X^T X + \lambda I)^{-1}(X^T y)  </script>
+</div>
 <h4 id="lasso">Lasso</h4>
 <p>Similar to Ridge regression: </p>
 <div>
@@ -469,7 +514,8 @@
 <div>
 <div class="MathJax_Preview"> Pr(y|x) = \frac{1}{1 + e^{-y (w \cdot x + b)}}  </div>
 <script type="math/tex; mode=display"> Pr(y|x) = \frac{1}{1 + e^{-y (w \cdot x + b)}}  </script>
-</div> 
+</div>
+<p>This is the Logistic regression model of classification. </p> 
                             </div>
                         </div> <footer>
   

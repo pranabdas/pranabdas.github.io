@@ -204,6 +204,8 @@
         
             <li><a class="toctree-l4" href="#interactive-backend">Interactive backend</a></li>
         
+            <li><a class="toctree-l4" href="#overriding-default-colors">Overriding default colors</a></li>
+        
         </ul>
     
 
@@ -442,7 +444,25 @@ plt.rcParams[&quot;figure.dpi&quot;] = 150
 <h4 id="interactive-backend">Interactive backend</h4>
 <p>If you want interactive plots, like ability to zoom, pan, read cursor position ect., you can use notebook backend in your jupyter notebook: </p>
 <pre><code>%matplotlib notebook
-</code></pre> 
+</code></pre>
+
+<h4 id="overriding-default-colors">Overriding default colors</h4>
+<pre><code class="py">import numpy as np
+import matplotlib.pyplot as plt
+%matplotlib inline
+plt.rcParams[&quot;figure.dpi&quot;] = 150
+
+color = ['#CD6155','#808B96','#9B59B6','#99A3A4','#7D6608',\
+         '#F39C12','#2980B9','#16A085','#ABEBC6','#AED6F1']
+
+x = np.linspace(0, 4*np.pi, 100)
+
+for i in range(10):
+    plt.plot(x, (i+1)*np.sin(x))
+plt.show()
+</code></pre>
+
+<p><img alt="custom-color" src="../../img/custom-color.png" /> </p> 
                             </div>
                         </div> <footer>
   
