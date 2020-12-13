@@ -127,6 +127,10 @@
         
             <li><a class="toctree-l4" href="#let-and-const">let and const</a></li>
         
+            <li><a class="toctree-l4" href="#default-values-for-function-argument">Default values for function argument</a></li>
+        
+            <li><a class="toctree-l4" href="#arbitrary-number-of-arguments">Arbitrary number of arguments</a></li>
+        
         </ul>
     
 
@@ -165,6 +169,10 @@
                 <li class="">
                     
     <a class="" href="../../DOM/dom/">Document Object Model</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../DOM/event-handler/">Event handler</a>
                 </li>
     </ul>
                         </li>
@@ -232,6 +240,10 @@
                 <li class="">
                     
     <a class="" href="../../react/shopping-cart/">Shopping cart project</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../react/githubpages/">Deploy to Github pages</a>
                 </li>
     </ul>
                         </li>
@@ -316,7 +328,36 @@ varScope()
 1
 </code></pre>
 
-<p>Note that if we define the first variable with <code>let</code>, it's scope will be whole function block while the scope of second <code>let</code> is only the if-condition block. </p> 
+<p>Note that if we define the first variable with <code>let</code>, it's scope will be whole function block while the scope of second <code>let</code> is only the if-condition block. </p>
+<h4 id="default-values-for-function-argument">Default values for function argument</h4>
+<pre><code class="js">function greetUser(greetingMessage=&quot;Hello&quot;, userName=&quot;User&quot;) {
+    console.log(greetingMessage + &quot; &quot; + userName);
+};
+
+&gt; greetUser()
+Hello User
+
+&gt; greetUser(&quot;Welcome&quot;)
+Welcome User
+
+&gt; greetUser(&quot;Welcome&quot;, &quot;Pranab&quot;)
+Welcome Pranab
+</code></pre>
+
+<h4 id="arbitrary-number-of-arguments">Arbitrary number of arguments</h4>
+<p>We can access the arguments by the <code>arguments</code> object. </p>
+<pre><code class="js">function sumAll() {
+    var sum = 0; 
+
+    for (var ii=0; ii&lt;arguments.length; ii++) {
+        sum += arguments[ii];
+    };
+    return sum;
+};
+
+&gt; sumAll(2, 3, 4)
+9
+</code></pre> 
                             </div>
                         </div> <footer>
   

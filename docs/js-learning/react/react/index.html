@@ -154,6 +154,10 @@
                     
     <a class="" href="../../DOM/dom/">Document Object Model</a>
                 </li>
+                <li class="">
+                    
+    <a class="" href="../../DOM/event-handler/">Event handler</a>
+                </li>
     </ul>
                         </li>
                         
@@ -235,6 +239,10 @@
                     
     <a class="" href="../shopping-cart/">Shopping cart project</a>
                 </li>
+                <li class="">
+                    
+    <a class="" href="../githubpages/">Deploy to Github pages</a>
+                </li>
     </ul>
                         </li>
                         
@@ -278,11 +286,12 @@
                         <div role="main">
                             <div class="section">
                                  <h3 id="reactjs">React.js</h3>
-<p>An open source framework to build web application <a href="https://reactjs.org" target="_blank">https://reactjs.org</a></p>
-<pre><code class="js">// install create-react-app 
-npm install create-react-app 
-//create your app/project 
-create-react-app my-react-app 
+<p>An open source framework to build web application <a href="https://reactjs.org" target="_blank">https://reactjs.org</a>. You need to have node.js installed in your system. Alternatively, you can run your development environment in Docker: </p>
+<pre><code class="sh">docker run -ti -p 127.0.0.1:3000:3000 -v ${pwd}:/home node:lts-buster-slim bash
+</code></pre>
+
+<pre><code class="js">// create your app. npx allows to run create-react-app without installing
+npx create-react-app my-react-app 
 // move to my-react project directory 
 cd my-react-app 
 // start app 
@@ -290,17 +299,20 @@ npm start
 </code></pre>
 
 <p>This will start a server in the localhost. A browser should be launched and you can see a spinning react logo. </p>
-<p>Now head over to <code>src/index.js</code> that is the starting point of the app. We can simplify this file: </p>
+<p>We will clear all files in <code>public</code> and <code>src</code> directory, except <code>index.html</code> and <code>index.js</code>, respectively. Open <code>src/index.js</code> that is the starting point of the app. We can simplify this file: </p>
 <pre><code class="js">import React from 'react';
 import ReactDOM from 'react-dom';
 
 ReactDOM.render( 
-  &lt;h1&gt;Hello React! &lt;/h1&gt; 
-  &lt;p&gt;I am learning react and liking it. &lt;/p&gt;
+  &lt;div&gt;
+    &lt;h1&gt;Hello React! &lt;/h1&gt; 
+    &lt;p&gt;I am learning react and liking it. &lt;/p&gt;
+  &lt;/div&gt;
   ,document.getElementById('root')
 );
 </code></pre>
 
+<p>If we have more than one html element, we have to put everything inside a single <code>div</code>. </p>
 <h5 id="creating-react-component">Creating react component</h5>
 <p>React component allows bit more modular approach: </p>
 <pre><code class="js">import React from 'react';

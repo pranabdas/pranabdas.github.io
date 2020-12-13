@@ -13,7 +13,7 @@
         <link rel="shortcut icon" href="../../img/favicon.ico" />
         
         <title>
-            map()
+            Deploy to Github pages
             - Learning Javascript
         </title>
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -34,8 +34,8 @@
         /> 
         <script>
             // Current page data
-            var mkdocs_page_name = "map()";
-            var mkdocs_page_input_path = "functions-objects/map.md";
+            var mkdocs_page_name = "Deploy to Github pages";
+            var mkdocs_page_input_path = "react/githubpages.md";
             var mkdocs_page_url = null;
         </script>
         
@@ -114,25 +114,19 @@
     <ul class="subnav">
                 <li class="">
                     
-    <a class="" href="../functions/">Functions</a>
+    <a class="" href="../../functions-objects/functions/">Functions</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../variable-scope/">Variable scope</a>
+    <a class="" href="../../functions-objects/variable-scope/">Variable scope</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../objects/">Objects</a>
+    <a class="" href="../../functions-objects/objects/">Objects</a>
                 </li>
-                <li class=" current">
+                <li class="">
                     
-    <a class="current" href="./">map()</a>
-    <ul class="subnav">
-            
-    <li class="toctree-l3"><a href="#arraymap">Array.map()</a></li>
-    
-
-    </ul>
+    <a class="" href="../../functions-objects/map/">map()</a>
                 </li>
     </ul>
                         </li>
@@ -221,19 +215,25 @@
     <ul class="subnav">
                 <li class="">
                     
-    <a class="" href="../../react/react/">React.js</a>
+    <a class="" href="../react/">React.js</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../react/to-do-list/">To do list project</a>
+    <a class="" href="../to-do-list/">To do list project</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../react/shopping-cart/">Shopping cart project</a>
+    <a class="" href="../shopping-cart/">Shopping cart project</a>
                 </li>
-                <li class="">
+                <li class=" current">
                     
-    <a class="" href="../../react/githubpages/">Deploy to Github pages</a>
+    <a class="current" href="./">Deploy to Github pages</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#deploying-react-app-to-github-pages">Deploying React app to github pages</a></li>
+    
+
+    </ul>
                 </li>
     </ul>
                         </li>
@@ -268,36 +268,56 @@
             &raquo;
         </li>
           
-        <li>Functions and Objects &raquo;</li>
+        <li>React.js &raquo;</li>
            
-        <li>map()</li>
+        <li>Deploy to Github pages</li>
         
     </ul>
     <hr />
 </div>
                         <div role="main">
                             <div class="section">
-                                 <h3 id="arraymap">Array.map()</h3>
-<pre><code class="js">const xdata = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+                                 <h3 id="deploying-react-app-to-github-pages">Deploying React app to github pages</h3>
+<p>Install <code>gh-pages</code> in your project. </p>
+<pre><code>npm install gh-pages --save-dev
+</code></pre>
 
-const ydata = xdata.map((item) =&gt; (item ** 2));
+<p>Make following changes in the <code>package.json</code>: </p>
+<pre><code class="js">{
+  &quot;homepage&quot;: &quot;https://pranabdas.github.io/suvapp&quot;,
+  &quot;name&quot;: &quot;suvapp&quot;,
+  &quot;version&quot;: &quot;0.1.0&quot;,
+  &quot;private&quot;: true,
+  &quot;dependencies&quot;: {
+    &quot;@testing-library/jest-dom&quot;: &quot;^5.11.6&quot;,
+    &quot;@testing-library/react&quot;: &quot;^11.2.2&quot;,
+    &quot;@testing-library/user-event&quot;: &quot;^12.3.0&quot;,
+    &quot;react&quot;: &quot;^17.0.1&quot;,
+    &quot;react-dom&quot;: &quot;^17.0.1&quot;,
+    &quot;react-scripts&quot;: &quot;4.0.1&quot;,
+    &quot;web-vitals&quot;: &quot;^0.2.4&quot;
+  },
+  &quot;scripts&quot;: {
+    &quot;start&quot;: &quot;react-scripts start&quot;,
+    &quot;build&quot;: &quot;react-scripts build&quot;,
+    &quot;test&quot;: &quot;react-scripts test&quot;,
+    &quot;eject&quot;: &quot;react-scripts eject&quot;,
+    &quot;predeploy&quot;: &quot;npm run build&quot;,
+    &quot;deploy&quot;: &quot;gh-pages -d build&quot;
+  },
+  ...
+</code></pre>
 
-console.log(ydata);
-
-[
-   1,  4,  9, 16,  25,
-  36, 49, 64, 81, 100
-]
+<p>Deploy command: </p>
+<pre><code>npm run deploy
 </code></pre> 
                             </div>
                         </div> <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../../loop/loop/" class="btn btn-neutral float-right" title="loop">Next <span class="icon icon-circle-arrow-right"></span></a>
       
-      
-        <a href="../objects/" class="btn btn-neutral" title="Objects"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../shopping-cart/" class="btn btn-neutral" title="Shopping cart project"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -319,10 +339,8 @@ console.log(ydata);
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../objects/" style="color: #2980B9;">&laquo; Previous</a></span>
+        <span><a href="../shopping-cart/" style="color: #2980B9;">&laquo; Previous</a></span>
       
-      
-        <span style="margin-left: 15px"><a href="../../loop/loop/" style="color: #2980B9">Next &raquo;</a></span>
       
     </span>
 </div>

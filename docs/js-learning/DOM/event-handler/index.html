@@ -13,7 +13,7 @@
         <link rel="shortcut icon" href="../../img/favicon.ico" />
         
         <title>
-            map()
+            Event handler
             - Learning Javascript
         </title>
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -34,8 +34,8 @@
         /> 
         <script>
             // Current page data
-            var mkdocs_page_name = "map()";
-            var mkdocs_page_input_path = "functions-objects/map.md";
+            var mkdocs_page_name = "Event handler";
+            var mkdocs_page_input_path = "DOM/event-handler.md";
             var mkdocs_page_url = null;
         </script>
         
@@ -114,25 +114,19 @@
     <ul class="subnav">
                 <li class="">
                     
-    <a class="" href="../functions/">Functions</a>
+    <a class="" href="../../functions-objects/functions/">Functions</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../variable-scope/">Variable scope</a>
+    <a class="" href="../../functions-objects/variable-scope/">Variable scope</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../objects/">Objects</a>
+    <a class="" href="../../functions-objects/objects/">Objects</a>
                 </li>
-                <li class=" current">
+                <li class="">
                     
-    <a class="current" href="./">map()</a>
-    <ul class="subnav">
-            
-    <li class="toctree-l3"><a href="#arraymap">Array.map()</a></li>
-    
-
-    </ul>
+    <a class="" href="../../functions-objects/map/">map()</a>
                 </li>
     </ul>
                         </li>
@@ -158,11 +152,17 @@
     <ul class="subnav">
                 <li class="">
                     
-    <a class="" href="../../DOM/dom/">Document Object Model</a>
+    <a class="" href="../dom/">Document Object Model</a>
                 </li>
-                <li class="">
+                <li class=" current">
                     
-    <a class="" href="../../DOM/event-handler/">Event handler</a>
+    <a class="current" href="./">Event handler</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#event-handler">Event handler</a></li>
+    
+
+    </ul>
                 </li>
     </ul>
                         </li>
@@ -268,36 +268,54 @@
             &raquo;
         </li>
           
-        <li>Functions and Objects &raquo;</li>
+        <li>DOM &raquo;</li>
            
-        <li>map()</li>
+        <li>Event handler</li>
         
     </ul>
     <hr />
 </div>
                         <div role="main">
                             <div class="section">
-                                 <h3 id="arraymap">Array.map()</h3>
-<pre><code class="js">const xdata = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+                                 <h3 id="event-handler">Event handler</h3>
+<p>We can do something based on the browser events, like when a button is clicked, page is scrolled etc. </p>
+<p>Let's create a simple html page: </p>
+<pre><code class="html">&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Event Handler&lt;/title&gt;
+        &lt;style&gt;
+            .header {
+                background-color: aqua;
+            }
+        &lt;/style&gt;
+    &lt;/head&gt;
 
-const ydata = xdata.map((item) =&gt; (item ** 2));
+    &lt;body&gt;
+        &lt;h1 class=&quot;header&quot;&gt;Hello Event Handler&lt;/h1&gt;
+    &lt;/body&gt;
 
-console.log(ydata);
+    &lt;script&gt;
+        const topHeader = document.querySelector(&quot;.header&quot;);
 
-[
-   1,  4,  9, 16,  25,
-  36, 49, 64, 81, 100
-]
-</code></pre> 
+        function clicked() {
+            alert(&quot;Top header is clicked!&quot;)
+        }
+
+        topHeader.onclick = clicked;
+    &lt;/script&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p>Now whenever we click our header, we will see an alert saying, "Top header is clicked". The full list of browser events are available in <a href="">MDN website</a>.</p> 
                             </div>
                         </div> <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../../loop/loop/" class="btn btn-neutral float-right" title="loop">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../../node/introduction/" class="btn btn-neutral float-right" title="Introduction">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../objects/" class="btn btn-neutral" title="Objects"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../dom/" class="btn btn-neutral" title="Document Object Model"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -319,10 +337,10 @@ console.log(ydata);
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../objects/" style="color: #2980B9;">&laquo; Previous</a></span>
+        <span><a href="../dom/" style="color: #2980B9;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../../loop/loop/" style="color: #2980B9">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../../node/introduction/" style="color: #2980B9">Next &raquo;</a></span>
       
     </span>
 </div>
