@@ -287,7 +287,7 @@
                             <div class="section">
                                  <h3 id="reactjs">React.js</h3>
 <p>An open source framework to build web application <a href="https://reactjs.org" target="_blank">https://reactjs.org</a>. You need to have node.js installed in your system. Alternatively, you can run your development environment in Docker: </p>
-<pre><code class="sh">docker run -ti -p 127.0.0.1:3000:3000 -v ${pwd}:/home node:lts-buster-slim bash
+<pre><code class="sh">docker run -ti -p 127.0.0.1:3000:3000 -v ${PWD}:/home node:lts-buster-slim bash
 </code></pre>
 
 <pre><code class="js">// create your app. npx allows to run create-react-app without installing
@@ -318,6 +318,22 @@ ReactDOM.render(
 <pre><code class="js">import React from 'react';
 import ReactDOM from 'react-dom';
 
+function Heading() {
+  return (
+    &lt;div&gt;
+      &lt;h1&gt;Hello React! &lt;/h1&gt;
+      &lt;p&gt;I am learning React and I am liking it.&lt;/p&gt;
+    &lt;/div&gt;
+  )
+}; 
+
+ReactDOM.render(&lt; Heading /&gt;, document.getElementById('root'));
+</code></pre>
+
+<p>Alternative where we can use extension of <code>React.Component</code>: </p>
+<pre><code class="js">import React from 'react';
+import ReactDOM from 'react-dom';
+
 class Heading extends React.Component {
   render() {
     return (
@@ -333,6 +349,118 @@ ReactDOM.render(&lt; Heading /&gt;, document.getElementById('root'));
 </code></pre>
 
 <p><strong>Important:</strong> React component names must start with uppercase letter. </p>
+<p>Now let's separate our App component in a separate file. Our <code>index.js</code> entry becomes:</p>
+<pre><code class="js">import { render } from '@testing-library/react';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App.jsx';
+
+ReactDOM.render(&lt; App /&gt;, document.getElementById('root'));
+</code></pre>
+
+<p>We use <code>App.jsx</code> in the <code>src</code> directory: </p>
+<pre><code class="js">import React from 'react';
+
+function App() {
+    return(
+      &lt;&gt;
+        &lt;h1&gt;Hello React! &lt;/h1&gt;
+        &lt;p&gt;I am learning React and I am liking it.&lt;/p&gt;
+      &lt;/&gt;
+    )
+  }
+
+export default App
+</code></pre>
+
+<p>Now let's display some data. You can get the data from <code>https://api.github.com/users/&lt;username&gt;</code>. </p>
+<pre><code class="js">import React from 'react';
+
+const user = {
+    &quot;login&quot;: &quot;pranabdas&quot;,
+    &quot;id&quot;: 31024886,
+    &quot;node_id&quot;: &quot;MDQ6VXNlcjMxMDI0ODg2&quot;,
+    &quot;avatar_url&quot;: &quot;https://avatars2.githubusercontent.com/u/31024886?v=4&quot;,
+    &quot;gravatar_id&quot;: &quot;&quot;,
+    &quot;url&quot;: &quot;https://api.github.com/users/pranabdas&quot;,
+    &quot;html_url&quot;: &quot;https://github.com/pranabdas&quot;,
+    &quot;followers_url&quot;: &quot;https://api.github.com/users/pranabdas/followers&quot;,
+    &quot;following_url&quot;: &quot;https://api.github.com/users/pranabdas/following{/other_user}&quot;,
+    &quot;gists_url&quot;: &quot;https://api.github.com/users/pranabdas/gists{/gist_id}&quot;,
+    &quot;starred_url&quot;: &quot;https://api.github.com/users/pranabdas/starred{/owner}{/repo}&quot;,
+    &quot;subscriptions_url&quot;: &quot;https://api.github.com/users/pranabdas/subscriptions&quot;,
+    &quot;organizations_url&quot;: &quot;https://api.github.com/users/pranabdas/orgs&quot;,
+    &quot;repos_url&quot;: &quot;https://api.github.com/users/pranabdas/repos&quot;,
+    &quot;events_url&quot;: &quot;https://api.github.com/users/pranabdas/events{/privacy}&quot;,
+    &quot;received_events_url&quot;: &quot;https://api.github.com/users/pranabdas/received_events&quot;,
+    &quot;type&quot;: &quot;User&quot;,
+    &quot;site_admin&quot;: false,
+    &quot;name&quot;: &quot;Pranab Das&quot;,
+    &quot;company&quot;: null,
+    &quot;blog&quot;: &quot;https://pranabdas.github.io&quot;,
+    &quot;location&quot;: null,
+    &quot;email&quot;: null,
+    &quot;hireable&quot;: null,
+    &quot;bio&quot;: null,
+    &quot;twitter_username&quot;: &quot;pranab_das&quot;,
+    &quot;public_repos&quot;: 24,
+    &quot;public_gists&quot;: 1,
+    &quot;followers&quot;: 0,
+    &quot;following&quot;: 0,
+    &quot;created_at&quot;: &quot;2017-08-15T02:36:34Z&quot;,
+    &quot;updated_at&quot;: &quot;2020-12-02T09:35:04Z&quot;
+}
+
+function App() {
+    return(
+    &lt;&gt;
+        &lt;img src={user.avatar_url} alt={user.name} /&gt;
+        &lt;h3&gt;Hello {user.name}!&lt;/h3&gt;
+        &lt;p&gt;Twitter: &lt;a href={`https://twitter.com/${user.twitter_username}`}&gt;@{user.twitter_username}&lt;/a&gt;&lt;/p&gt;
+      &lt;/&gt;
+    )
+  }
+
+export default App
+
+</code></pre>
+
+<p>Let's create an app to add two numbers. Here we will learn how to accept user inputs. We just work in our <code>App.jsx</code> file from previous example. </p>
+<pre><code class="js">import React, { useState } from 'react';
+
+function App() {
+    const [input1, setInput1] = useState(0);
+    const [input2, setInput2] = useState(0);
+    const [total, setTotal] = useState(input1 + input2);
+
+    function add() {
+        setTotal(input1 + input2)
+    }
+
+    return(
+    &lt;&gt;
+        &lt;h3&gt;Adding two numbers&lt;/h3&gt;
+        &lt;input 
+            type=&quot;number&quot;
+            value={input1}
+            onChange={e =&gt; setInput1(+e.target.value)}
+            placeholder=&quot;0&quot;
+        /&gt;
+        &lt;input 
+            type=&quot;number&quot;
+            value={input2}
+            onChange={e =&gt; setInput2(+e.target.value)}
+            placeholder=&quot;0&quot;
+        /&gt;
+        &lt;button onClick={add}&gt;Add&lt;/button&gt;
+        &lt;p&gt;{total}&lt;/p&gt;
+      &lt;/&gt;
+    )
+  }
+
+export default App
+</code></pre>
+
 <h5 id="fetch-data-from-api">Fetch data from API</h5>
 <pre><code class="js">import React from 'react'; 
 
@@ -347,7 +475,7 @@ class App extends React.Component {
 
   componentDidMount() {
     this.setState({loading: true})
-    fetch(&quot;https://swapi.dev/api/planet/1&quot;)
+    fetch(&quot;https://swapi.dev/api/planets/2/&quot;)
         .then(response =&gt; response.json())
         .then(data =&gt; {
           this.setState({ 
@@ -368,7 +496,9 @@ class App extends React.Component {
 }
 
 export default App;
-</code></pre> 
+</code></pre>
+
+<p>Finally, let's combine all that we have learned. We will accept an user input of their Github username, and later show them some info based their Github profile data. </p> 
                             </div>
                         </div> <footer>
   
