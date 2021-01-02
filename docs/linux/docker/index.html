@@ -289,6 +289,7 @@ docker ps -l
 <p>Exit from the docker container without killing the process: [control] + [P], [control] + [Q]</p>
 <p>Sharing volumes (shared folder with the host):</p>
 <pre><code>docker run -v /home/host/docs:/home -ti centos bash
+docker run -v ${PWD}:/home -ti ubuntu bash
 </code></pre>
 
 <p>Delete container:</p>
@@ -309,6 +310,14 @@ docker ps -l
 
 <p>Use host network:</p>
 <pre><code>docker run -it --net=host centos bash
+</code></pre>
+
+<p>Port forwarding: </p>
+<pre><code>docker run -ti -p 8888:8888 -v ${pwd}:/home jupyter bash
+</code></pre>
+
+<p>Set MAC address:</p>
+<pre><code>docker run -it -v ${PWD}:/home --mac-address 02:42:ac:11:0d:11 ubuntu bash
 </code></pre>
 
 <h4 id="installing-apache-on-a-docker-container">Installing apache on a docker container</h4>
@@ -390,8 +399,12 @@ RUN mkdir -p /root/.config/matplotlib \
 WORKDIR /home
 </code></pre>
 
-<p>Build docker image: </p>
+<p>Build docker image (the file is named Dockerfile): </p>
 <pre><code>docker build -t arptools .
+</code></pre>
+
+<p>If the file is named other than Dockerfile: </p>
+<pre><code>docker build -t arptools -f arptools.dockerfile .
 </code></pre>
 
 <p>Launch: </p>
@@ -433,7 +446,7 @@ docker load -i ubuntu_image.docker
 
   <div role="contentinfo">
     <!-- Copyright etc -->
-    <p>&copy; Copyright 2020 Pranab Das. All rights reserved.</p>
+    <p>&copy; Copyright 2021 Pranab Das. All rights reserved.</p>
   </div>
 
 </footer> 
