@@ -346,7 +346,7 @@ body { box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: 
 
 @media screen and (max-width: 600px) { .site-nav { position: absolute; top: 10px; right: 1em; background-color: white; border-radius: 5px; text-align: right; padding-right: 3px; } .site-nav label[for="nav-trigger"] { display: block; float: right; width: 32px; height: 32px; z-index: 2; cursor: pointer; } .site-nav .menu-icon { display: block; float: right; width: 36px; height: 25px; line-height: 0; text-align: center; } .site-nav input ~ .trigger { clear: both; display: none; } .site-nav input:checked ~ .trigger { display: block; padding-bottom: 5px; } .site-nav .page-link { display: block; padding: 5px 10px; margin-left: 10px; } .site-nav .page-link:not(:last-child) { margin-right: 0; } }
 
-.header-bar { border-bottom: 1px solid #ccc; font-size: 20px; display: block; opacity: 0.75; width: 100%; text-align: center; padding-top: 25px; padding-bottom: 4rem; line-height: 3em; z-index: 25; }
+.header-bar { border-bottom: 1px solid #ccc; font-size: 20px; display: block; opacity: 0.75; width: 100%; text-align: center; padding-top: 0.5rem; padding-bottom: 4rem; line-height: 3em; z-index: 25; }
 
 .header-bar h1 { color: #0099ff; font-size: 2.5em; /* PKD */ }
 
@@ -362,7 +362,7 @@ footer .wrapper { text-align: center; padding: 0.5rem; }
 
 .footer-alt { color: #ccc; font-size: 0.7rem; font-weight: normal; }
 
-.page-content { padding: 100px 0; /* VERTICAL PADDING FOR TITLE ON EVERY PAGE */ padding-bottom: 20px; min-height: calc( 100vh - 120px - 2.1rem); }
+.page-content { padding: 90px 0; /* VERTICAL PADDING FOR TITLE ON EVERY PAGE */ padding-bottom: 20px; min-height: calc( 100vh - 110px - 2.4rem); }
 
 .page-heading { font-size: 20px; }
 
@@ -376,7 +376,7 @@ footer .wrapper { text-align: center; padding: 0.5rem; }
 
 .post-list > li { border-bottom: 1px solid #ccc; padding-bottom: 1rem; padding-top: 1rem; }
 
-.post-title { font-size: 1.8em; /* PKD */ letter-spacing: -1px; line-height: 1; margin-bottom: 10px; margin-top: 0; }
+.post-title { font-size: 2rem; /* PKD */ letter-spacing: -1px; line-height: 1; margin-bottom: 10px; margin-top: 0; }
 
 .post-content h2 { font-size: 42px; }
 
