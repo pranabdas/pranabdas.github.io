@@ -362,7 +362,7 @@ footer .wrapper { text-align: center; padding: 0.5rem; }
 
 .footer-alt { color: #ccc; font-size: 0.7rem; font-weight: normal; }
 
-.page-content { padding: 90px 0; /* VERTICAL PADDING FOR TITLE ON EVERY PAGE */ padding-bottom: 20px; min-height: calc( 100vh - 110px - 2.4rem); }
+.page-content { padding: 90px 0; /* VERTICAL PADDING FOR TITLE ON EVERY PAGE */ padding-bottom: 20px; min-height: calc( 100vh - 110px - 2.1rem); }
 
 .page-heading { font-size: 20px; }
 
