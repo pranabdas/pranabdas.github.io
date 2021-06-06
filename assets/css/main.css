@@ -552,6 +552,8 @@ article a:hover, .news a:hover { text-decoration: underline; }
 
 .social-icons iframe[title=Flattr] { position: relative; top: 0.1em; }
 
+.pgp:hover { text-decoration: underline; }
+
 /* Table styles copied from Bootstrap Copyright (c) 2013 Twitter, Inc */
 table { width: 100%; max-width: 100%; margin-bottom: 1.5; }
 

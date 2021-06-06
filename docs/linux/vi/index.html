@@ -237,49 +237,41 @@
 </ul>
 <pre><code>vi file_name
 </code></pre>
-
 <ul>
 <li>Go into <code>INSERT</code> mode by (Check in the bottom for <code>--INSERT--</code>):</li>
 </ul>
 <pre><code>[shift] + [I]
 </code></pre>
-
 <ul>
 <li>Go into <code>REPLACE</code> mode (Check in the bottom for <code>--REPLACE--</code>):</li>
 </ul>
 <pre><code>[shift] + [R]
 </code></pre>
-
 <ul>
 <li>Go into readonly/normal mode:</li>
 </ul>
 <pre><code>[esc]
 </code></pre>
-
 <ul>
 <li>To save file, first go into readonly mode (<code>[esc]</code>) and then:</li>
 </ul>
 <pre><code>:w
 </code></pre>
-
 <ul>
 <li>To exit vim, first go into readonly mode (<code>[esc]</code>) and then:</li>
 </ul>
 <pre><code>:q
 </code></pre>
-
 <ul>
 <li>You can combine both to save and exit (keyboard shortcut [Shift]+[Z Z]):</li>
 </ul>
 <pre><code>:wq
 </code></pre>
-
 <ul>
 <li>Exit without saving (keyboard shortcut [Shift]+[Z Q]):</li>
 </ul>
 <pre><code>:q!
 </code></pre>
-
 <ul>
 <li>
 <p>Search in the file: Type <code>/</code> followed by the phrase you are looking for. Press <code>N</code> go to next match. You can search backwards using <code>?</code> </p>
@@ -309,7 +301,6 @@ set hlsearch
 hi Search ctermbg=LightBlue
 hi Search ctermfg=black
 </code></pre>
-
 <ul>
 <li>Go to the end of the file: <code>G</code> </li>
 <li>Go to the beginning of file: <code>gg</code> </li>
@@ -337,7 +328,6 @@ hi Search ctermfg=black
 <pre><code>curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 </code></pre>
-
 <ul>
 <li>Installing plugins using vimplug: add this to your <code>.vimrc</code></li>
 </ul>
@@ -345,26 +335,22 @@ hi Search ctermfg=black
 Plug 'junegunn/goyo.vim'
 call plug#end()
 </code></pre>
-
 <p>Save the file <code>:w</code>. Then install plugins by issuing <code>:PlugInstall</code>. </p>
 <p>You can modify or add your own settings to a plugin. For example, if you want to call <strong>Limelight</strong> along with <strong>Goyo</strong>. Go to </p>
 <pre><code>~/.vim/plugged/goyo.vim/autoload/goyo.vim
 </code></pre>
-
 <p>and add a line <code>Limelight</code>. You may add other settings, say, <code>set spell</code> etc. </p>
 <ul>
 <li>Convert tabs to spaces. Add the following to your <code>.vimrc</code>:</li>
 </ul>
 <pre><code>set tabstop=4 shiftwidth=4 expandtab
 </code></pre>
-
 <p>Convert existing tabs to spaces by <code>:retab</code> (once the above settings are added).</p>
 <ul>
 <li>Compare two files. </li>
 </ul>
 <pre><code>vi -d file.txt file-copy.txt
 </code></pre>
-
 <h4 id="select-copy-cut-paste-in-vim-visual-mode">Select, Copy, Cut, Paste in VIM visual mode</h4>
 <p>Enter Visual mode by pressing <code>v</code>, <code>V</code> or <code>[control] + v</code> for visual character, line or block modes, respectively. Select text using the arrow keys on the key board. You can: </p>
 <ul>

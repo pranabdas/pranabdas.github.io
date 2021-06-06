@@ -243,16 +243,13 @@
 # or
 docker version
 </code></pre>
-
 <p>List images:</p>
 <pre><code>docker images
 </code></pre>
-
 <p>Run an image:</p>
 <pre><code>docker run -ti ubuntu:latest bash
 docker run &lt;image-id&gt;
 </code></pre>
-
 <p><code>-ti</code> stands for terminal interactive. If the image is not present locally, it will pull from the docker hub. Alternatively, you can use <code>docker pull</code> to download locally an image prior to running. </p>
 <p>List docker process:</p>
 <pre><code># running containers
@@ -264,87 +261,68 @@ docker ps -a
 # last exited container 
 docker ps -l
 </code></pre>
-
 <p>Create images from container:</p>
 <pre><code>docker commit &lt;container-id&gt;
 </code></pre>
-
 <p>Give a name to the image: </p>
 <pre><code>docker tag &lt;SHA-256-image-id&gt; &lt;my-image-name&gt;
 </code></pre>
-
 <p>We can assign name at the same time with commit:</p>
 <pre><code>docker commit &lt;container-id&gt; &lt;image-name&gt;
 </code></pre>
-
 <p>This will save the state of the container in the latest image. </p>
 <p>Start a detached container:</p>
 <pre><code>docker run -d -ti ubuntu:latest bash
 </code></pre>
-
 <p>Attach running detached container:</p>
 <pre><code>docker attach &lt;container-name-or-id&gt;
 </code></pre>
-
 <p>Exit from the docker container without killing the process: [control] + [P], [control] + [Q]</p>
 <p>Sharing volumes (shared folder with the host):</p>
 <pre><code>docker run -v /home/host/docs:/home -ti centos bash
 docker run -v ${PWD}:/home -ti ubuntu bash
 </code></pre>
-
 <p>Delete container:</p>
 <pre><code>docker rm &lt;id-or-name&gt;
 </code></pre>
-
 <p>Delete all idle containers: </p>
 <pre><code>sudo docker container prune
 </code></pre>
-
 <p>Delete images:</p>
 <pre><code>sudo docker rmi &lt;image-name&gt;
 </code></pre>
-
 <p>Run and remove when docker instance exits:</p>
 <pre><code>docker run --rm &lt;image-name&gt;
 </code></pre>
-
 <p>Use host network:</p>
 <pre><code>docker run -it --net=host centos bash
 </code></pre>
-
 <p>Port forwarding: </p>
 <pre><code>docker run -ti -p 8888:8888 -v ${pwd}:/home jupyter bash
 </code></pre>
-
 <p>Set MAC address:</p>
 <pre><code>docker run -it -v ${PWD}:/home --mac-address 02:42:ac:11:0d:11 ubuntu bash
 </code></pre>
-
 <h4 id="installing-apache-on-a-docker-container">Installing apache on a docker container</h4>
 <p>Here we will install centos docker image: </p>
 <pre><code>docker pull centos 
 </code></pre>
-
 <p>Run docker:</p>
 <pre><code>docker run -ti centos bash
 </code></pre>
-
 <p>Once inside centos update the os:</p>
 <pre><code>dnf up
 </code></pre>
-
 <p>Install apache:</p>
 <pre><code>sudo dnf install httpd
 exit 
 docker commit &lt;container-id&gt; centos
 docker run --net=host centos httpd -D FOREGROUND &amp;
 </code></pre>
-
 <p>Now if you browse your host IP address you should be able to view the default website. We can stop the httpd, by killing the container.</p>
 <pre><code>docker ps
 docker kill &lt;container-id&gt;
 </code></pre>
-
 <h4 id="dockerfile">Dockerfile</h4>
 <p>Write the <code>Dockerfile</code>: </p>
 <pre><code># Start from Ubuntu 20.04 LTS
@@ -398,32 +376,25 @@ RUN mkdir -p /root/.config/matplotlib \
 # leave in `/home` which we can map with the host
 WORKDIR /home
 </code></pre>
-
 <p>Build docker image (the file is named Dockerfile): </p>
 <pre><code>docker build -t arptools .
 </code></pre>
-
 <p>If the file is named other than Dockerfile: </p>
 <pre><code>docker build -t arptools -f arptools.dockerfile .
 </code></pre>
-
 <p>Launch: </p>
 <pre><code>docker run -ti --net=host -v /host/path:/home arptools bash
 </code></pre>
-
 <h4 id="docker-hub">Docker hub</h4>
 <p>Login: </p>
 <pre><code>sudo docker login docker.io
 </code></pre>
-
 <p>Tag a local image: </p>
 <pre><code>sudo docker tag localimage:latest username/localimage:latest
 </code></pre>
-
 <p>Push a local image: </p>
 <pre><code>sudo docker push username/localimage:latest
 </code></pre>
-
 <h4 id="transferring-docker-image-offline">Transferring Docker image offline</h4>
 <pre><code>docker pull ubuntu
 docker save -o ubuntu_image.docker ubuntu

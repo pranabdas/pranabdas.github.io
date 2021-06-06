@@ -228,51 +228,41 @@
 <p>Show network devices: </p>
 <pre><code>ip addr
 </code></pre>
-
 <p>More details about a specific network adapter: </p>
 <pre><code>ethtool enp0s3
 </code></pre>
-
 <p>About network names: en → ethernet (could be wl → wireless), p0 → bus PCI-0 (could be u → USB), s3 → slot 3. </p>
 <p>Check if NetworkManager is running in your system:</p>
 <pre><code>sudo systemctl status NetworkManager
 </code></pre>
-
 <p>If it is not active, start NetworkManager:</p>
 <pre><code>sudo systemctl start NetworkManager
 </code></pre>
-
 <p>If NetworkManager is not installed in your system:</p>
 <pre><code>sudo dnf install NetworkManager
 sudo apt install network-manager
 </code></pre>
-
 <p>Check the device status:</p>
 <pre><code>nmcli device
 </code></pre>
-
 <p>Network setting files in Centos: <code>/ect/sysconfig/network-scripts</code>. 
 Network setting files in Ubuntu: <code>/ect/NetworkManager/NetworkManager.conf</code>.</p>
 <p>If you make any changes, you need to restart the NetworkManager service to take effect. </p>
 <p>Details about a network connection:</p>
 <pre><code>nmcli connection show Wired\ Connection\ 1
 </code></pre>
-
 <p>If there is no connection name for a network device, you can try the device name instead. </p>
 <p>Edit a connection profile:</p>
 <pre><code>nmcli connection edit Wired\ Connection\ 1
 </code></pre>
-
 <p>Print details about a specific section:</p>
 <pre><code>nmcli&gt; print ipv4
 </code></pre>
-
 <p>Make changes: </p>
 <pre><code>nmcli&gt; set ipv4.method auto
 nmcli&gt; save 
 nmcli&gt; quit
 </code></pre>
-
 <p>We can restart the connection to reflect the changes:</p>
 <pre><code>nmcli connection down Wired\ Connection\ 1
 nmcli connection up Wired\ Connection\ 1

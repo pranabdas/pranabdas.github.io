@@ -229,20 +229,16 @@
 <p>Check the current mode:</p>
 <pre><code>getenforce
 </code></pre>
-
 <p>We can change SELinux modes using </p>
 <pre><code>setenforce
 </code></pre>
-
 <p>For example, you may choose <code>setenforce 0</code> for permissive mode while troubleshooting. Never disable selinux. SELinux configurations are in the file: <code>/etc/selinux/config</code>. You can open it in a text editor and make changes. </p>
 <p>Look into the context using <code>Z</code> flag:</p>
 <pre><code>ls -lZ
 </code></pre>
-
 <p>There are three different types of context: users, roles and type. Like every files and directories, process has context too. </p>
 <pre><code>ps -auxZ
 </code></pre>
-
 <p>The unconfined processes are those that selinux does not monitor. </p>
 <p><strong>Resources:</strong>
 - <a href="https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/using_selinux/index" target="_blank">Red Hat SELinux documentation</a></p> 

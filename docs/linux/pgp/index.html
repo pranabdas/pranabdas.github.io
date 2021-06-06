@@ -234,86 +234,68 @@
 <p>First step, check whether you have <em>gnupg</em> already installed in your system. If you are on a standard Linux environment, that's likely the case. </p>
 <pre><code>which gpg
 </code></pre>
-
 <p>If it prints a path, we are good to go. Otherwise, you will see <code>gpg not found</code> message. In that case, we need to install. Depending on your OS and package manager choose one of the following or similar command:</p>
 <pre><code>apt-get install gnupg 
 dnf install gnupg 
 brew install gnupg
 </code></pre>
-
 <p>Create a new key pair: </p>
 <pre><code>gpg --gen-key
 </code></pre>
-
 <p>You must keep the private key to yourself and never share with anyone. The public key you can give to people, so that they can encrypt messages/files with your public key. You will be the only one to decrypt those messages using your private key. Private key is stored on the disc encrypted with a passphrase. If you lose either your private key or the passphrase, you will not be able to decrypt the messages. Therefore, backup your private key securely, also write down the passphrase in a safe place. </p>
 <p>Export your public key: </p>
 <pre><code>gpg --export --armor youremail@example.com &gt; mypubkey.asc
 </code></pre>
-
 <p>Import others public keys: </p>
 <pre><code>gpg --import pubkey.asc
 </code></pre>
-
 <p>You can use the same command to import your own private keys as well like if you need to move your key to another machine or you have obtained from another place. </p>
 <pre><code>gpg --import privatekey.asc
 </code></pre>
-
 <p>List public keys in your keyring: </p>
 <pre><code>gpg --list-keys
 </code></pre>
-
 <p>List private keys: </p>
 <pre><code>gpg --list-secret-keys
 </code></pre>
-
 <p>Encrypt a file: </p>
 <pre><code>gpg --encrypt --recipient Pranab filename.txt
 gpg --encrypt --recipient 'Pranab' filename.txt
 gpg --encrypt --recipient 'pranab@example.com' --recipient 'Sam' filename.txt
 </code></pre>
-
 <p>It will generate encrypted file named <em>filename.txt.gpg</em>. 
 If you want armor text, use that flag: </p>
 <pre><code>gpg --encrypt --armor --recipient 'pranab@example.com' filename.txt
 </code></pre>
-
 <p>It generates encrypted file named <em>ilename.txt.asc</em>. Specify the output file:</p>
 <pre><code>gpg --output filename.asc --encrypt --armor --recipient 'pranab@example.com' filename.txt
 </code></pre>
-
 <p>Decrypt a file: </p>
 <pre><code>gpg --decrypt filename.txt.gpg
 gpg filename.txt.gpg
 gpg --decrypt filename.txt.gpg &gt; filename-copy.txt
 </code></pre>
-
 <p>If you do not provide an output file name, it will print decrypted text in the terminal. If it is a binary file, you should provide an output file, possibly with correct file extension. </p>
 <p>Edit a key: </p>
 <pre><code>gpg --edit-key 'Pranab Das'
 trust 
 quit
 </code></pre>
-
 <p>Set the time a cache entry is valid to n seconds. The default is 600 seconds.</p>
 <pre><code>gpg --default-cache-ttl n
 </code></pre>
-
 <p>You can download anyone's protonmail public key by replacing the email address (username) in the last part and visiting the URL: </p>
 <pre><code>https://api.protonmail.ch/pks/lookup?op=get&amp;search=username@protonmail.com
 </code></pre>
-
 <p>You can use PGP to perform symmetric encryption (AES-256 default) as well. Encrypt a file using passphrase: </p>
 <pre><code>gpg -c file.txt
 </code></pre>
-
 <p>If you want armor text:</p>
 <pre><code>gpg -c --armor file.txt
 </code></pre>
-
 <p>Decryption:</p>
 <pre><code>gpg -d file.txt.gpg &gt; file-copy.txt
 </code></pre>
-
 <h4 id="using-pgp-encryption-with-vim-editor">Using PGP encryption with VIM editor</h4>
 <p>Install this plugin <a href="https://github.com/jamessan/vim-gnupg" tartge="_blank">https://github.com/jamessan/vim-gnupg</a></p>
 <p>I experienced a bug: sometimes two characters of second line is missing or hidden. To resolve this issue, add this to your <code>.vimrc</code> file: </p>
@@ -322,12 +304,10 @@ func FixRedraw(timer)
         redraw!
 endfunc
 </code></pre>
-
 <p>You may prefer to have following options. Just add to your <code>.vimrc</code>: </p>
 <pre><code>let g:GPGPreferArmor=1
 let g:GPGDefaultRecipients=[&quot;default@example.com&quot;]
 </code></pre>
-
 <p>Read more: </p>
 <ul>
 <li><a href="https://protonmail.com/blog/what-is-pgp-encryption/" target="_blank">https://protonmail.com/blog/what-is-pgp-encryption/</a> </li>

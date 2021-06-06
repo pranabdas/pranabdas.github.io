@@ -113,6 +113,12 @@
             
     <li class="toctree-l2"><a href="#git-commands">Git commands</a></li>
     
+        <ul>
+        
+            <li><a class="toctree-l3" href="#working-with-remotes">Working with remotes</a></li>
+        
+        </ul>
+    
 
     </ul>
                         </li>
@@ -224,366 +230,247 @@
 </div>
                         <div role="main">
                             <div class="section">
-                                 <h3 id="git-commands">Git commands</h3>
-<p>Git is a content aware filesystem. It is used for version control. It is used by millions of developers. It is used by big projects for distributed software development. But you can use it to keep track of almost anything from your manuscripts, drawings to complicated code structure. It can provide you with many advantages. It's worth putting some effort to learn git. Happy learning! </p>
-<ul>
-<li>Check if you have git already installed by issuing following command in Terminal</li>
-</ul>
-<pre><code>git --version
+                                 <h1 id="git-commands">Git commands</h1>
+<p>Git is a content aware filesystem. It is used for version control. It is used by
+millions of developers. It is used by big projects for distributed software
+development. But you can use it to keep track of almost anything from your
+manuscripts, drawings to complicated code structure. It can provide you with
+many advantages. It's worth putting some effort to learn git. Happy learning!</p>
+<p>Check if you have git already installed by issuing following command in Terminal</p>
+<pre><code class="language-bash">git --version
 </code></pre>
-
-<ul>
-<li>
-<p>If you see error. Go to <a href="https://git-scm.com" target="_blank">https://git-scm.com</a> download and install.</p>
-</li>
-<li>
-<p>If you are on Windows, use of Git bash is recommenced. In MacOS or Linux, use the Terminal.</p>
-</li>
-<li>
+<p>If you see error. Go to <a href="https://git-scm.com" target="_blank">here</a> download
+and install.</p>
+<p>If you are on Windows, use of Git bash is recommenced. In MacOS or Linux, use
+the Terminal.</p>
 <p>Configure git</p>
-</li>
-</ul>
-<pre><code>git config --global user.name &quot;User Name&quot;
+<pre><code class="language-bash">git config --global user.name &quot;User Name&quot;
 git config --global user.email &quot;user@example.com&quot;
 </code></pre>
-
-<ul>
-<li>Check a particular entry</li>
-</ul>
-<pre><code>git config --global user.name
+<p>Check a particular entry</p>
+<pre><code class="language-bash">git config --global user.name
 </code></pre>
-
-<ul>
-<li>If you want to add a text editor which will let you type long commit messages. For Visual Studio Code/Atom, use following (choose one):</li>
-</ul>
-<pre><code>git config --global core.editor &quot;code --wait&quot;
-git config --global core.editor &quot;atom --wait&quot; 
+<p>If you want to add a text editor which will let you type long commit messages.
+For Visual Studio Code/Atom, use following (choose one):</p>
+<pre><code class="language-bash">git config --global core.editor &quot;code --wait&quot;
+git config --global core.editor &quot;atom --wait&quot;
 </code></pre>
-
-<ul>
-<li>You can check your setting by: </li>
-</ul>
-<pre><code>git config --list
+<p>You can check your setting by:</p>
+<pre><code class="language-bash">git config --list
 </code></pre>
-
-<ul>
-<li>Initialize current project directory:</li>
-</ul>
-<pre><code>git init
+<p>Initialize current project directory:</p>
+<pre><code class="language-bash">git init
 </code></pre>
-
-<ul>
-<li>Now start working/modifying your files. Then you need to add files individually or whole directory for staging. </li>
-</ul>
-<pre><code>git add filename
+<p>Now start working/modifying your files. Then you need to add files individually
+or whole directory for staging.</p>
+<pre><code class="language-bash">git add filename
 </code></pre>
-
-<ul>
-<li>Add current directory to staging. You can use either one of the following:</li>
-</ul>
-<pre><code>git add . 
-git add --all 
+<p>Add current directory to staging. You can use either one of the following:</p>
+<pre><code class="language-bash">git add .
+git add --all
 </code></pre>
-
-<ul>
-<li>This will add the files to the staging area. Note that if you make further changes on the files before commit, those new changes will not be included in the commit. Commit will record precisely when you ran the git add. You can check the status of your project by:</li>
-</ul>
-<pre><code>git status
+<p>This will add the files to the staging area. Note that if you make further
+changes on the files before commit, those new changes will not be included in
+the commit. Commit will record precisely when you ran the git add. You can check
+the status of your project by:</p>
+<pre><code class="language-bash">git status
 </code></pre>
-
-<ul>
-<li>There is a short status version, which will output a concise status message:</li>
-</ul>
-<pre><code>git status -s
+<p>There is a short status version, which will output a concise status message:</p>
+<pre><code class="language-bash">git status -s
 </code></pre>
-
-<ul>
-<li>Often you want to ignore some files or directories in your project. You can do that by creating a <em>.gitignore</em> in your project root, and including the files and folders that you want to exclude. You can use patterns/wildcards to indicate those files. </li>
-</ul>
-<pre><code>vi .gitignore
+<p>Often you want to ignore some files or directories in your project. You can do
+that by creating a <em>.gitignore</em> in your project root, and including the files
+and folders that you want to exclude. You can use patterns/wildcards to indicate
+those files.</p>
+<pre><code class="language-bash">vi .gitignore
 </code></pre>
+<p>Then this is how the contents of <em>.gitignore</em> should look like:</p>
+<pre><code class="language-bash"># Ignore all bin files
+*.bin
 
-<ul>
-<li>Then this is how the contents of <em>.gitignore</em> should look like:</li>
-</ul>
-<pre><code>    # Ignore all bin files 
-    *.bin 
+# Track lib.bin even though we ignore all other .bin
+!lib.bin
 
-    # Track lib.bin even though we ignore all other .bin
-    !lib.bin 
+# Ignore everything on the output directory
+output/
 
-    # Ignore everything on the output directory 
-    output/
+result.txt
 
-    result.txt
-
-    # ignore all .pdf files in the doc/ directory and any of its subdirectories
-    doc/**/*.pdf
+# ignore all .pdf files in the doc/ directory and any of its subdirectories
+doc/**/*.pdf
 </code></pre>
-
-<ul>
-<li>Note that .gitignore applies to un-tracked files. Once, you include them in git add, they won't be removed automatically by .gitignore inclusion. You can remove them manually by: </li>
-</ul>
-<pre><code>git rm --cached filename
+<p>Note that .gitignore applies to un-tracked files. Once, you include them in git
+add, they won't be removed automatically by .gitignore inclusion. You can remove
+them manually by:</p>
+<pre><code class="language-bash">git rm --cached filename
 git rm --cached folder/
 </code></pre>
-
-<ul>
-<li>
-<p>Blank lines or the lines that start with "#" are ignored. You can visit this page <a href="https://github.com/github/gitignore" target="_blank">https://github.com/github/gitignore</a>, where GitHub maintains a list of <em>.gitignore</em> for various popular projects. </p>
-</li>
-<li>
+<p>Blank lines or the lines that start with "#" are ignored. You can visit this
+page <a href="https://github.com/github/gitignore" target="_blank">https://github.com/github/gitignore</a>, where GitHub maintains a
+list of <em>.gitignore</em> for various popular projects.</p>
 <p>Remove a file from staging environment:</p>
-</li>
-</ul>
-<pre><code>git checkout filename
+<pre><code class="language-bash">git checkout filename
 </code></pre>
-
-<ul>
-<li>You can also do for all files, certain directory, or wildcards:</li>
-</ul>
-<pre><code>git checkout --.
+<p>You can also do for all files, certain directory, or wildcards:</p>
+<pre><code class="language-bash">git checkout --.
 git checkout --*.html
 </code></pre>
-
-<ul>
-<li>To see what changes you have made but not staged: </li>
-</ul>
-<pre><code>git diff 
+<p>To see what changes you have made but not staged:</p>
+<pre><code class="language-bash">git diff
 </code></pre>
-
-<ul>
-<li>To see what changes you have staged: </li>
-</ul>
-<pre><code>git diff --staged 
+<p>To see what changes you have staged:</p>
+<pre><code class="language-bash">git diff --staged
 </code></pre>
-
-<ul>
-<li>Check the difference with another branch or commit</li>
-</ul>
-<pre><code>git diff &lt;commit-hash or branch-name&gt;
+<p>Check the difference with another branch or commit</p>
+<pre><code class="language-bash">git diff &lt;commit-hash or branch-name&gt;
 </code></pre>
-
-<ul>
-<li>Check the difference for a particular file: </li>
-</ul>
-<pre><code>git diff -- path/file.md 
+<p>Check the difference for a particular file:</p>
+<pre><code class="language-bash">git diff -path/file.md
 </code></pre>
-
-<ul>
-<li>You can also remove something, or everything from staging using:</li>
-</ul>
-<pre><code>git reset HEAD filename
+<p>You can also remove something, or everything from staging using:</p>
+<pre><code class="language-bash">git reset HEAD filename
 git reset HEAD
 </code></pre>
-
-<ul>
-<li>Commit git (save staging state):</li>
-</ul>
-<pre><code>git commit -m &quot;commit comment&quot;
+<p>Commit git (save staging state):</p>
+<pre><code class="language-bash">git commit -m &quot;commit comment&quot;
 </code></pre>
-
-<ul>
-<li>You can add all changes and commit by combing: </li>
-</ul>
-<pre><code>git commit -a -m &quot;commit all changes&quot;
+<p>You can add all changes and commit by combing:</p>
+<pre><code class="language-bash">git commit -a -m &quot;commit all changes&quot;
 </code></pre>
-
-<ul>
-<li>Often you forget some files to add or commit to early. You can add those files and amend the commit: </li>
-</ul>
-<pre><code>git commit --amend 
+<p>Often you forget some files to add or commit to early. You can add those files
+and amend the commit:</p>
+<pre><code class="language-bash">git commit --amend
 </code></pre>
-
-<ul>
-<li>Check the records/commits of your project:</li>
-</ul>
-<pre><code>git log
+<p>Check the records/commits of your project:</p>
+<pre><code class="language-bash">git log
+git shortlog
 </code></pre>
-
-<ul>
-<li>Go back to (undo) previous commits</li>
-</ul>
-<pre><code>git checkout &lt;commit-hash&gt;
+<p>Go back to (undo) previous commits</p>
+<pre><code class="language-bash">git checkout &lt;commit-hash&gt;
 </code></pre>
-
-<ul>
-<li>It will create a separate branch (main branch is called master). You can check branches by:</li>
-</ul>
-<pre><code>git branch
+<p>It will create a separate branch (main branch is called master). You can check
+branches by:</p>
+<pre><code class="language-bash">git branch
 </code></pre>
-
-<ul>
-<li>You can list remotes brach as well with: </li>
-</ul>
-<pre><code>git branch -a
+<p>You can list remotes brach as well with:</p>
+<pre><code class="language-bash">git branch -a
 </code></pre>
-
-<ul>
-<li>Go back to master:</li>
-</ul>
-<pre><code>git checkout master
+<p>Go back to master:</p>
+<pre><code class="language-bash">git checkout master
 </code></pre>
-
-<ul>
-<li>You can keep the other by creating a new branch:</li>
-</ul>
-<pre><code>git branch &lt;new-branch&gt; &lt;commit-hash&gt;
+<p>You can keep the other by creating a new branch:</p>
+<pre><code class="language-bash">git branch &lt;new-branch&gt; &lt;commit-hash&gt;
 </code></pre>
-
-<ul>
-<li>Switch to new branch by using</li>
-</ul>
-<pre><code>git checkout &lt;new-branch&gt;
+<p>Switch to new branch by using</p>
+<pre><code class="language-bash">git checkout &lt;new-branch&gt;
 </code></pre>
-
-<ul>
-<li>You can create a new branch from current master as well</li>
-</ul>
-<pre><code>git branch &lt;branch-name&gt;
+<p>You can create a new branch from current master as well</p>
+<pre><code class="language-bash">git branch &lt;branch-name&gt;
 </code></pre>
-
-<ul>
-<li>Bring over changes from a branch to the master. Once you merge, you bring over all the changes from another branch to the working directory (you do not bring the commit history from other branch). If there are files modified on both branch, there will be conflict merge, you may need to manually resolve those files. Later everything is alright, you can make commit to keep a permanent record. </li>
-</ul>
-<pre><code>git checkout master
+<p>Bring over changes from a branch to the master. Once you merge, you bring over
+all the changes from another branch to the working directory (you do not bring
+the commit history from other branch). If there are files modified on both
+branch, there will be conflict merge, you may need to manually resolve those
+files. Later everything is alright, you can make commit to keep a permanent
+record.</p>
+<pre><code class="language-bash">git checkout master
 git merge &lt;branch-name&gt;
 </code></pre>
-
-<ul>
-<li>Rename a branch:</li>
-</ul>
-<pre><code>git branch -m &lt;old-name&gt; &lt;new-name&gt;
+<p>Rename a branch:</p>
+<pre><code class="language-bash">git branch -m &lt;old-name&gt; &lt;new-name&gt;
 </code></pre>
-
-<ul>
-<li>Delete a brach:</li>
-</ul>
-<pre><code>git branch -d &lt;branch-name&gt;
+<p>Delete a brach:</p>
+<pre><code class="language-bash">git branch -d &lt;branch-name&gt;
 </code></pre>
-
-<ul>
-<li>The above command will fail with warning if there are changes that are not merged. If you want to delete a branch irrespective of whether the changes were merged: </li>
-</ul>
-<pre><code>git branch -D &lt;branch-name&gt;
+<p>The above command will fail with warning if there are changes that are not
+merged. If you want to delete a branch irrespective of whether the changes were
+merged:</p>
+<pre><code class="language-bash">git branch -D &lt;branch-name&gt;
 </code></pre>
-
-<ul>
-<li>Following will reset all changes after the specified commit. This preserves the history locally. </li>
-</ul>
-<pre><code>git reset &lt;commit hash&gt;
+<p>Following will reset all changes after the specified commit. This preserves the
+history locally.</p>
+<pre><code class="language-bash">git reset &lt;commit hash&gt;
 </code></pre>
-
-<ul>
-<li>Discard all changes without history: </li>
-</ul>
-<pre><code>git reset --hard &lt;commit hash&gt; 
+<p>Discard all changes without history:</p>
+<pre><code class="language-bash">git reset --hard &lt;commit hash&gt;
 </code></pre>
-
-<ul>
-<li>Reset changes after last commit (HEAD represents the current working directory). This will keep the changes un-staged. If you want to reset fully use the flag <code>--hard</code>. </li>
-</ul>
-<pre><code>git reset HEAD 
+<p>Reset changes after last commit (HEAD represents the current working directory).
+This will keep the changes un-staged. If you want to reset fully use the flag
+<code>--hard</code>.</p>
+<pre><code class="language-bash">git reset HEAD
 git reset --hard HEAD
 </code></pre>
-
-<ul>
-<li>
-<p>Resetting history which is already pushed to remote can have unintended side effects. Do it with caution. </p>
-</li>
-<li>
-<p>You can undo a merge by using either of following two: </p>
-</li>
-</ul>
-<pre><code>git merge --abort  
-git reset --hard HEAD 
+<p>Resetting history which is already pushed to remote can have unintended side
+effects. Do it with caution.</p>
+<p>You can undo a merge by using either of following two:</p>
+<pre><code class="language-bash">git merge --abort
+git reset --hard HEAD
 </code></pre>
-
-<p><br> 
-<strong>Working with remotes:</strong>  </p>
-<p>Here I use the example of GitHub. You can choose another provider, like Gitlab, Bitbucket. </p>
-<ul>
-<li>Clone a github repository locally:</li>
-</ul>
-<pre><code>git clone https://github.com/user/repository.git 
+<p><br/></p>
+<h2 id="working-with-remotes">Working with remotes</h2>
+<p>Here I use the example of GitHub. You can choose another provider, like Gitlab, Bitbucket.</p>
+<p>Clone a github repository locally:</p>
+<pre><code class="language-bash">git clone https://github.com/user/repository.git
 </code></pre>
-
-<ul>
-<li>If you want to have your repository with a different name, just pass the new name as second argument: </li>
-</ul>
-<pre><code>git clone https://github.com/user/repository.git my-repo-name
+<p>If you want to have your repository with a different name, just pass the new
+name as second argument:</p>
+<pre><code class="language-bash">git clone https://github.com/user/repository.git my-repo-name
 </code></pre>
-
-<ul>
-<li>Clone a specific branch: </li>
-</ul>
-<pre><code>git clone --branch &lt;branchname&gt; &lt;remote-repo-url&gt;
+<p>Clone a specific branch:</p>
+<pre><code class="language-bash">git clone --branch &lt;branchname&gt; &lt;remote-repo-url&gt;
 </code></pre>
-
-<ul>
-<li>Add GitHub remote directory:</li>
-</ul>
-<pre><code>git remote add &lt;short-name&gt; &lt;url&gt;
+<p>Shallow cloning:</p>
+<pre><code class="language-bash">git clone --depth 1 https://github.com/user/repository.git
+</code></pre>
+<p>Add GitHub remote directory:</p>
+<pre><code class="language-bash">git remote add &lt;short-name&gt; &lt;url&gt;
 git remote add origin https://github.com/user/repository.git
 </code></pre>
-
-<ul>
-<li>You can have multiple remotes. You can check the remotes: </li>
-</ul>
-<pre><code>git remote -v
+<p>You can have multiple remotes. You can check the remotes:</p>
+<pre><code class="language-bash">git remote -v
 </code></pre>
-
-<ul>
-<li>Push changes to the GitHub:</li>
-</ul>
-<pre><code>git push &lt;remote&gt; &lt;branch&gt;
+<p>Push changes to the GitHub:</p>
+<pre><code class="language-bash">git push &lt;remote&gt; &lt;branch&gt;
 git push origin master
 </code></pre>
-
-<ul>
-<li>Force Push:</li>
-</ul>
-<pre><code>git push origin --force --all
+<p>Force Push:</p>
+<pre><code class="language-bash">git push origin --force --all
 </code></pre>
-
-<ul>
-<li>Fetch from remote. It fetches the meta-data from the remote: </li>
-</ul>
-<pre><code>git fetch &lt;short-name or url&gt;
+<p>Fetch from remote. It fetches the meta-data from the remote:</p>
+<pre><code class="language-bash">git fetch &lt;short-name or url&gt;
 </code></pre>
-
-<ul>
-<li>Then you can run a diff: </li>
-</ul>
-<pre><code>git diff master origin/master
-git diff &lt;local&gt; &lt;remote/branch&gt; 
+<p>Then you can run a diff:</p>
+<pre><code class="language-bash">git diff master origin/master
+git diff &lt;local&gt; &lt;remote/branch&gt;
 </code></pre>
-
-<ul>
-<li>If everything is alright, you can pull the data from remote: </li>
-</ul>
-<pre><code>git pull &lt;remote&gt; &lt;remote-master&gt; 
-git pull origin master 
+<p>If everything is alright, you can pull the data from remote:</p>
+<pre><code class="language-bash">git pull &lt;remote&gt; &lt;remote-master&gt;
+git pull origin master
 git pull --all
 </code></pre>
-
-<ul>
-<li>Rename remote: </li>
-</ul>
-<pre><code>git remote rename &lt;old-name&gt; &lt;new-name&gt;
+<p>Rename remote:</p>
+<pre><code class="language-bash">git remote rename &lt;old-name&gt; &lt;new-name&gt;
 </code></pre>
-
-<ul>
-<li>Remove remote:</li>
-</ul>
-<pre><code>git remote remove &lt;short-name&gt;
+<p>Remove remote:</p>
+<pre><code class="language-bash">git remote remove &lt;short-name&gt;
 </code></pre>
-
-<p><br/> </p>
-<p><strong>Learn more about git:</strong> </p>
+<p>Pull upstream changes:</p>
+<pre><code class="language-bash"># set aside working files
+git stash
+# bring in upstream changes
+git pull
+# apply stash
+git stash apply
+</code></pre>
+<p>Pull changes and discard local changes (not recommended, do it with caution):</p>
+<pre><code class="language-bash">git fetch
+git reset --hard origin/master
+</code></pre>
+<p><br/></p>
+<p><strong>Learn more about git:</strong></p>
 <ul>
-<li><a href="https://git-scm.com/book/en/v2" target="_blank">https://git-scm.com/book/en/v2</a> </li>
-<li><a href="https://github.com/pluralsight/git-internals-pdf" target="_blank">https://github.com/pluralsight/git-internals-pdf</a> </li>
+<li><a href="https://git-scm.com/book/en/v2" target="_blank">https://git-scm.com/book/en/v2</a></li>
+<li><a href="https://github.com/pluralsight/git-internals-pdf" target="_blank">https://github.com/pluralsight/git-internals-pdf</a></li>
 </ul> 
                             </div>
                         </div> <footer>

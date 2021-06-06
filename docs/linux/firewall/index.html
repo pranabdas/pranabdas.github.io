@@ -228,62 +228,48 @@
 <p>We will setup <strong>firewalld</strong>. Make sure that another firewall tool is not running or installed in the system that might conflict with <strong>firewalld</strong>. In some older systems, you might have <strong>iptables</strong> installed. You can check if the service is running: </p>
 <pre><code>systemctl status iptables
 </code></pre>
-
 <p>If it is there, stop the service in case it is running:</p>
 <pre><code>systemctl stop iptables
 </code></pre>
-
 <p>If it is not running, next check if the program is installed: </p>
 <pre><code>cd /sbin/
 ls -Fla iptables
 </code></pre>
-
 <p>Mask the program: </p>
 <pre><code>systemctl mask iptables
 </code></pre>
-
 <p>Install <em>firewalld</em>:</p>
 <pre><code>sudo apt install firewalld
 sudo apt install firewall-config
 </code></pre>
-
 <p>Check the available zones:</p>
 <pre><code>firewall-cmd --get-zones
 </code></pre>
-
 <p>Get default zone:</p>
 <pre><code>firewall-cmd --get-default-zone
 </code></pre>
-
 <p>More detailed list:</p>
 <pre><code>firewall-cmd --list-all-zones
 </code></pre>
-
 <p>Services available via firewalld:</p>
 <pre><code>firewall-cmd --get-services
 </code></pre>
-
 <p>Change default zone:</p>
 <pre><code>firewall-cmd --set-default-zone=work
 </code></pre>
-
 <p>Get active zones:</p>
 <pre><code>firewall-cmd --get-active-zones
 </code></pre>
-
 <p>Add a service to your default zone:</p>
 <pre><code>firewall-cmd --add-service=mdns
 </code></pre>
-
 <p>List the zone:</p>
 <pre><code>firewall-cmd --list-all
 </code></pre>
-
 <p>Allow <em>http</em> and <em>https</em> in a apache server:</p>
 <pre><code>firewall-cmd --add-service=http
 firewall-cmd --add-service=https
 </code></pre>
-
 <p>Allow mail server:</p>
 <pre><code>firewall-cmd --add-service=smtp
 firewall-cmd --add-service=smtps
@@ -293,13 +279,11 @@ firewall-cmd --add-service=imaps
 firewall-cmd --add-service=pop3
 firewall-cmd --add-service=pop3s
 </code></pre>
-
 <p>Removing services:</p>
 <pre><code>firewall-cmd --remove-service=smtp
 firewall-cmd --remove-service=imap
 firewall-cmd --remove-service=pop3
 </code></pre>
-
 <p>Emergency panic mode (stop all network connections):</p>
 <pre><code>firewall-cmd --panic-on
 firewall-cmd --query-panic

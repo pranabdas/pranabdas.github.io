@@ -245,11 +245,9 @@ major minor  #blocks  name
    8        5   41415680 sda5
    7        8     223124 loop8
 </code></pre>
-
 <p>There are multiple ways to know about the partitions. Another command is: </p>
 <pre><code>sudo fdisk -l
 </code></pre>
-
 <p>Another is: </p>
 <pre><code>$ lsblk
 NAME   MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT
@@ -268,23 +266,18 @@ sda      8:0    0    40G  0 disk
 └─sda5   8:5    0  39.5G  0 part /
 sr0     11:0    1  1024M  0 rom 
 </code></pre>
-
 <p>Check the partitions that are mounted on boot:</p>
 <pre><code>cat /etc/fstab
 </code></pre>
-
 <p>Check filesystem types:</p>
 <pre><code>df -Th
 </code></pre>
-
 <p>Formatting a partition:</p>
 <pre><code>sudo mkfs -t ext4 /dev/sdb3
 </code></pre>
-
 <p>Mounting a filesystem: it maps the filesystem with a directory. </p>
 <pre><code>sudo mount /dev/sdb3 /newdrive
 </code></pre>
-
 <p>Mounting Windows network drive in WSL:</p>
 <pre><code>sudo mkdir /mnt/k
 sudo mount -t drvfs K: /mnt/k

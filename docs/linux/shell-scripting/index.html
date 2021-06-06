@@ -230,15 +230,12 @@
 type -a myscript
 which myscript
 </code></pre>
-
 <p>Then we need to store our executable in the system <code>PATH</code>. Check the existing paths: </p>
 <pre><code>echo $PATH
 </code></pre>
-
 <p>If we want to include a new path to our <code>$PATH</code> variable, we can include following in our <code>.bashrc</code>: </p>
 <pre><code>PATH=$PATH:/new/path
 </code></pre>
-
 <p>or, </p>
 <pre><code>export PATH=&quot;/new/path:$PATH&quot;
 </code></pre> 
