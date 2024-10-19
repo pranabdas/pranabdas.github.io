@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="https://pranabdas.github.io/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://pranabdas.github.io/" rel="alternate" type="text/html" /><updated>2023-02-26T17:40:00+08:00</updated><id>https://pranabdas.github.io/blog/feed.xml</id><title type="html">Pranab Das</title><subtitle>Tutorials, notes, and resources on Condensed Matter Physics, Crystal Growth, Angle Resolved Photoemission Spectroscopy (ARPES), Density Functional Theory (DFT) calculations using Quantum Espresso and OpenMX, computational materials science, Rietveld refinement of powder XRD pattern using FullProf, Laue simulation using Orient Express, various coding projects using python, javascript (react applications), FORTRAN, C, C++, Rust, software engineering, data science, machine learning, Linux, GitHub, LaTeX, web development, webassembly, Jekyll, Docusaurus.</subtitle><author><name>Pranab Das</name></author><entry><title type="html">Patterns</title><link href="https://pranabdas.github.io/blog/2023/pattern/" rel="alternate" type="text/html" title="Patterns" /><published>2023-02-26T17:40:00+08:00</published><updated>2023-02-26T17:40:00+08:00</updated><id>https://pranabdas.github.io/blog/2023/pattern</id><content type="html" xml:base="https://pranabdas.github.io/blog/2023/pattern/"><![CDATA[<div>
-<picture>
-  <source type="image/webp" srcset="https://pranabdas.github.io/drive/photos/blog/pattern.webp" />
-  <img class="col three" src="https://pranabdas.github.io/drive/photos/blog/pattern.jpg" alt="photograph" />
-</picture>
+  <img class="col three" src="https://pranabdas.github.io/drive/photos/blog/pattern.webp" alt="photograph" />
 </div>
 
 <div class="col three caption">
@@ -12,10 +9,7 @@
 <!-- <br>
 
 >In the mind’s eye, a fractal is a way of seeing infinity. -->]]></content><author><name>Pranab Das</name></author><category term="photography" /><summary type="html"><![CDATA[Tree silhouettes]]></summary></entry><entry><title type="html">Flower close-ups</title><link href="https://pranabdas.github.io/blog/2023/close-ups/" rel="alternate" type="text/html" title="Flower close-ups" /><published>2023-02-19T09:30:00+08:00</published><updated>2023-02-19T09:30:00+08:00</updated><id>https://pranabdas.github.io/blog/2023/close-ups</id><content type="html" xml:base="https://pranabdas.github.io/blog/2023/close-ups/"><![CDATA[<div>
-<picture>
-  <source type="image/webp" srcset="https://pranabdas.github.io/drive/photos/blog/flowers-sidewalks.webp" />
-  <img class="col three" src="https://pranabdas.github.io/drive/photos/blog/flowers-sidewalks.jpg" alt="flower closeup photos" />
-</picture>
+  <img class="col three" src="https://pranabdas.github.io/drive/photos/blog/flowers-sidewalks.webp" alt="flower closeup photos" />
 </div>
 
 <p><br />
@@ -25,10 +19,7 @@
   <p>For lack of attention, a thousand forms of loveliness elude us everyday.<br /><br />
 ― Evelyn Underhill</p>
 </blockquote>]]></content><author><name>Pranab Das</name></author><category term="photography" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Then, Be</title><link href="https://pranabdas.github.io/blog/2022/then-be/" rel="alternate" type="text/html" title="Then, Be" /><published>2022-03-20T19:04:00+08:00</published><updated>2022-03-20T19:04:00+08:00</updated><id>https://pranabdas.github.io/blog/2022/then-be</id><content type="html" xml:base="https://pranabdas.github.io/blog/2022/then-be/"><![CDATA[<div class="fancy-img">
-<picture>
-  <source type="image/webp" srcset="https://pranabdas.github.io/drive/photos/blog/Making-Amends-by-Holly-Warburton.webp" />
-  <img style="max-width: 360px;" src="https://pranabdas.github.io/drive/photos/blog/Making-Amends-by-Holly-Warburton.jpg" alt="photograph" />
-</picture>
+  <img style="max-width: 360px;" src="https://pranabdas.github.io/drive/photos/blog/Making-Amends-by-Holly-Warburton.webp" alt="photograph" />
 </div>
 
 <p style="text-align: center; padding-top: 1em;">
@@ -99,10 +90,7 @@ Be the Transformation yourself.<br />
     }
 }
 </script>]]></content><author><name>Pranab Das</name></author><category term="memories" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Rotorua</title><link href="https://pranabdas.github.io/blog/2019/geothermals/" rel="alternate" type="text/html" title="Rotorua" /><published>2019-08-20T18:53:00+08:00</published><updated>2019-08-20T18:53:00+08:00</updated><id>https://pranabdas.github.io/blog/2019/geothermals</id><content type="html" xml:base="https://pranabdas.github.io/blog/2019/geothermals/"><![CDATA[<div class="">
-<picture>
-  <source type="image/webp" srcset="https://pranabdas.github.io/drive/photos/blog/geothermals.webp" />
-  <img class="col three" src="https://pranabdas.github.io/drive/photos/blog/geothermals.jpg" alt="photograph" />
-</picture>
+  <img class="col three" src="https://pranabdas.github.io/drive/photos/blog/geothermals.webp" alt="photograph" />
 </div>
 
 <div class="col three caption">
@@ -118,10 +106,7 @@ village. Meals were cooked by keeping under the volcanic rocks.</p>
 
 <p><br />
 More pics from New Zealand on my <a href="https://500px.com/p/pranab/galleries/new-zealand" target="_blank">500px <i class="fa-solid fa-arrow-up-right-from-square"></i></a></p>]]></content><author><name>Pranab Das</name></author><category term="travel" /><summary type="html"><![CDATA[Geo-thermals]]></summary></entry><entry><title type="html">Hobbiton</title><link href="https://pranabdas.github.io/blog/2019/hobbiton/" rel="alternate" type="text/html" title="Hobbiton" /><published>2019-08-15T11:25:00+08:00</published><updated>2019-08-15T11:25:00+08:00</updated><id>https://pranabdas.github.io/blog/2019/hobbiton</id><content type="html" xml:base="https://pranabdas.github.io/blog/2019/hobbiton/"><![CDATA[<div class="">
-<picture>
-  <source type="image/webp" srcset="https://pranabdas.github.io/drive/photos/blog/hobbiton.webp" />
-  <img class="col three" src="https://pranabdas.github.io/drive/photos/blog/hobbiton.jpg" alt="photograph" />
-</picture>
+  <img class="col three" src="https://pranabdas.github.io/drive/photos/blog/hobbiton.webp" alt="photograph" />
 </div>
 
 <div class="col three caption">
@@ -175,10 +160,7 @@ My evening-rest and sleep to meet.<br />
 <br />
 More pics from New Zealand on my <a target="_blank" href="https://500px.com/p/pranab/galleries/new-zealand">500px <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
 </div>]]></content><author><name>Pranab Das</name></author><category term="travel" /><category term="poem" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Huka falls</title><link href="https://pranabdas.github.io/blog/2019/huka-falls/" rel="alternate" type="text/html" title="Huka falls" /><published>2019-08-12T16:32:00+08:00</published><updated>2019-08-12T16:32:00+08:00</updated><id>https://pranabdas.github.io/blog/2019/huka-falls</id><content type="html" xml:base="https://pranabdas.github.io/blog/2019/huka-falls/"><![CDATA[<div class="col three fancy-img">
-<picture>
-  <source type="image/webp" srcset="https://pranabdas.github.io/drive/photos/blog/waterfall.webp" />
-  <img src="https://pranabdas.github.io/drive/photos/blog/waterfall.jpg" alt="photograph" />
-</picture>
+  <img src="https://pranabdas.github.io/drive/photos/blog/waterfall.webp" alt="photograph" />
 </div>
 
 <div class="col three caption">
@@ -199,10 +181,7 @@ So we got on his car, he told us some stories along the way. He dropped us,
 wished good luck, and we could never thank him enough.</p>
 
 <div class="col three fancy-img">
-<picture>
-  <source type="image/webp" srcset="https://pranabdas.github.io/drive/photos/blog/huka-river.webp" />
-  <img src="https://pranabdas.github.io/drive/photos/blog/huka-river.jpg" alt="photograph" />
-</picture>
+  <img src="https://pranabdas.github.io/drive/photos/blog/huka-river.webp" alt="photograph" />
 </div>
 
 <div class="col three caption">
@@ -211,10 +190,7 @@ wished good luck, and we could never thank him enough.</p>
 
 <p><br />
 More pics from New Zealand on my <a href="https://500px.com/p/pranab/galleries/new-zealand" target="_blank">500px <i class="fa-solid fa-arrow-up-right-from-square"></i></a></p>]]></content><author><name>Pranab Das</name></author><category term="travel" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Waiheke Island</title><link href="https://pranabdas.github.io/blog/2019/waiheke/" rel="alternate" type="text/html" title="Waiheke Island" /><published>2019-08-10T10:17:00+08:00</published><updated>2019-08-10T10:17:00+08:00</updated><id>https://pranabdas.github.io/blog/2019/waiheke</id><content type="html" xml:base="https://pranabdas.github.io/blog/2019/waiheke/"><![CDATA[<div class="">
-<picture>
-  <source type="image/webp" srcset="https://pranabdas.github.io/drive/photos/blog/waiheke.webp" />
-  <img class="col three" src="https://pranabdas.github.io/drive/photos/blog/waiheke.jpg" alt="photograph" />
-</picture>
+  <img class="col three" src="https://pranabdas.github.io/drive/photos/blog/waiheke.webp" alt="photograph" />
 </div>
 
 <p>Waiheke is about one hour by boat from Auckland Central. The ferry arrives at
@@ -225,10 +201,7 @@ beautiful Oneroa is one of them.</p>
 
 <p><br />
 More pics from New Zealand on my <a href="https://500px.com/p/pranab/galleries/new-zealand" target="_blank">500px <i class="fa-solid fa-arrow-up-right-from-square"></i></a></p>]]></content><author><name>Pranab Das</name></author><category term="travel" /><summary type="html"><![CDATA[Beautiful island with beaches and vineyards]]></summary></entry><entry><title type="html">Pulau Ubin</title><link href="https://pranabdas.github.io/blog/2018/pulau-ubin/" rel="alternate" type="text/html" title="Pulau Ubin" /><published>2018-05-06T22:30:00+08:00</published><updated>2018-05-06T22:30:00+08:00</updated><id>https://pranabdas.github.io/blog/2018/pulau-ubin</id><content type="html" xml:base="https://pranabdas.github.io/blog/2018/pulau-ubin/"><![CDATA[<div class="">
-<picture>
-  <source type="image/webp" srcset="https://pranabdas.github.io/drive/photos/blog/pulau-ubin.webp" />
-  <img class="col three" src="https://pranabdas.github.io/drive/photos/blog/pulau-ubin.jpg" alt="photograph" />
-</picture>
+  <img class="col three" src="https://pranabdas.github.io/drive/photos/blog/pulau-ubin.webp" alt="photograph" />
 </div>
 
 <p>Pulau Ubin is northeast of mainland Singapore. We took a morning ferry from
@@ -243,10 +216,7 @@ sleeve. It also lines up with one of Changi landing runway, you will see
 airplanes descending very low every couple of minutes.</p>
 
 <p>Individual pics on <a href="https://500px.com/p/pranab/galleries/pulau-ubin" target="_blank">500px <i class="fa-solid fa-arrow-up-right-from-square"></i></a></p>]]></content><author><name>Pranab Das</name></author><category term="cycling" /><summary type="html"><![CDATA[A day cycling around Pulau Ubin]]></summary></entry><entry><title type="html">Napolionica to Duino walk</title><link href="https://pranabdas.github.io/blog/2016/duino-walk/" rel="alternate" type="text/html" title="Napolionica to Duino walk" /><published>2016-03-27T18:00:00+08:00</published><updated>2016-03-27T18:00:00+08:00</updated><id>https://pranabdas.github.io/blog/2016/duino-walk</id><content type="html" xml:base="https://pranabdas.github.io/blog/2016/duino-walk/"><![CDATA[<div class="">
-<picture>
-  <source type="image/webp" srcset="https://pranabdas.github.io/drive/photos/blog/duino-walk.webp" />
-  <img class="col three" src="https://pranabdas.github.io/drive/photos/blog/duino-walk.jpg" alt="photograph" />
-</picture>
+  <img class="col three" src="https://pranabdas.github.io/drive/photos/blog/duino-walk.webp" alt="photograph" />
 </div>
 
 <p>We had a long Easter walk today. Starting from Opicina Obelisk to Duino.</p>
