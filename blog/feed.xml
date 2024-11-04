@@ -55,7 +55,7 @@ Be the Transformation yourself.<br />
 <br />
 &mdash; <i>Sandy Gordon Frankfort</i><br />
 
-</p>]]></content><author><name>Pranab Das</name></author><category term="poem" /><summary type="html"><![CDATA[A beautiful poem by Sandy Gordon Frankfort]]></summary></entry><entry><title type="html">Our very special day</title><link href="https://pranabdas.github.io/blog/2021/our-special-day/" rel="alternate" type="text/html" title="Our very special day" /><published>2021-12-19T16:45:00+08:00</published><updated>2021-12-19T16:45:00+08:00</updated><id>https://pranabdas.github.io/blog/2021/our-special-day</id><content type="html" xml:base="https://pranabdas.github.io/blog/2021/our-special-day/"><![CDATA[<link rel="stylesheet" type="text/css" href="/assets/css/heart.css" />
+</p>]]></content><author><name>Pranab Das</name></author><category term="poem" /><summary type="html"><![CDATA[A beautiful poem by Sandy Gordon Frankfort]]></summary></entry><entry><title type="html">Our very special day</title><link href="https://pranabdas.github.io/blog/2021/our-special-day/" rel="alternate" type="text/html" title="Our very special day" /><published>2021-12-19T16:45:00+08:00</published><updated>2021-12-19T16:45:00+08:00</updated><id>https://pranabdas.github.io/blog/2021/our-special-day</id><content type="html" xml:base="https://pranabdas.github.io/blog/2021/our-special-day/"><![CDATA[<link rel="stylesheet" type="text/css" href="/assets/css/hearts.css" />
 
 <div class="hearts">
     <div class="heart"></div>
@@ -68,7 +68,7 @@ Be the Transformation yourself.<br />
 </div>
 
 <div class="fancy-img">
-    <img style="max-width: 360px; position: relative; z-index: 5; pointer-events: none;" src="/assets/img/pne.jpg" alt="Our very special day" />
+    <img style="max-width: 360px; position: relative; z-index: -10; pointer-events: none;" src="/assets/img/pne.jpg" alt="Our very special day" />
 </div>
 
 <div class="col three caption" style="padding: 0.75em;">
